@@ -1,6 +1,7 @@
-package com.login;
+package com.customer;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -23,17 +24,26 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		boolean isTrue;
 		
-		try {
-			List<Customer> cusDetails = CustomerDBUtil.validate(username , password);
+		isTrue = CustomerDBUtil.validate(username, password);
+		
+		if (isTrue == true) {
+			List<Customer> cusDetails = CustomerDBUtil.getCustomer(username);
 			request.setAttribute("cusDetails", cusDetails);
 			
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
+			RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
+			dis.forward(request, response);
+		} else {
+			out.println("<script type='text/javascript'>");
+			out.println("alert('Your username or password is incorrect');");
+			out.println("location='index.jsp'");
+			out.println("</script>");
 		}
 		
 		RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");

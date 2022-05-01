@@ -1,4 +1,4 @@
-package com.login;
+package com.customer;
 
 public class Customer {
 	
