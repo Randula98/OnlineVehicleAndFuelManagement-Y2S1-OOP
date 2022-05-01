@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="a">
-	       <h1 id="mainhead">eZ Vehi Care and Service Center</h1>
+	       <h1 id="mainhead">eZ Vehi Care Service Center and Fuel Station</h1>
         <hr>
         <div class="c">
         <table>
