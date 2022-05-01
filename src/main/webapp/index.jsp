@@ -32,9 +32,8 @@
             <tr>
 
             <td>
-                <form action="POST">
-
-                <form action = "" method = "post">
+            
+                <form action = "login" method = "POST">
 
                     UserName <input type="text" name = "username"><br>
                     Password <input type="password" name = "password"><br>
