@@ -39,6 +39,7 @@ public class LoginServlet extends HttpServlet {
 		RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
 		dis.forward(request, response);
 		
+
 	}
 
 }
