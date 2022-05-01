@@ -47,6 +47,7 @@ public class CustomerDBUtil {
 			
 			conn = DBConnect.getConnection();
 			state = conn.createStatement();
+			
 			String sql = "select * from customer where username = '" + username + "'";
 			rs = state.executeQuery(sql);
 			

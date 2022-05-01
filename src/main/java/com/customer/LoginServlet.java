@@ -45,10 +45,7 @@ public class LoginServlet extends HttpServlet {
 			out.println("location='index.jsp'");
 			out.println("</script>");
 		}
-		
-		RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
-		dis.forward(request, response);
-		
+		System.out.println("Error");
 	}
 
 }
