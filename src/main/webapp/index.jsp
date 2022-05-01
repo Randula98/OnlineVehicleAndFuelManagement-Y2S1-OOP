@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>eZ Vehi Care and Service Center</title>
 </head>
 <body>
 	       <h1>eZ Vehi Care and Service Center</h1>
@@ -23,8 +23,8 @@
         <table border="1">
             <tr>
                 <form action="POST">
-                    UserName <input type="text"><br>
-                    Password <input type="password"><br>
+                    UserName <input type="text" name = "username"><br>
+                    Password <input type="password" name = "password"><br>
                     <input type="submit" value="Login as Customer">
                     <input type="submit" value="Login as Supplier">
                     <input type="submit" value="Login as Employee">
