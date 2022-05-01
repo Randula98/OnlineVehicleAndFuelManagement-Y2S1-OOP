@@ -73,6 +73,39 @@ public class CustomerDBUtil {
 		return customer;
 	}
 
+public static List<Customer> getAllCustomer(String username){
+		
+		ArrayList<Customer> customer = new ArrayList<>();
+		
+		try {
+			
+			conn = DBConnect.getConnection();
+			state = conn.createStatement();
+			
+			String sql = "select * from customer";
+			rs = state.executeQuery(sql);
+			
+			while (rs.next()) {
+				
+				int id = rs.getInt(1);
+				String firstName = rs.getString(2);
+				String lastName = rs.getString(3);
+				String contact = rs.getString(4);
+				String email = rs.getString(5);
+				String uname = rs.getString(6);
+				String pword = rs.getString(7);
+				
+				Customer c = new Customer(id , firstName , lastName , contact , email , uname , pword);
+				customer.add(c);
+			}
+		} 
+		catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		return customer;
+	}
 }
 
 /*
