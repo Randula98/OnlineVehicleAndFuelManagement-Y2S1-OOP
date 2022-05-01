@@ -25,9 +25,9 @@
                 <form action="POST">
                     UserName <input type="text" name = "username"><br>
                     Password <input type="password" name = "password"><br>
-                    <input type="submit" value="Login as Customer">
-                    <input type="submit" value="Login as Supplier">
-                    <input type="submit" value="Login as Employee">
+                    <input type="submit" value="Login as Customer" name = "customer">
+                    <input type="submit" value="Login as Supplier" name = "supplier">
+                    <input type="submit" value="Login as Employee" name = "employee">
                 </form>
                 <p>Login as <a href>Employee</a><br>
                 Login as <a href>Supplier</a></p>
