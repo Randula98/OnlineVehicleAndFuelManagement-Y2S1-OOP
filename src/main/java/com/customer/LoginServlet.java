@@ -45,7 +45,6 @@ public class LoginServlet extends HttpServlet {
 			out.println("location='index.jsp'");
 			out.println("</script>");
 		}
-		System.out.println("Error");
 	}
 
 }
