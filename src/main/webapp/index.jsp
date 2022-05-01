@@ -22,7 +22,7 @@
         <h2>Login</h2>
         <table border="1">
             <tr>
-                <form action="POST">
+                <form action = "" method = "post">
                     UserName <input type="text" name = "username"><br>
                     Password <input type="password" name = "password"><br>
                     <input type="submit" value="Login as Customer" name = "customer">
