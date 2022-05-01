@@ -15,7 +15,7 @@
 	
 	${cus.id}<br>
 	${cus.firstName}<br>
-	${cus.firstLast}<br>
+	${cus.lastName}<br>
 	${cus.contact}<br>
 	${cus.email}<br>
 	${cus.username}<br>
