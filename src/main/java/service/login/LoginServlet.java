@@ -1,4 +1,4 @@
-package com.customer;
+package service.login;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.customer.Customer;
+import com.customer.CustomerDBUtil;
 /**
  * Servlet implementation class LoginServlet
  */
