@@ -1,28 +1,5 @@
+@charset "ISO-8859-1";
 * {
   margin: 0;
   padding: 0;
-}
-body{
-	
-}
-
-#mainhead{
-	text-align: center;
-	color:#999E54;
-	font-size:80px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-div.c{
-	
-	position:relative;
-	float:right;
-	right:0px;
-}
-div.a{
-	
-	background-image:url("../images/background.jpg");
-	background-repeat: no-repeat;
-	background-size: auto;
-	object-fit: cover;
 }

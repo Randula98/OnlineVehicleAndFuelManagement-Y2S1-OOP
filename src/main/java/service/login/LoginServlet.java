@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
 		{
 			out.println("<script type='text/javascript'>");
 			out.println("alert('Employee');");
-			out.println("location='index.jsp'");
+			out.println("location='login.jsp'");
 			out.println("</script>");
 		}
 		else if(customer != null)
@@ -75,25 +75,8 @@ public class LoginServlet extends HttpServlet {
 		{
 			out.println("<script type='text/javascript'>");
 			out.println("alert('Supplier');");
-			out.println("location='index.jsp'");
+			out.println("location='login.jsp'");
 			out.println("</script>");
 		}
-				
-//		
-//		isTrue = CustomerDBUtil.validate(username, password);
-//		
-//		if (isTrue == true) {
-//			List<Customer> cusDetails = CustomerDBUtil.getCustomer(username);
-//			request.setAttribute("cusDetails", cusDetails);
-//			
-//			RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
-//			dis.forward(request, response);
-//		} else {
-//			out.println("<script type='text/javascript'>");
-//			out.println("alert('Your username or password is incorrect');");
-//			out.println("location='index.jsp'");
-//			out.println("</script>");
-//		}
 	}
-
 }

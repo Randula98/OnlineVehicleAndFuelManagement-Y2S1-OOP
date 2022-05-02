@@ -75,7 +75,7 @@ public class CustomerDBUtil {
 		return customer;
 	}
 
-public static List<Customer> getAllCustomer(String username){
+public static List<Customer> getAllCustomer(){
 		
 		ArrayList<Customer> customer = new ArrayList<>();
 		

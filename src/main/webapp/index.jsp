@@ -4,47 +4,96 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>eZ Vehi Care and Service Center</title>
+<title>eZ Vehi Care Service And Filling Station</title>
 <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-	<div class="a">
-	       <h1 id="mainhead">eZ Vehi Care Service Center and Fuel Station</h1>
-        <hr>
-        <div class="c">
-        <table>
-            <tr>
-                <td>Home</td>
-                <td>Services</td>
-                <td>Reserve Fuel</td>
-                <td>Make Appointment</td>
-                <td>Login</td>
+	<div>
+		<center>
+    		<img src="images/index/logo.png" alt="logo" height="125">
+    	</center>
+    </div>
+        
+    <div>
+		<center>
+        	<h1>eZ Vehi Care Service And Filling Station</h1>
+            <p>We Care For Your Vehicle As Our Own</p>
+        </center>
+    </div>
+    <hr>
+    <div>
+    	<table>
+        	<tr>
+            	<td><a href = "#"><button>Our Services</button></a></td>
+                <td><a href = "#"><button>Make Appointment</button></a></td>
+                <td><a href = "#"><button>Reserve Fuel</button></a></td>
+                <td><a href = "#"><button>Contact Us</button></a></td>
+                <td><a href = "login.jsp"><button>Log In</button></a></td>
             </tr>
-        </table>
+         </table>
+    </div><br>
+    
+    <div>
+    	<img src="images/index/back.png" alt="background">
+        	<table>
+            	<tr>
+                    <td><button>Services</button></td>
+                    <td><button>Order Spare-Parts</button></td>
+                    <td><button>Reserve Fuel</button></td>
+                </tr>
+                <tr>
+                    <td>Experience our special and world class services. Every employee taking care of your vehicle is highly experienced and highly skilled professionals. We offer V.I.P,Full,Body Wash,Come N Go services </td>
+                    <td>Tell us what you desire and we shall order the best quality spare parts for you vehicle from the highly recognized dealers. You also have the priveledge to install the spare parts that you order through us at a special discounted.</td>
+                    <td>We proudly are the first ever orgainzaion to offer online fuel reservation for your vehicle. Pay now and reserve the fuel that you desire and also adjust time of your preference. </td>
+                </tr>
+            </table>
         </div>
-  	</div>
-  	
-  	<div>
-  		<br>
-        <hr>
-        <h2>Login</h2>
-        <table border="1">
-            <tr>
-            	<td>
-                	<form action = "login" method = "POST">
-                    	UserName <input type="text" name = "username"><br>
-                    	Password <input type="password" name = "password"><br>
-                    	<input type="submit" value="Login as Customer" name = "customer">
-                    	<input type="submit" value="Login as Supplier" name = "supplier">
-                    	<input type="submit" value="Login as Employee" name = "employee">
-                	</form>
-                <p>Login as <a href>Employee</a><br>
-                	Login as <a href>Supplier</a></p>
-                </td>
-            </tr>
-        </table>
-  	</div>
-        <hr>
+        <hr><hr>
+        
+        <div>
+            <h2>Vehicle Range</h2>
+        </div>
+        
+        <div>
+            <img src="images/index/car.jpg" width="50" height="50" alt="">
+            <img src="images/index/van.png" width="50" height="50" alt="">
+            <img src="images/index/suv.jpg" width="50" height="50" alt="">
+        </div>
+            <hr><hr>
+        <div>
+            <table>
+                <tr>
+                    <td>Services</td>
+                    <td>Fuel Reservations</td>
+                    <td>Order Parts</td>
+                    <td>Contact Us</td>
+                </tr>
+                <tr>
+                    <td>V.I.P Service</td>
+                    <td>Petrol Octane...</td>
+                    <td>Geniune Parts</td>
+                    <td>Manager</td>
+                </tr>
+                <tr>
+                    <td>Full Service</td>
+                    <td>Petrol Octane</td>
+                    <td>Reconditioned Parts</td>
+                    <td>Assistant Manager</td>
+                </tr>
+                <tr>
+                    <td>Body Wash</td>
+                    <td>Super Diesel</td>
+                    <td></td>
+                    <td>Supervisiors</td>
+                </tr>
+                <tr>
+                    <td>Come N Go </td>
+                    <td>Diesel</td>
+                    <td></td>
+                    <td>Assistant Supervisor</td>
+                </tr>
+            </table>
+        </div>
 
 </body>
 </html>

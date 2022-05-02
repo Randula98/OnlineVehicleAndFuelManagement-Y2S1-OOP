@@ -22,6 +22,8 @@
 	${cus.password}<br>
 	
 	</c:forEach>
-
+	
+	<c:forEach var="cus" items="${cusDetails}">
+	</c:forEach>
 </body>
 </html>
