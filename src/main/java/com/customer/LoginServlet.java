@@ -24,27 +24,74 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		PrintWriter out = response.getWriter();
-		response.setContentType("text/html");
+		String employee = null;
+		String customer = null;
+		String supplier = null;
+		boolean isTrue = false;
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		boolean isTrue;
 		
-		isTrue = CustomerDBUtil.validate(username, password);
+		employee = request.getParameter("employee");
+		customer = request.getParameter("customer");
+		supplier = request.getParameter("supplier");
 		
-		if (isTrue == true) {
-			List<Customer> cusDetails = CustomerDBUtil.getCustomer(username);
-			request.setAttribute("cusDetails", cusDetails);
-			
-			RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
-			dis.forward(request, response);
-		} else {
+		
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		
+		
+		out.println("<script type='text/javascript'>");
+		out.println("alert('Logged in');");
+		out.println("</script>");
+		
+		if(employee != null)
+		{
 			out.println("<script type='text/javascript'>");
-			out.println("alert('Your username or password is incorrect');");
+			out.println("alert('Employee');");
 			out.println("location='index.jsp'");
 			out.println("</script>");
 		}
+		else if(customer != null)
+		{
+			isTrue = CustomerDBUtil.validate(username, password);
+			
+			if (isTrue == true) {
+				List<Customer> cusDetails = CustomerDBUtil.getCustomer(username);
+				request.setAttribute("cusDetails", cusDetails);
+				
+				RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
+				dis.forward(request, response);
+			} else {
+				out.println("<script type='text/javascript'>");
+				out.println("alert('Your username or password is incorrect');");
+				out.println("location='index.jsp'");
+				out.println("</script>");
+			}
+		}
+		else if(supplier != null)
+		{
+			out.println("<script type='text/javascript'>");
+			out.println("alert('Supplier');");
+			out.println("location='index.jsp'");
+			out.println("</script>");
+		}
+				
+//		
+//		isTrue = CustomerDBUtil.validate(username, password);
+//		
+//		if (isTrue == true) {
+//			List<Customer> cusDetails = CustomerDBUtil.getCustomer(username);
+//			request.setAttribute("cusDetails", cusDetails);
+//			
+//			RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
+//			dis.forward(request, response);
+//		} else {
+//			out.println("<script type='text/javascript'>");
+//			out.println("alert('Your username or password is incorrect');");
+//			out.println("location='index.jsp'");
+//			out.println("</script>");
+//		}
 	}
 
 }
