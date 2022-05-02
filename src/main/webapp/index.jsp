@@ -10,7 +10,7 @@
 <body>
 	<div>
 		<center>
-    		<img src="images/index/logo.png" alt="logo" height="125">
+    		<a href="index.jsp"><img src="images/index/logo.png" alt="logo" height="125"></a>
     	</center>
     </div>
         
@@ -27,7 +27,7 @@
             	<td><a href = "#"><button>Our Services</button></a></td>
                 <td><a href = "#"><button>Make Appointment</button></a></td>
                 <td><a href = "#"><button>Reserve Fuel</button></a></td>
-                <td><a href = "#"><button>Contact Us</button></a></td>
+                <td><a href = "contactUs.jsp"><button>Contact Us</button></a></td>
                 <td><a href = "login.jsp"><button>Log In</button></a></td>
             </tr>
          </table>
