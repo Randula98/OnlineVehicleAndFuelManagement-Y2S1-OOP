@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.customer.Customer;
 import com.customer.CustomerDBUtil;
+
+import com.employee.Employee;
+import com.employee.EmployeeDBUtil;
 /**
  * Servlet implementation class LoginServlet
  */
@@ -46,14 +49,26 @@ public class LoginServlet extends HttpServlet {
 		out.println("<script type='text/javascript'>");
 		out.println("alert('Logged in');");
 		out.println("</script>");
-		
+		//Done by Leo
 		if(employee != null)
 		{
-			out.println("<script type='text/javascript'>");
-			out.println("alert('Employee');");
-			out.println("location='login.jsp'");
-			out.println("</script>");
-		}
+			isTrue = EmployeeDBUtil.validate(username, password);
+			
+			
+			if (isTrue == true) {
+				List<Employee> empDetails = EmployeeDBUtil.getEmployee(username);
+				request.setAttribute("empDetails", empDetails);
+				
+				RequestDispatcher dis = request.getRequestDispatcher("employeeaccount.jsp");
+				dis.forward(request, response);
+			} else {
+				out.println("<script type='text/javascript'>");
+				out.println("alert('Your username or password is incorrect');");
+				out.println("location='index.jsp'");
+				out.println("</script>");
+			
+			}
+		} // until here
 		else if(customer != null)
 		{
 			isTrue = CustomerDBUtil.validate(username, password);
