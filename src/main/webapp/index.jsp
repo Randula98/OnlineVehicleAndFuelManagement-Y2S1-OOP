@@ -24,7 +24,7 @@
     <div>
     	<table>
         	<tr>
-            	<td><a href = "#"><button>Our Services</button></a></td>
+            	<td><a href = "services.jsp"><button>Our Services</button></a></td>
                 <td><a href = "#"><button>Make Appointment</button></a></td>
                 <td><a href = "#"><button>Reserve Fuel</button></a></td>
                 <td><a href = "contactUs.jsp"><button>Contact Us</button></a></td>
@@ -37,7 +37,7 @@
     	<img src="images/index/back.png" alt="background">
         	<table>
             	<tr>
-                    <td><button>Services</button></td>
+                    <td><a href="services.jsp"><button>Services</button></a></td>
                     <td><button>Order Spare-Parts</button></td>
                     <td><button>Reserve Fuel</button></td>
                 </tr>
