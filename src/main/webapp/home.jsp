@@ -6,13 +6,16 @@
 	<title>eZVehiCare</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="Styles/promo.css">
+  <link rel="stylesheet" type="text/css" href="css/promo.css">
+  <link rel="stylesheet" type="text/css" href="css/sd.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="container">
   	<div class="navbar">
   	  <div class="logo">
-  	  	<center><a href="index.php"><img src="Images/logo1.png" width="250px"></a></center>
+  	  	<center><a href="index.php"><img src="images/index/logo.png" width="250px"></a></center>
         <h1 class="topic" align="center">eZ Vehi Care</h1>
   		<nav class="top">
   			<ul>
@@ -55,7 +58,7 @@
            </div>
          </div>
        </div>
-       <div class="slide" style="background-image: url('Images/book.jpg')">
+       <div class="slide" style="background-image: url('images/book.jpg')">
          <div class="container">
            <div class="caption">
              <h1 >Book Services</h1>
@@ -64,7 +67,7 @@
            </div>
          </div>
        </div>
-       <div class="slide" style="background-image: url('Images/spare.jpg')">
+       <div class="slide" style="background-image: url('images/spare.jpg')">
       <div class="container">
         <div class="caption">
           <h1>Spare Parts</h1>
@@ -73,7 +76,7 @@
         </div>
       </div>
     </div>
-    <div class="slide" style="background-image: url('Images/fuel.jpg')">
+    <div class="slide" style="background-image: url('images/fuel.jpg')">
          <div class="container">
            <div class="caption">
              <h1 style="color:black">Fuel Reservations</h1>
@@ -82,7 +85,7 @@
            </div>
          </div>
        </div>
-    <div class="slide" style="background-image: url('Images/oil change.jpg')">
+    <div class="slide" style="background-image: url('images/oil change.jpg')">
       <div class="container">
         <div class="caption">
           <h1>Oil Changes</h1>
@@ -110,18 +113,18 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div>
     <center>
-      <img src="Images/pormo2.jpg" alt="promo2 image" class="mainImage"> <!-- done by : IT21105302 -->
-      <img src="Images/promo6.jpg" alt="promo6 image" class="mainImage">
+      <img src="images/pormo2.jpg" alt="promo2 image" class="mainImage"> <!-- done by : IT21105302 -->
+      <img src="images/promo6.jpg" alt="promo6 image" class="mainImage">
       <br>
-      <img src="Images/promo7.jpg" alt="promo6 image" class="banner">
+      <img src="images/promo7.jpg" alt="promo6 image" class="banner">
     
     <hr>
     <br><br><br>
     <div class="imgFooter">
-      <a href="category.php? categoryId=CA02"><img src="Images/promo1.jpg" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA01"><img src="Images/promo3.png" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA02"><img src="Images/promo4.jpg" alt="" class="image"></a> 
-      <a href="index.php"><img src="Images/promo5.jpg" alt="" class="image"></a> 
+      <a href="category.php? categoryId=CA02"><img src="images/promo1.jpg" alt="" class="image"></a> 
+      <a href="category.php? categoryId=CA01"><img src="images/promo3.png" alt="" class="image"></a> 
+      <a href="category.php? categoryId=CA02"><img src="images/promo4.jpg" alt="" class="image"></a> 
+      <a href="index.php"><img src="images/promo5.jpg" alt="" class="image"></a> 
     </div>
     </center>
   </div>
@@ -166,10 +169,10 @@
              <li><a href="">Other</a></li></div>
             </td>
             <td><center>
-              <a href=""><img src="Images/youtube.png" alt="Youtube"></a>
-              <a href=""><img src="Images/fb.png" alt="Facebook"></a><br><br>
-              <a href=""><img src="Images/twitter.png" alt="Twitter"></a>
-              <a href=""><img src="Images/whatsapp.png" alt="Whatsapp"></a></center>
+              <a href=""><img src="images/youtube.png" alt="Youtube"></a>
+              <a href=""><img src="images/fb.png" alt="Facebook"></a><br><br>
+              <a href=""><img src="images/twitter.png" alt="Twitter"></a>
+              <a href=""><img src="images/whatsapp.png" alt="Whatsapp"></a></center>
             </td>
           </tr>
         </table>

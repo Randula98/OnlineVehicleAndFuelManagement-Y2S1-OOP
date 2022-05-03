@@ -1,7 +1,6 @@
 package com.customer;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -41,7 +40,6 @@ public class CustomerDBUtil {
 		return isSuccess;
 	}
 	
-	//dont use
 	public static List<Customer> getCustomer(String username){
 		
 		ArrayList<Customer> customer = new ArrayList<>();
@@ -76,7 +74,8 @@ public class CustomerDBUtil {
 		return customer;
 	}
 
-public static List<Customer> getAllCustomer(){
+	//dont use
+	public static List<Customer> getAllCustomer(){
 		
 		ArrayList<Customer> customer = new ArrayList<>();
 		
