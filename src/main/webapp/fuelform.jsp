@@ -15,7 +15,7 @@
   <div class="container">
   	<div class="navbar">
   	  <div class="logo">
-  	  	<center><a href="index.php"><img src="images/index/logo.png" width="250px"></a></center>
+  	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
         <h1 class="topic" align="center">eZ Vehi Care</h1>
   		<nav class="top">
   			<ul>

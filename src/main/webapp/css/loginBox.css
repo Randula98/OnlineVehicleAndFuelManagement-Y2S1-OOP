@@ -51,10 +51,11 @@ div.c{
 	border-radius: 15px 5px 15px 5px;
 	background-color: rgb(116, 120, 83);
 	border: none;
-	color: bisque;
+	color: white;
 	transition: .5s;
 	font-size: 18px;
 	font-family: Monospace;
+	
 }
 
 .loginbox input.text:hover , .loginbox input.text:focus {
