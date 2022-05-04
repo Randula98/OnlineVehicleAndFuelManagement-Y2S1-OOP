@@ -77,15 +77,15 @@
               </td>
               <td style="border-right: solid 1px grey; border-left: solid 1px grey;">
                 <div class="fut">
-               <li><a href="https://www.toyota.lk/">Toyota</a></li>
-               <li><a href="">Nisan</a></li>
-               <li><a href="">BMW</a></li>
-               <li><a href="">Mitsubishi</a></li>
-               <li><a href="">McLaren</a></li>
-               <li><a href="">Mazda</a></li>
-               <li><a href="">Suzuki</a></li>
-               <li><a href="">Honda</a></li>
-               <li><a href="">Other</a></li></div>
+               	<li><a href="https://www.toyota.lk/">Toyota</a></li>
+             	<li><a href="https://www.nissan-global.com/EN/">Nisan</a></li>
+             	<li><a href="https://www.bmw.com/en/index.html">BMW</a></li>
+             	<li><a href="https://www.mitsubishicars.com/">Mitsubishi</a></li>
+             	<li><a href="https://cars.mclaren.com/en">McLaren</a></li>
+             	<li><a href="https://www.mazda.com/">Mazda</a></li>
+             	<li><a href="https://www.globalsuzuki.com/automobile/">Suzuki</a></li>
+             	<li><a href="https://global.honda/">Honda</a></li>
+             	<li><a href="https://www.carlogos.org/car-brands/">Other</a></li></div>
               </td>
               <td><center>
                 <a href=""><img src="images/youtube.png" alt="Youtube"></a>
