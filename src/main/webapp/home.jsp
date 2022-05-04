@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<title>eZVehiCare</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
-  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/promo.css">
-  <link rel="stylesheet" type="text/css" href="css/sd.css">
-  <link rel="stylesheet" type="text/css" href="css/home.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/promo.css">
+  	<link rel="stylesheet" type="text/css" href="css/sd.css">
+  	<link rel="stylesheet" type="text/css" href="css/home.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="container">
@@ -177,7 +177,6 @@
           </tr>
         </table>
       </footer>
-  </div>  
       
 </body>
 </html>
