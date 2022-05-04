@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
-	<title>eZVehiCare</title>
+	<title>Fuel Registration Form | eZ Vehicare Service</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
-  	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  	<link rel="stylesheet" type="text/css" href="css/promo.css">
-  	<link rel="stylesheet" type="text/css" href="css/sd.css">
-  	<link rel="stylesheet" type="text/css" href="css/home.css">
-  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/promo.css">
+  <link rel="stylesheet" type="text/css" href="css/sd.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="container">
@@ -44,91 +44,55 @@
 		      </div></div>
 		      <hr class="new1">
 
+            <!-- Form starts here-->
+            <center>
+                <h2> Registration Form</h2> <!-- reffered from labsheets-->
+            </center>
+            <center>
+                <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
+                <label for="vehicleNo">Vehicle Number</label>
+                <input type="text" placeholder="Enter Vehicle Number" name="vehicleNo" required><br><br>
+                <label for="Fueltype">Select Fuel Type</label>
+                <select name="fueltype" id="fueltype">
+                    <option value="Octane92">Octane 92</option>
+                    <option value="Octane95">Octane 95</option>
+                    <option value="superdiesel">Super Diesel</option>
+                    <option value="autodiesel">Auto Diesel</option>
+                    <option value="kerosene">Kerosene</option>
+                  </select>
+                <br><br>
+                <label for="vehicletype">Select Vehicle Type</label>
+                <select name="vehicleType" id="vehicleType">
+                    <option value="Car">Car</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Van">Van</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Lorry">Lorry</option>
+                    <option value="Tuk">Tuk Tuk</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="LV">Long Vehicle</option>
+                  </select>
+                <br><br>
 
-          <!-- App slide show --> <br><br>
-    <h1><center>HOME</center></h1>
-  <section class="slide-show"> <!-- https://www.youtube.com/watch?v=0wvrlOyGlq0&ab_channel=CodingSnow--> 
-    <div class="slider">
-       <div class="slide active" style="background-image: url('Images/guy.jpg')">
-         <div class="container">
-           <div class="caption">
-             <h1>Our Services</h1>
-             <p>Professional services for affordable prices.</p>
-             <a href="" style="background-color: #ec2724;">More...</a>
-           </div>
-         </div>
-       </div>
-       <div class="slide" style="background-image: url('images/book.jpg')">
-         <div class="container">
-           <div class="caption">
-             <h1 >Book Services</h1>
-             <p style="color:black">Save every minute of your valuable time.</p>
-             <a href="" style="background-color: #ec2724;">More...</a>
-           </div>
-         </div>
-       </div>
-       <div class="slide" style="background-image: url('images/spare.jpg')">
-      <div class="container">
-        <div class="caption">
-          <h1>Spare Parts</h1>
-          <p>Keep 'em running.</p>
-          <a href="" >More...</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/fuel.jpg')">
-         <div class="container">
-           <div class="caption">
-             <h1 style="color:black">Fuel Reservations</h1>
-             <p style="color:black">Good fuel.Quality journey.</p>
-             <a href="" style="background-color: #ec2724;">More...</a>
-           </div>
-         </div>
-       </div>
-    <div class="slide" style="background-image: url('images/oil change.jpg')">
-      <div class="container">
-        <div class="caption">
-          <h1>Oil Changes</h1>
-          <p>Oiling makes you perfect</p>
-          <a href="" style="background-color: white; color: black;">More...</a>
-        </div>
-      </div>
-    </div>
-    </div>
-    
-     <!-- controls  -->
-     <div class="controls">
-       <div class="prev">&#10094;</div>
-       <div class="next">&#10095;</div>
-     </div>
-   
-     <!-- indicators -->
-     <div class="indicator">
-     </div>
-   
-   </section>
-   <script src = "Scripts/catslider.js"></script>
 
-  
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div>
-    <center>
-      <img src="images/pormo2.jpg" alt="promo2 image" class="mainImage"> <!-- done by : IT21105302 -->
-      <img src="images/promo6.jpg" alt="promo6 image" class="mainImage">
-      <br>
-      <img src="images/promo7.jpg" alt="promo6 image" class="banner">
-    
-    <hr>
-    <br><br><br>
-    <div class="imgFooter">
-      <a href="category.php? categoryId=CA02"><img src="images/promo1.jpg" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA01"><img src="images/promo3.png" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA02"><img src="images/promo4.jpg" alt="" class="image"></a> 
-      <a href="index.php"><img src="images/promo5.jpg" alt="" class="image"></a> 
-    </div>
-    </center>
-  </div>
-
+                
+                <label for="Amount">Amount</label>:
+                <input type="number"> Litres <br><br>
+                
+                
+                
+                Date Of Collection : <br/>
+                <input type="date" name="cod" required><br/><br>
+                
+                
+                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">I have Read the conditions and I Accept Privacy Policy and Terms.<br/>
+                </center>
+                
+                
+                <center>
+                <input type="submit" id="submitBtn" value="submit" disabled >
+                </center>
+                </form>
     
          
 
@@ -177,6 +141,7 @@
           </tr>
         </table>
       </footer>
+  </div>  
       
 </body>
 </html>
