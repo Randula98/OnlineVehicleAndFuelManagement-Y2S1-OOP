@@ -6,49 +6,95 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>eZ Vehi Care and Service Center</title>
-<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="Styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/promo.css">
+        <link rel="stylesheet" type="text/css" href="css/sd.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="a">
-	       <h1 id="mainhead">eZ Vehi Care Service Center and Fuel Station</h1>
-        <hr>
-        <div class="c">
-        <table>
-            <tr>
-                <td>Home</td>
-                <td>Services</td>
-                <td>Reserve Fuel</td>
-                <td>Make Appointment</td>
-                <td>Login</td>
-            </tr>
-        </table>
+	<body>
+        <div class="container">
+            <div class="navbar">
+              <div class="logo">
+                  <center><a href="index.php"><img src="images/index/logo.png" width="250px"></a></center>
+              <h1 class="topic" align="center">eZ Vehi Care</h1>
+                <nav class="top">
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="logout.php">Logout</a></li>
+                        <li><a href="sellerRequestForm.php">Become a seller</a></li>
+                        <li><a href="contactUs.php">Help</a></li>
+                        <li><a href="cart.php">My Cart</a></li>
+                    </ul><br>
+            
+                      <form method="GET" action="/action_page.php">
+                       <input  class="navigation" type="text" placeholder="Search.." name="search" >
+                      <button class="navigation" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </nav>
+              </div>  
+            </div>  
+        </div>  
+            <br><br>
+        <div class = "loginbox">
+            <center>
+                <h1>Login</h1><br>
+                <form action = "login" method = "POST">
+                    <input type="text" name = "username" placeholder = "Username" class = "text"><br><br>
+                    <input type="password" name = "password" placeholder = "Password" class = "text"><br><br>
+                    <input type="submit" value="Login as Customer" name = "customer" class = "button">
+                    <input type="submit" value="Login as Supplier" name = "supplier" class = "button">
+                    <input type="submit" value="Login as Employee" name = "employee" class = "button">
+                </form>
+            </center>
         </div>
-  	</div>
-  	
-  	<div>
-  		<br>
-        <hr>
-        <h2>Login</h2>
-        <table border="1">
-            <tr>
-            	<td>
-                	<form action = "login" method = "POST">
-                    	UserName <input type="text" name = "username"><br>
-                    	Password <input type="password" name = "password"><br>
-                    	<input type="submit" value="Login as Customer" name = "customer">
-                    	<input type="submit" value="Login as Supplier" name = "supplier">
-                    	<input type="submit" value="Login as Employee" name = "employee">
-                	</form>
-                <p>Login as <a href>Employee</a><br>
-                	Login as <a href>Supplier</a></p>
-                </td>
-            </tr>
-        </table>
-  	</div>
-        <hr>
-        <br>
-        <br>   
-        
+        <br><br>
 
+        <footer>
+            <hr class="new1"><nav class="foot">
+              <ul class="foot">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="promotions.php">Promotions</a></li>
+                    <li><a href="aboutUs.php">About Us</a></li>
+                    <li><a href="contactUs.php">Contact Us</a></li>
+                </ul></nav>
+            <hr class="new1">
+          <table class="t1" width="100%">
+            <tr>
+              <th>Online Vehicle Service <br>and<br> Fuel Station Management System</th>
+              <th >Find Brands</th>
+              <th>More</th>
+            </tr>
+            <tr>
+              <td>
+                <li>Promotion</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Category</li>
+              </td>
+              <td style="border-right: solid 1px grey; border-left: solid 1px grey;">
+                <div class="fut">
+               <li><a href="https://www.toyota.lk/">Toyota</a></li>
+               <li><a href="">Nisan</a></li>
+               <li><a href="">BMW</a></li>
+               <li><a href="">Mitsubishi</a></li>
+               <li><a href="">McLaren</a></li>
+               <li><a href="">Mazda</a></li>
+               <li><a href="">Suzuki</a></li>
+               <li><a href="">Honda</a></li>
+               <li><a href="">Other</a></li></div>
+              </td>
+              <td><center>
+                <a href=""><img src="images/youtube.png" alt="Youtube"></a>
+                <a href=""><img src="images/fb.png" alt="Facebook"></a><br><br>
+                <a href=""><img src="images/twitter.png" alt="Twitter"></a>
+                <a href=""><img src="images/whatsapp.png" alt="Whatsapp"></a></center>
+              </td>
+            </tr>
+          </table>
+        </footer>
 </body>
 </html>

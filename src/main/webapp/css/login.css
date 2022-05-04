@@ -3,7 +3,7 @@
   padding: 0;
 }
 body{
-	
+	background: linear-gradient(270deg, #abae15, #96984b);
 }
 
 #mainhead{
@@ -25,4 +25,54 @@ div.a{
 	background-repeat: no-repeat;
 	background-size: auto;
 	object-fit: cover;
+}
+
+.loginbox{
+	margin: 0px auto;
+	width: 650px;
+	height: 320px;
+	background-color: #989a544b;
+	border-radius: 50px;
+  	padding: 10px;
+  	box-shadow: 2px 5px 5px 5px #d0c9435b;
+}
+.loginbox h1{
+	font-family: Monospace;
+}
+
+.loginbox input.text{
+	text-align: center;
+	width: 220px;
+	height: 40px;
+	border-radius: 15px 5px 15px 5px;
+	background-color: rgb(116, 120, 83);
+	border: none;
+	color: white;
+	transition: .5s;
+	font-size: 18px;
+	font-family: Monospace;
+}
+
+.loginbox input.text:hover , .loginbox input.text:focus {
+	color: black;
+	background-color: rgb(190, 192, 173);
+}
+
+.loginbox input.button{
+	width: 180px;
+	height: 40px;
+	margin-left: 30px;
+	margin-top: 10px;
+	font-family: Monospace;
+	font-size: 16px;
+	background-color: rgb(113, 112, 112);
+	color: bisque;
+	border: 0px;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.loginbox input.button:hover{
+	background-color: bisque;
+	color: rgb(113, 112, 112);
 }
