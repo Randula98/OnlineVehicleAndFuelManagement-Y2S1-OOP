@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
-	<title>eZVehiCare Service and Filling Station</title>
+	<title>eZVehiCare</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
   	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" type="text/css" href="css/promo.css">
@@ -15,7 +15,7 @@
   <div class="container">
   	<div class="navbar">
   	  <div class="logo">
-  	  	<center><a href="index.php"><img src="images/index/logo.png" width="250px"></a></center>
+  	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
         <h1 class="topic" align="center">eZ Vehi Care</h1>
   		<nav class="top">
   			<ul>
@@ -44,93 +44,51 @@
 		      </div></div>
 		      <hr class="new1">
 
+            <!--Form begins from here-->
 
-          <!-- App slide show --> <br><br>
-    <h1><center>HOME</center></h1>
-  <section class="slide-show"> <!-- https://www.youtube.com/watch?v=0wvrlOyGlq0&ab_channel=CodingSnow--> 
-    <div class="slider">
-       <div class="slide active" style="background-image: url('Images/guy.jpg')">
-         <div class="container">
-           <div class="caption">
-             <h1>Our Services</h1>
-             <p>Professional services for affordable prices.</p>
-             <a href="" style="background-color: #ec2724;">More...</a>
-           </div>
-         </div>
-       </div>
-       <div class="slide" style="background-image: url('images/book.jpg')">
-         <div class="container">
-           <div class="caption">
-             <h1 >Book Services</h1>
-             <p style="color:black">Save every minute of your valuable time.</p>
-             <a href="" style="background-color: #ec2724;">More...</a>
-           </div>
-         </div>
-       </div>
-       <div class="slide" style="background-image: url('images/spare.jpg')">
-      <div class="container">
-        <div class="caption">
-          <h1>Spare Parts</h1>
-          <p>Keep 'em running.</p>
-          <a href="" >More...</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/fuel.jpg')">
-         <div class="container">
-           <div class="caption">
-             <h1 style="color:black">Fuel Reservations</h1>
-             <p style="color:black">Good fuel.Quality journey.</p>
-             <a href="" style="background-color: #ec2724;">More...</a>
-           </div>
-         </div>
-       </div>
-    <div class="slide" style="background-image: url('images/oil change.jpg')">
-      <div class="container">
-        <div class="caption">
-          <h1>Oil Changes</h1>
-          <p>Oiling makes you perfect</p>
-          <a href="" style="background-color: white; color: black;">More...</a>
-        </div>
-      </div>
-    </div>
-    </div>
-    
-     <!-- controls  -->
-     <div class="controls">
-       <div class="prev">&#10094;</div>
-       <div class="next">&#10095;</div>
-     </div>
-   
-     <!-- indicators -->
-     <div class="indicator">
-     </div>
-   
-   </section>
-   <script src = "Scripts/catslider.js"></script>
+            <center>
+                <h2> Registration Form</h2> <!-- reffered from labsheets-->
+                </center>
 
-  
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<div>
-    <center>
-      <img src="images/pormo2.jpg" alt="promo2 image" class="mainImage"> <!-- done by : IT21105302 -->
-      <img src="images/promo6.jpg" alt="promo6 image" class="mainImage">
-      <br>
-      <img src="images/promo7.jpg" alt="promo6 image" class="banner">
-    
-    <hr>
-    <br><br><br>
-    <div class="imgFooter">
-      <a href="category.php? categoryId=CA02"><img src="images/promo1.jpg" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA01"><img src="images/promo3.png" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA02"><img src="images/promo4.jpg" alt="" class="image"></a> 
-      <a href="index.php"><img src="images/promo5.jpg" alt="" class="image"></a> 
-    </div>
-    </center>
-  </div>
-
-    
-         
+                <center>
+                <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
+                <label for="fname">First name:</label>
+                <input type="text" placeholder="Enter First Name" name="fname" required><br>
+                <label for="lname">Last name:</label>
+                <input type="text" placeholder="Enter Last Name" name="lname" required><br><br>
+                
+                
+                
+                Mobile number : 
+                <input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="0712345678" required><br/><br>
+                
+                
+                
+                Email Address : 
+                <input type="email" name="email" pattern="[a-z0-9.-+_%]+@[a-z0-9.-]+\.[a-z]{2,3} " placeholder="anonymous@Xmail.com" required><br/><br>
+                
+                
+                
+                <label for="username">Username:</label>
+                <input type="text" placeholder="Username" name="uname" pattern="{5,15}"required><br><br>
+                
+                
+                
+                Password :
+                <input type="password" name="pwd" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" required><br/>
+                Re-Enter Password : 
+                <input type="password" name="cnfrmpwd" id="cnfrmpwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" required><br/><br/>
+                
+                
+                
+                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">Accept Privacy Policy and Terms.<br/>
+                
+                </center>
+                
+                <center>
+                <input type="submit" id="submitBtn" value="SignUp" disabled >
+                </center>
+                </form>
 
 		<br>
 		
