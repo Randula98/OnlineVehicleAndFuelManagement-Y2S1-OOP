@@ -2,17 +2,21 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-	<meta charset="utf-8">
-	<title>Employee Registration | eZ VehiCare Service and Filling Station</title>
+<head>
+<meta charset="ISO-8859-1">
+<title>Supplier Registration | eZ VehiCare Service and Filling Station</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
   	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" type="text/css" href="css/promo.css">
   	<link rel="stylesheet" type="text/css" href="css/sd.css">
   	<link rel="stylesheet" type="text/css" href="css/home.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" type="text/css" href="css/regform.css">
+  	
+  	<script type="text/javascript" src = "js/regScript.js"></script>
 </head>
 <body>
-  <div class="container">
+<div class="container">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
@@ -20,7 +24,7 @@
   		<nav class="top">
   			<ul>
   				<li><a href="index.php">Home</a></li>
-  				<li><a href="logout.php">Logout</a></li>
+  				<li><a href="login.jsp">Login</a></li>
   				<li><a href="sellerRequestForm.php">Become a seller</a></li>
   				<li><a href="contactUs.php">Help</a></li>
   				<li><a href="cart.php">My Cart</a></li>
@@ -45,53 +49,47 @@
 		      <hr class="new1">
 
             <!--Form begins from here-->
-
+			<br>
+            <div class = "regform sup"  style = "height:560px">
             <center>
-                <h2> Registration Form</h2> <!-- reffered from labsheets-->
+                <h1>Supplier Registration Form</h1><br>
                 </center>
 
                 <center>
-                <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
-                <label for="fname">First name:</label>
-                <input type="text" placeholder="Enter First Name" name="fname" required><br>
-                <label for="lname">Last name:</label>
-                <input type="text" placeholder="Enter Last Name" name="lname" required><br><br>
+                <form action="" method="POST" onsubmit="return checkPassword()">
                 
+                	<label for="fname">Company Name:</label><br>
+                	<input type="text" placeholder="Enter Company Name" name="fname" class = "text" required><br><br>
                 
+                	<label for="lname">Branch:</label><br>
+                	<input type="text" placeholder="Enter Branch" name="lname" class = "text" required><br><br>
+
+                	<label for="lname">Contact Number:</label><br> 
+                	<input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="+94712345678" class = "text" required><br/><br>
                 
-                Role : 
-                <input type="text" name="role"placeholder="Enter Role" required><br/><br>
+                	<label for="username">Username:</label><br>
+                	<input type="text" placeholder="Username" name="uname" pattern="{5,15}" class = "text" required><br><br>
                 
+                	<label for="lname">Enter Password:</label><br>
+                	<input type="password" name="pwd" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Enter Password" class = "text" required ><br/><br>
                 
+                	<label for="lname">Re-Enter Password:</label><br>
+                	<input type="password" name="cnfrmpwd" id="cnfrmpwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Re-Enter Password" class = "text" required><br/><br>
                 
-                Salary : 
-                <input type="number" name="salary" placeholder="Enter Salary" required><br/><br>
-                
-                
-                
-                <label for="username">Username:</label>
-                <input type="text" placeholder="Username" name="uname" pattern="{5,15}"required><br><br>
-                
-                
-                
-                Password :
-                <input type="password" name="pwd" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" required><br/>
-                Re-Enter Password : 
-                <input type="password" name="cnfrmpwd" id="cnfrmpwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" required><br/><br/>
-                
-                
-                
-                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">Accept Privacy Policy and Terms.<br/>
+                	<input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()"> &nbspI accept the Terms And Conditions.<br/><br>
                 
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="Register" disabled >
+               		<input type="submit" id="submitBtn" value="Register" disabled >
                 </center>
+                
                 </form>
+                
+                </div>
 
 		<br>
-		
+		</div>
 	 <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
@@ -135,6 +133,5 @@
           </tr>
         </table>
       </footer>
-      
 </body>
 </html>

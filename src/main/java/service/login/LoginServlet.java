@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
 				List<Employee> empDetails = EmployeeDBUtil.getEmployee(username);
 				request.setAttribute("empDetails", empDetails);
 				
-				RequestDispatcher dis = request.getRequestDispatcher("employeeaccount.jsp");
+				RequestDispatcher dis = request.getRequestDispatcher("empDash.jsp");
 				dis.forward(request, response);
 			} else {
 				out.println("<script type='text/javascript'>");
@@ -77,7 +77,7 @@ public class LoginServlet extends HttpServlet {
 				List<Customer> cusDetails = CustomerDBUtil.getCustomer(username);
 				request.setAttribute("cusDetails", cusDetails);
 				
-				RequestDispatcher dis = request.getRequestDispatcher("customeraccount.jsp");
+				RequestDispatcher dis = request.getRequestDispatcher("cusDash.jsp.jsp");
 				dis.forward(request, response);
 			} else {
 				out.println("<script type='text/javascript'>");

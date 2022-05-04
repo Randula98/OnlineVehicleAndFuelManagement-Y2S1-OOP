@@ -1,0 +1,60 @@
+@charset "ISO-8859-1";
+
+body{
+	background: linear-gradient(270deg, #d8e60f, #b2b950, #838a1d);
+}
+
+.regform{
+	width:600px;
+	height:800px;
+	margin:0px auto;
+	font-family: Monospace;
+	background-color: #acb16d60;
+	border-radius:50px;
+	transition:1s;
+}
+
+.regform:hover{
+	border-radius:80px;
+}
+
+.regform label{
+	font-size: 18px;
+}
+
+.regform input.text , .regform select{
+	width : 180px;
+	height : 30px;
+	text-align: center;
+	border:0px;
+	background-color: #a4ad24;
+	color:white;
+	border-radius:10px;
+	transition:0.5s;
+}
+
+.regform input.text:hover , .regform select:hover{
+	background-color: beige;
+	color:black;
+}
+
+ .regform input.text:focus , .regform select:focus {
+	background-color: beige;
+	color:black;	
+ }
+
+#submitBtn{
+	width:100px;
+	height:40px;
+	border-radius:10px;
+	border:0px;
+	transition:0.75s;
+	color:#95943a;
+	background-color:white;
+}
+
+#submitBtn:hover{
+	cursor:ponter;
+	color:black;
+	background-color:gold;
+}

@@ -3,13 +3,16 @@
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
-	<title>eZVehiCare</title>
+	<title>Employee Registration | eZ VehiCare Service and Filling Station</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
   	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" type="text/css" href="css/promo.css">
   	<link rel="stylesheet" type="text/css" href="css/sd.css">
   	<link rel="stylesheet" type="text/css" href="css/home.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" type="text/css" href="css/regform.css">
+  	
+  	<script type="text/javascript" src = "js/regScript.js"></script>
 </head>
 <body>
   <div class="container">
@@ -20,7 +23,7 @@
   		<nav class="top">
   			<ul>
   				<li><a href="index.php">Home</a></li>
-  				<li><a href="logout.php">Logout</a></li>
+  				<li><a href="login.jsp">Login</a></li>
   				<li><a href="sellerRequestForm.php">Become a seller</a></li>
   				<li><a href="contactUs.php">Help</a></li>
   				<li><a href="cart.php">My Cart</a></li>
@@ -45,53 +48,58 @@
 		      <hr class="new1">
 
             <!--Form begins from here-->
-
+			<br>
+            <div class = "regform emp" style = "height:600px">
             <center>
-                <h2> Registration Form</h2> <!-- reffered from labsheets-->
+                <h1>Employee Registration Form</h1><br>
                 </center>
 
                 <center>
-                <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
-                <label for="fname">First name:</label>
-                <input type="text" placeholder="Enter First Name" name="fname" required><br>
-                <label for="lname">Last name:</label>
-                <input type="text" placeholder="Enter Last Name" name="lname" required><br><br>
+                <form action="" method="POST" onsubmit="return checkPassword()">
                 
+                <label for="fname">First name:</label><br>
+                <input type="text" placeholder="Enter First Name" name="fname" class = "text" required><br><br>
                 
+                <label for="lname">Last name:</label><br>
+                <input type="text" placeholder="Enter Last Name" name="lname" class = "text" required><br><br>
                 
-                Mobile number : 
-                <input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="0712345678" required><br/><br>
+                <label for="lname">Role:</label><br>
+                <select name="role" id="role" required>
+            		<option value="">Select...</option>
+            		<option value="admin">System Admin</option>
+            		<option value="supervior">Supervisor</option>
+            		<option value="admin">System Admin</option>
+            		<option value="mechanic">Mechanic</option>
+            		<option value="assistant_mechanic">Assistant Mechanic</option>
+            		<option value="car_detailer">Car Detailer</option>
+            		<option value="recieption">Recipetion</option>
+        		</select><br/><br>
+               
+                <label for="lname">Salary:</label><br>
+                <input type="number" name="salary" placeholder="Enter Salary" class = "text" required><br/><br>
                 
+                <label for="username">Username:</label><br>
+                <input type="text" placeholder="Username" name="uname" pattern="{5,15}" class = "text" required><br><br>
                 
+                <label for="lname">Enter Password:</label><br>
+                <input type="password" name="pwd" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Enter Password" class = "text" required ><br/><br>
                 
-                Email Address : 
-                <input type="email" name="email" pattern="[a-z0-9.-+_%]+@[a-z0-9.-]+\.[a-z]{2,3} " placeholder="anonymous@Xmail.com" required><br/><br>
-                
-                
-                
-                <label for="username">Username:</label>
-                <input type="text" placeholder="Username" name="uname" pattern="{5,15}"required><br><br>
-                
-                
-                
-                Password :
-                <input type="password" name="pwd" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" required><br/>
-                Re-Enter Password : 
-                <input type="password" name="cnfrmpwd" id="cnfrmpwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" required><br/><br/>
-                
-                
-                
-                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">Accept Privacy Policy and Terms.<br/>
+                <label for="lname">Re-Enter Password:</label><br>
+                <input type="password" name="cnfrmpwd" id="cnfrmpwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Re-Enter Password"  class = "text" required><br/><br>
+                       
+                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()"> &nbspI accept the Terms And Conditions.<br/><br>
                 
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="SignUp" disabled >
+                <input type="submit" id="submitBtn" value="Register" disabled >
                 </center>
                 </form>
+                
+                </div>
 
 		<br>
-		
+		</div>
 	 <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">

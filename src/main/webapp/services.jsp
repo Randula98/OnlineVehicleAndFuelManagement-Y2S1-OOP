@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Services</title>
+<title>Services | eZ VehiCare Service and Filling Station</title>
 </head>
 <body>
 <div><center>

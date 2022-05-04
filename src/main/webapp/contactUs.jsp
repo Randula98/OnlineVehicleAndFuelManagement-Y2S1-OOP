@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>eZ Vehi Care - Contact Us</title>
 </head>
 <body>
  <div><center>
@@ -13,7 +13,7 @@
         </div>
         <div>
             <center>
-            <h1> Vehi Care Service And Filling Station</h1>
+            <h1>eZVehi Care Service And Filling Station</h1>
             <p>We Care For Your Vehicle As Our Own</p>
             </center>
         </div>

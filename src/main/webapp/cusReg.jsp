@@ -3,13 +3,16 @@
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
-	<title>Fuel Reservation Form | eZ Vehicare Service</title>
+	<title>Customer Registration | eZ VehiCare Service and Filling Station</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
-  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/promo.css">
-  <link rel="stylesheet" type="text/css" href="css/sd.css">
-  <link rel="stylesheet" type="text/css" href="css/home.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/promo.css">
+  	<link rel="stylesheet" type="text/css" href="css/sd.css">
+  	<link rel="stylesheet" type="text/css" href="css/home.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	<link rel="stylesheet" type="text/css" href="css/regform.css">
+  	
+  	<script type="text/javascript" src = "js/regScript.js"></script>
 </head>
 <body>
   <div class="container">
@@ -20,7 +23,7 @@
   		<nav class="top">
   			<ul>
   				<li><a href="index.php">Home</a></li>
-  				<li><a href="logout.php">Logout</a></li>
+  				<li><a href="login.jsp">Login</a></li>
   				<li><a href="sellerRequestForm.php">Become a seller</a></li>
   				<li><a href="contactUs.php">Help</a></li>
   				<li><a href="cart.php">My Cart</a></li>
@@ -44,60 +47,50 @@
 		      </div></div>
 		      <hr class="new1">
 
-            <!-- Form starts here-->
+            <!--Form begins from here-->
+			<br>
+            <div class = "regform cus"  style = "height:600px">
             <center>
-                <h2> Registration Form</h2> <!-- reffered from labsheets-->
-            </center>
-            <center>
-                <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
-                <label for="vehicleNo">Vehicle Number</label>
-                <input type="text" placeholder="Enter Vehicle Number" name="vehicleNo" required><br><br>
-                <label for="Fueltype">Select Fuel Type</label>
-                <select name="fueltype" id="fueltype">
-                    <option value="Octane92">Octane 92</option>
-                    <option value="Octane95">Octane 95</option>
-                    <option value="superdiesel">Super Diesel</option>
-                    <option value="autodiesel">Auto Diesel</option>
-                    <option value="kerosene">Kerosene</option>
-                  </select>
-                <br><br>
-                <label for="vehicletype">Select Vehicle Type</label>
-                <select name="vehicleType" id="vehicleType">
-                    <option value="Car">Car</option>
-                    <option value="SUV">SUV</option>
-                    <option value="Van">Van</option>
-                    <option value="Bike">Bike</option>
-                    <option value="Lorry">Lorry</option>
-                    <option value="Tuk">Tuk Tuk</option>
-                    <option value="Jeep">Jeep</option>
-                    <option value="LV">Long Vehicle</option>
-                  </select>
-                <br><br>
-
-
-                
-                <label for="Amount">Amount</label>:
-                <input type="number"> Litres <br><br>
-                
-                
-                
-                Date Of Collection : <br/>
-                <input type="date" name="cod" required><br/><br>
-                
-                
-                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">I have Read the conditions and I Accept Privacy Policy and Terms.<br/>
+                <h1>Customer Registration Form</h1><br>
                 </center>
+
+                <center>
+                <form action="" method="POST" onsubmit="return checkPassword()">
                 
+                <label for="fname">First name:</label><br>
+                <input type="text" placeholder="Enter First Name" name="fname" class = "text" required><br><br>
+                
+                <label for="lname">Last name:</label><br>
+                <input type="text" placeholder="Enter Last Name" name="lname" class = "text" required><br><br>
+                
+                <label for="lname">Mobile Number:</label><br>
+                <input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="+94712345678" class = "text" required><br/><br>
+                
+                <label for="lname">Email Address:</label><br>
+                <input type="email" name="email" pattern="[a-z0-9.-+_%]+@[a-z0-9.-]+\.[a-z]{2,3} " placeholder="anonymous@Xmail.com" class = "text" required><br/><br>
+                
+                <label for="username">Username:</label><br>
+                <input type="text" placeholder="Username" name="uname" pattern="{5,15}" class = "text" required><br><br>
+                
+                <label for="lname">Enter Password:</label><br>
+                <input type="password" name="pwd" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Enter Password" class = "text" required ><br/><br>
+                
+                <label for="lname">Re-Enter Password:</label><br>
+                <input type="password" name="cnfrmpwd" id="cnfrmpwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Re-Enter Password" class = "text" required><br/><br>
+                
+                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()"> &nbspI accept the Terms And Conditions.<br/><br>
+                
+                </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" disabled >
+                <input type="submit" id="submitBtn" value="Register" disabled >
                 </center>
                 </form>
-    
-         
+            </div>
 
 		<br>
 		
+		</div>
 	 <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
@@ -141,7 +134,6 @@
           </tr>
         </table>
       </footer>
-  </div>  
       
 </body>
 </html>

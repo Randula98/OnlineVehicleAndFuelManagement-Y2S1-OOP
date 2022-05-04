@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Fuck Me</title>
+<title>Employee Dashboard</title>
 </head>
 <body>
-	<h1>Big Titties</h1>
+	<h1>Employee Dashboard</h1>
 	
 	<c:forEach var="emp" items="${empDetails}">
 	
