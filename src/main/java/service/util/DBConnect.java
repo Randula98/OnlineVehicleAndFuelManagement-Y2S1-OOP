@@ -8,6 +8,7 @@ public class DBConnect {
 	private static String url = "jdbc:mysql://localhost:3306/ezvehicare";
 	private static String username = "root";
 	private static String password = "psg88";
+
 	private static Connection conn;
 
 	public static Connection getConnection() {
