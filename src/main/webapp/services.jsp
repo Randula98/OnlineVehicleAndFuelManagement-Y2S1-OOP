@@ -2,33 +2,47 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Services | eZ VehiCare Service and Filling Station</title>
+	<meta charset="utf-8">
+	<title>Our Services | eZ Vehicare Service</title>
+	<link rel="stylesheet" type="text/css" href="Styles/style.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/promo.css">
+  <link rel="stylesheet" type="text/css" href="css/sd.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<div><center>
-            <a href="index.jsp"><img src="images/index/logo.png" alt="logo" height="125"></a>
-            </center>
-        </div>
-        <div>
-            <center>
-            <h1>eZ Vehi Care Service And Filling Station</h1>
-            <p>We Care For Your Vehicle As Our Own</p>
-            </center>
-        </div>
-        <hr>
-        <div>
-            <table>
-                <tr>
-                    <td><a href = "#"><button>Our Services</button></a></td>
-                	<td><a href = "#"><button>Make Appointment</button></a></td>
-                	<td><a href = "#"><button>Reserve Fuel</button></a></td>
-                	<td><a href = "contactUs.jsp"><button>Contact Us</button></a></td>
-                	<td><a href = "login.jsp"><button>Log In</button></a></td>
-                	</tr>
-            </table >
-        </div>
+  <div class="container">
+  	<div class="navbar">
+  	  <div class="logo">
+  	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
+        <h1 class="topic" align="center">eZ Vehi Care</h1>
+  		<nav class="top">
+  			<ul>
+  				<li><a href="index.php">Home</a></li>
+  				<li><a href="logout.php">Logout</a></li>
+  				<li><a href="sellerRequestForm.php">Become a seller</a></li>
+  				<li><a href="contactUs.php">Help</a></li>
+  				<li><a href="cart.php">My Cart</a></li>
+  			</ul><br>
+      
+  			  <form method="GET" action="/action_page.php">
+     		    <input  class="navigation" type="text" placeholder="Search.." name="search" >
+      		  <button class="navigation" type="submit"><i class="fa fa-search"></i></button>
+    		  </form>
+  		</nav>
+  	  </div>
+  	      <div align="center">		
+			        <button class="category" id="services" ><a href="services.jsp">Our Services</a></button>
+			        <button class="category" id="book" ><a href="makebook.jsp">Book Services</a></button>
+			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
+			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
+		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
+		        	
+
+			        <br>
+		      </div></div>
+		      <hr class="new1">
         <hr>
         <table>
             <tr>
@@ -73,7 +87,7 @@
             </tr>
             <tr>
                 <td>
-                    <button>Make A Booking</button>
+                    <button><a href="makebook.jsp">Make A Booking</a></button>
                 </td>
             </tr>
         </table>
@@ -106,7 +120,7 @@
             </tr>
             <tr>
                 <td>
-                    <button>Make A Booking</button>
+                    <button><a href="makebook.jsp">Make A Booking</a></button>
                 </td>
             </tr>
         </table>
@@ -128,7 +142,7 @@
             </tr>
             <tr>
                 <td>
-                    <button>Make A Booking</button>
+                    <button><a href="makebook.jsp">Make A Booking</a></button>
                 </td>
             </tr>
         </table>
@@ -144,7 +158,7 @@
             </tr>
             <tr>
                 <td>
-                    <button>Make A Booking</button>
+                    <button><a href="makebook.jsp">Make A Booking</a></button>
                 </td>
             </tr>
         </table>
