@@ -17,6 +17,8 @@ import com.customer.CustomerDBUtil;
 
 import com.employee.Employee;
 import com.employee.EmployeeDBUtil;
+import com.supplier.Supplier;
+import com.supplier.SupplierDBUtil;
 /**
  * Servlet implementation class LoginServlet
  */
@@ -98,10 +100,23 @@ public class LoginServlet extends HttpServlet {
 		}
 		else if(supplier != null)
 		{
-			out.println("<script type='text/javascript'>");
-			out.println("alert('Supplier');");
-			out.println("location='login.jsp'");
-			out.println("</script>");
+			isTrue = SupplierDBUtil.validate(username, password);
+			
+			if(isTrue == true) {
+				List<Supplier> supDetails = SupplierDBUtil.getSupplier(username);
+				request.setAttribute("supDetails", supDetails);
+				
+				session.setAttribute("supName", username);
+				
+				RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
+				dis.forward(request, response);
+			}
+			else {
+				out.println("<script type='text/javascript'>");
+				out.println("alert('Login failed');");
+				out.println("location='login.jsp'");
+				out.println("</script>");
+			}
 		}
 	}
 }
