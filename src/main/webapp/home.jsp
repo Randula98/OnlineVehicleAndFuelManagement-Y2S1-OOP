@@ -29,7 +29,7 @@
   				%><li><a href="logout.jsp">Log Out</a></li><% 
   						} 
   				%> <!-- if session -->
-  				<li><a href="sellerRequestForm.php">Sign Up</a></li>
+  				<li><a href="regselection.jsp">Sign Up</a></li>
   				<li><a href="contactUs.php">Help</a></li>
   				<li><a href="cart.php">My Cart</a></li>
   			</ul><br>
