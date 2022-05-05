@@ -158,7 +158,7 @@
             </tr>
             <tr>
                 <td>
-                    <button>Make A Booking</button>
+                    <button><a href="makebook.jsp">Make A Booking</a></button>
                 </td>
             </tr>
         </table>
