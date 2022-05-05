@@ -43,7 +43,7 @@
                 <h1>Login</h1><br>
                 <form action = "login" method = "POST">
                     <input type="text" name = "username" placeholder = "Username" class = "text"><br><br>
-                    <input type="text" name = "password" placeholder = "Password" class = "text"><br><br>
+                    <input type="password" name = "password" placeholder = "Password" class = "text"><br><br>
                     <input type="submit" value="Login as Customer" name = "customer" class = "button">
                     <input type="submit" value="Login as Supplier" name = "supplier" class = "button">
                     <input type="submit" value="Login as Employee" name = "employee" class = "button">
