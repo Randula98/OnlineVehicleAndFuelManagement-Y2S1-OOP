@@ -111,9 +111,6 @@ public class LoginServlet extends HttpServlet {
 				dis.forward(request, response);
 			}
 			else {
-				System.out.println(username);
-				System.out.println(password);
-				System.out.println(isTrue);
 				out.println("<script type='text/javascript'>");
 				out.println("alert('Login no');");
 				out.println("location='login.jsp'");
