@@ -22,10 +22,14 @@
   				<li><a href="index.php">Home</a></li>
   				<!-- if no session -->
   				<%
-  				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null)) {%><li><a href="login.jsp">Log In</a></li><% } 
-  				else {%><li><a href="logout.jsp">Log Out</a></li><% } 
+  				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null) && (session.getAttribute("supName")== null)) {
+  				%><li><a href="login.jsp">Log In</a></li><% 
+  						} 
+  				else {
+  				%><li><a href="logout.jsp">Log Out</a></li><% 
+  						} 
   				%> <!-- if session -->
-  				<li><a href="sellerRequestForm.php">Sign In</a></li>
+  				<li><a href="sellerRequestForm.php">Sign Up</a></li>
   				<li><a href="contactUs.php">Help</a></li>
   				<li><a href="cart.php">My Cart</a></li>
   			</ul><br>
