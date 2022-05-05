@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.customer.Customer;
 import com.customer.CustomerDBUtil;
@@ -40,6 +41,8 @@ public class LoginServlet extends HttpServlet {
 		employee = request.getParameter("employee");
 		customer = request.getParameter("customer");
 		supplier = request.getParameter("supplier");
+		
+		HttpSession session = request.getSession(true);
 		
 		
 		PrintWriter out = response.getWriter();
@@ -77,7 +80,10 @@ public class LoginServlet extends HttpServlet {
 				List<Customer> cusDetails = CustomerDBUtil.getCustomer(username);
 				request.setAttribute("cusDetails", cusDetails);
 				
-				RequestDispatcher dis = request.getRequestDispatcher("cusDash.jsp.jsp");
+				session.setAttribute("Susername", username);
+				
+				
+				RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
 				dis.forward(request, response);
 			} else {
 				out.println("<script type='text/javascript'>");

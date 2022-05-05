@@ -24,7 +24,6 @@
                 <nav class="top">
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="logout.php">Logout</a></li>
                         <li><a href="sellerRequestForm.php">Become a seller</a></li>
                         <li><a href="contactUs.php">Help</a></li>
                         <li><a href="cart.php">My Cart</a></li>
