@@ -100,8 +100,11 @@ public class LoginServlet extends HttpServlet {
 		}
 		else if(supplier != null)
 		{
+			System.out.println(username);
+			System.out.println(password);
+			System.out.println(isTrue);
 			isTrue = SupplierDBUtil.validate(username, password);
-			
+			System.out.println(isTrue);
 			if(isTrue == true) {
 				List<Supplier> supDetails = SupplierDBUtil.getSupplier(username);
 				request.setAttribute("supDetails", supDetails);
@@ -112,8 +115,11 @@ public class LoginServlet extends HttpServlet {
 				dis.forward(request, response);
 			}
 			else {
+				System.out.println(username);
+				System.out.println(password);
+				System.out.println(isTrue);
 				out.println("<script type='text/javascript'>");
-				out.println("alert('Login failed');");
+				out.println("alert('Login no');");
 				out.println("location='login.jsp'");
 				out.println("</script>");
 			}
