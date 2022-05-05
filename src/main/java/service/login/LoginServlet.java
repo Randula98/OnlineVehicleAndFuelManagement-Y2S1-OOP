@@ -62,7 +62,11 @@ public class LoginServlet extends HttpServlet {
 				List<Employee> empDetails = EmployeeDBUtil.getEmployee(username);
 				request.setAttribute("empDetails", empDetails);
 				
-				RequestDispatcher dis = request.getRequestDispatcher("empDash.jsp");
+				//Must Ask how its being done
+				
+				session.setAttribute("Empname", username);
+				
+				RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
 				dis.forward(request, response);
 			} else {
 				out.println("<script type='text/javascript'>");

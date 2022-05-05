@@ -22,7 +22,7 @@
   				<li><a href="index.php">Home</a></li>
   				<!-- if no session -->
   				<%
-  				if(session.getAttribute("Susername") == null) {%><li><a href="login.jsp">Log In</a></li><% } 
+  				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null)) {%><li><a href="login.jsp">Log In</a></li><% } 
   				else {%><li><a href="logout.jsp">Log Out</a></li><% } 
   				%> <!-- if session -->
   				<li><a href="sellerRequestForm.php">Become a seller</a></li>
