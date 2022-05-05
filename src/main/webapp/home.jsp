@@ -41,7 +41,7 @@
   		</nav>
   	  </div>
   	      <div align="center">		
-			        <button class="category" id="services" onclick="window.location.href=">Our Services</button>
+			        <button class="category" id="services" ><a href="services.jsp">Our Services</a></button>
 			        <button class="category" id="book" onclick="window.location.href=">Book Services</button>
 			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
 			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
