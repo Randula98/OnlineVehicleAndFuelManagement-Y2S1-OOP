@@ -68,7 +68,6 @@
             		<option value="">Select...</option>
             		<option value="admin">System Admin</option>
             		<option value="supervior">Supervisor</option>
-            		<option value="admin">System Admin</option>
             		<option value="mechanic">Mechanic</option>
             		<option value="assistant_mechanic">Assistant Mechanic</option>
             		<option value="car_detailer">Car Detailer</option>

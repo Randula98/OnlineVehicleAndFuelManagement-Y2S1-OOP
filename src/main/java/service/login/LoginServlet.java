@@ -68,12 +68,12 @@ public class LoginServlet extends HttpServlet {
 				
 				session.setAttribute("Empname", username);
 				
-				RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
+				RequestDispatcher dis = request.getRequestDispatcher("empDash.jsp");
 				dis.forward(request, response);
 			} else {
 				out.println("<script type='text/javascript'>");
 				out.println("alert('Your username or password is incorrect');");
-				out.println("location='index.jsp'");
+				out.println("location='login.jsp'");
 				out.println("</script>");
 			
 			}
@@ -89,29 +89,25 @@ public class LoginServlet extends HttpServlet {
 				session.setAttribute("Susername", username);
 				
 				
-				RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
+				RequestDispatcher dis = request.getRequestDispatcher("cusDash.jsp");
 				dis.forward(request, response);
 			} else {
 				out.println("<script type='text/javascript'>");
 				out.println("alert('Your username or password is incorrect');");
-				out.println("location='index.jsp'");
+				out.println("location='login.jsp'");
 				out.println("</script>");
 			}
 		}
 		else if(supplier != null)
 		{
-			System.out.println(username);
-			System.out.println(password);
-			System.out.println(isTrue);
 			isTrue = SupplierDBUtil.validate(username, password);
 			if(isTrue == true) {
-				System.out.println(isTrue);
 				List<Supplier> supDetails = SupplierDBUtil.getSupplier(username);
 				request.setAttribute("supDetails", supDetails);
 				
 				session.setAttribute("supName", username);
 				
-				RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
+				RequestDispatcher dis = request.getRequestDispatcher("supDash.jsp");
 				dis.forward(request, response);
 			}
 			else {

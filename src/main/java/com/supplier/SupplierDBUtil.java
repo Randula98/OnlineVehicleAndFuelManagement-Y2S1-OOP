@@ -21,7 +21,7 @@ public class SupplierDBUtil {
 	  try {
 		conn = DBConnect.getConnection();
 		state = conn.createStatement();
-		String sql = "select * from supplier where username = '" + username + "' and password = '" + password + "'";
+		String sql = "select * from supplier where userName = '" + username + "' and password = '" + password + "'";
 		rs = state.executeQuery(sql);
 		
 		if(rs.next()) {
@@ -42,7 +42,7 @@ public class SupplierDBUtil {
 	  try {
 		  conn = DBConnect.getConnection();
 		  state = conn.createStatement();
-		  String sql = "select * from supplier where username = '" + username + "'";
+		  String sql = "select * from supplier where userName = '" + username + "'";
 	      rs = state.executeQuery(sql);
 	      
 	      while(rs.next()) {
