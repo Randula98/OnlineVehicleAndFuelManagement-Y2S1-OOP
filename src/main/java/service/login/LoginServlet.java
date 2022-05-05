@@ -100,8 +100,12 @@ public class LoginServlet extends HttpServlet {
 		}
 		else if(supplier != null)
 		{
+			System.out.println(username);
+			System.out.println(password);
+			System.out.println(isTrue);
 			isTrue = SupplierDBUtil.validate(username, password);
 			if(isTrue == true) {
+				System.out.println(isTrue);
 				List<Supplier> supDetails = SupplierDBUtil.getSupplier(username);
 				request.setAttribute("supDetails", supDetails);
 				
