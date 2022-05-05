@@ -15,7 +15,7 @@
   <div class="container">
   	<div class="navbar">
   	  <div class="logo">
-  	  	<center><a href="index.php"><img src="images/index/logo.png" width="250px"></a></center>
+  	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
         <h1 class="topic" align="center">eZ Vehi Care</h1>
   		<nav class="top">
   			<ul>
@@ -42,7 +42,7 @@
   	  </div>
   	      <div align="center">		
 			        <button class="category" id="services" ><a href="services.jsp">Our Services</a></button>
-			        <button class="category" id="book" onclick="window.location.href=">Book Services</button>
+			        <button class="category" id="book" ><a href="makebook.jsp">Book Services</a></button>
 			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
 			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
 		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
