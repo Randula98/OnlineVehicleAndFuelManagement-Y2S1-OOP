@@ -82,8 +82,7 @@
   						} 
   				%> <!-- if session -->
   				<li><a href="regselection.jsp">Sign Up</a></li>
-  				<li><a href="contactUs.php">Help</a></li>
-  				<li><a href="cart.php">My Cart</a></li>
+  				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
   			  <form method="GET" action="/action_page.php">
@@ -93,11 +92,11 @@
   		</nav>
   	  </div>
   	      <div align="center">		
-			        <button class="category" id="services" ><a href="services.jsp">Our Services</a></button>
-			        <button class="category" id="book" ><a href="makebook.jsp">Book Services</a></button>
-			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
-			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
-		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
+			        <button class="category" id="services" onclick="window.location.href='services.jsp'">Our Services</button>
+			        <button class="category" id="book" onclick="window.location.href='makebook.jsp'">Book Services</button>
+			        <button class="category" id="fuel" onclick="window.location.href='fuel.jsp'">Reserve Fuel</button>
+			        <button class="category" id="spare" onclick="window.location.href='spare.jsp'">Spare Parts</button>
+		        	<button class="category" id="oil" onclick="window.location.href='oil.jsp'">Oil</button>
 		        	
 
 			        <br>
