@@ -170,11 +170,11 @@
             </p>
             <table >
             <tr>
-            <td>Vehicle Number</td>
-            <td>Fuel Amount(Litres)</td>
-            <td>Fuel Type</td>
-            <td>Reservation Date</td>
-            <td>Vehicle Type</td>
+            <td><b>Vehicle Number</b></td>
+            <td><b>Fuel Amount(Litres)</b></td>
+            <td><b>Fuel Type</b></td>
+            <td><b>Reservation Date</b></td>
+            <td><b>Vehicle Type</b></td>
             </tr>
             
             <%
@@ -192,7 +192,6 @@
             </table>
         </div>
 
-	
 	
 	
 	<footer>
