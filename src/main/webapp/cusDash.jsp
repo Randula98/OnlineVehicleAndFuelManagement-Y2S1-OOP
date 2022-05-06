@@ -27,10 +27,12 @@
 	Statement state2 = null;
 	Statement state3 = null;
 	Statement state4 = null;
+	Statement state5 = null;
 	ResultSet rs = null;
 	ResultSet ls = null;
 	ResultSet zs = null;
 	ResultSet as = null;
+	ResultSet fs = null;
 	
 	try{
 		conn = DBConnect.getConnection();   //made connection
@@ -38,6 +40,7 @@
 		state2 =conn.createStatement();
 		state3 =conn.createStatement(); 
 		state4 =conn.createStatement();  //gave connection for statements
+		state5 =conn.createStatement();
 		
 		String sql = "select * from customer where username = '" + cusUserName + "'";
 		String sql2= "select count(*)  from customer";  // sql statemnets
@@ -50,11 +53,12 @@
 		
 		String sql3= "select count(itemID) from customer_item where cusID = '"+rs.getInt(1)+"'";  // sql statemnets
 		String sql4= "select * from appointment where cusID = '"+rs.getInt(1)+"'";
+		String sql5= "select * from fuel_reservations where customerID ='"+rs.getInt(1)+"'";
 		
 		zs = state3.executeQuery(sql3); // executed statements
 		zs.next();
 		as = state4.executeQuery(sql4);
-		as.next();
+		fs = state5.executeQuery(sql5); // executed statements
 		
 		}
 	catch(Exception e){
@@ -82,8 +86,7 @@
   						} 
   				%> <!-- if session -->
   				<li><a href="regselection.jsp">Sign Up</a></li>
-  				<li><a href="contactUs.php">Help</a></li>
-  				<li><a href="cart.php">My Cart</a></li>
+  				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
   			  <form method="GET" action="/action_page.php">
@@ -93,16 +96,18 @@
   		</nav>
   	  </div>
   	      <div align="center">		
-			        <button class="category" id="services" ><a href="services.jsp">Our Services</a></button>
-			        <button class="category" id="book" ><a href="makebook.jsp">Book Services</a></button>
-			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
-			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
-		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
+			        <button class="category" id="services" onclick="window.location.href='services.jsp'">Our Services</button>
+			        <button class="category" id="book" onclick="window.location.href='makebook.jsp'">Book Services</button>
+			        <button class="category" id="fuel" onclick="window.location.href='fuel.jsp'">Reserve Fuel</button>
+			        <button class="category" id="spare" onclick="window.location.href='spare.jsp'">Spare Parts</button>
+		        	<button class="category" id="oil" onclick="window.location.href='oil.jsp'">Oil</button>
 		        	
 
 			        <br>
 		      </div>
-		      Welcome Back <%out.print(rs.getString(2));%>
+		     <b>
+		      <label style="font-size:20px">Welcome Back <%out.print(rs.getString(2));%> !!!</label>
+		      </b>
 		</div>	
 	</div>
 	
@@ -137,8 +142,23 @@
                 Service Appointments
             </h3>
             <p>
-                hudheudheudhudheud
+            	You have the Below mentioned Appointments with our Service <br>
             </p>
+            	<table>
+            	<tr>
+            	<td><b>Service Type</b></td>
+            	<td><b>Date</b></td>
+            	</tr>
+                <%
+             		while(as.next()){%>
+             			<tr>
+             			
+             			<td><%out.print(as.getString(2)); %></td> 
+             			<td><%out.print(as.getDate(3)); %></td> 
+             			</tr><%
+             		}%>
+                </table>
+            
         </div>
 
         <div>
@@ -146,20 +166,40 @@
                 Fuel Reservations
             </h3>
             <p>
-                Randulage lamaya ch**d***
+                You have the Below mentioned Fuel Reservations in our Filling Station<br>
             </p>
+            <table >
+            <tr>
+            <td><b>Vehicle Number</b></td>
+            <td><b>Fuel Amount(Litres)</b></td>
+            <td><b>Fuel Type</b></td>
+            <td><b>Reservation Date</b></td>
+            <td><b>Vehicle Type</b></td>
+            </tr>
+            
+            <%
+            	while(fs.next()){
+            %><tr>
+            	<td><% out.print(fs.getString(4)); %></td>
+            	<td><% out.print(fs.getInt(3)); %></td>
+            	<td><% out.print(fs.getString(2)); %></td>
+            	<td><% out.print(fs.getDate(5)); %></td>
+            	<td><% out.print(fs.getString(6)); %></td>
+            	<%
+            	}
+            	%>
+            	</tr>
+            </table>
         </div>
 
-	
 	
 	
 	<footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
-  				<li><a href="index.php">Home</a></li>
-  				<li><a href="promotions.php">Promotions</a></li>
-  				<li><a href="aboutUs.php">About Us</a></li>
-  				<li><a href="contactUs.php">Contact Us</a></li>
+  				<li><a href="home.jsp">Home</a></li>
+  				<li><a href="about.jsp">About Us</a></li>
+  				<li><a href="contactUs.jsp">Contact Us</a></li>
   			</ul></nav>
       	<hr class="new1">
         <table class="t1" width="100%">

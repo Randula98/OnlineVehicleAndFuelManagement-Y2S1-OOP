@@ -3,3 +3,7 @@
 	width:100%;
 	height:1000px;
 }
+
+td,tr,th{
+	border:1px solid black;
+}
