@@ -111,7 +111,7 @@
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
   				<li><a href="home.jsp">Home</a></li>
-  				<li><a href="about.jsp">About Us</a></li>
+  				<li><a href="aboutjspp">About Us</a></li>
   				<li><a href="contactUs.jsp">Contact Us</a></li>
   			</ul></nav>
       	<hr class="new1">
