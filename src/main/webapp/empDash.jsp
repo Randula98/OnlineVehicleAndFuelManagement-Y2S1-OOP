@@ -82,17 +82,26 @@
 		      </div>
 		</div>
 		
-		
+		<br>
 		<div class = "dashboard">
-              <h1>||Employee's|| Dashboard</h1>
+              <h1><%out.print(rs.getString(2)); %>'s Dashboard</h1>
 
               <div class = "cards self-details"><!--own details-->
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
-                <p>text</p>
+                <p>Employee ID - <%out.print(rs.getInt(1));%> | <%out.print(rs.getString(7));%></p>
+                <p><%out.print(rs.getString(2));%> <%out.print(rs.getString(3));%></p>
+                <p><%out.print(rs.getString(4));%></p>
+                <p>
+                <% if(rs.getString(5).equals("admin")) out.print("System Administrator");
+                else if(rs.getString(5).equals("supervior")) out.print("Supervisor");
+                else if(rs.getString(5).equals("mechanic")) out.print("Mechanic");
+                else if(rs.getString(5).equals("assistant_mechanic")) out.print("Assistant Mechanic");
+                else if(rs.getString(5).equals("car_detailer")) out.print("Car Detailer");
+                else if(rs.getString(5).equals("recieption")) out.print("Recipetion");
+                %></p>
+                <p>Net Salary of - <%out.print(rs.getDouble(6));%></p>
+                
+                <img alt="" src="images/user.png">
+                
               </div>
 
               <div class = "cards site-details"><!--site details-->
