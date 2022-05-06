@@ -21,17 +21,33 @@
 <%
 	String cusUserName = session.getAttribute("Susername").toString();
 	
+	
 	Connection conn = null;
 	Statement state = null;
+	Statement state2 = null;
+	Statement state3 = null;
 	ResultSet rs = null;
+	ResultSet ls = null;
+	ResultSet zs = null;
 	
 	try{
 		conn = DBConnect.getConnection();
 		state = conn.createStatement();
+		state2 =conn.createStatement();
+		state3 =conn.createStatement();
 		String sql = "select * from customer where username = '" + cusUserName + "'";
+		String sql2= "select count(*)  from customer";
+		
 		rs = state.executeQuery(sql);
+		ls = state2.executeQuery(sql2);
+		ls.next();
 		rs.next();
-	}
+		
+		String sql3= "select count(itemID) from customer_item where cusID = '"+rs.getInt(1)+"'";
+		zs = state3.executeQuery(sql3);
+		zs.next();
+		
+		}
 	catch(Exception e){
 		e.printStackTrace();
 	}
@@ -77,13 +93,56 @@
 
 			        <br>
 		      </div>
-		</div>
-		
-		
-		
-		
-		
+		      Welcome Back <%out.print(rs.getString(2));%>
+		</div>	
 	</div>
+	
+	
+	
+	<div>
+            <div>
+                <h3>Customer Details</h3>
+                    <p>
+                        FirstName:  <%out.print(rs.getString(2));%><br>
+                        LastName: <%out.print(rs.getString(3));%><br>
+                        Contact Number: <%out.print(rs.getString(4));%><br>
+                        Email: <%out.print(rs.getString(5));%><br>
+                        UserName: <%out.print(rs.getString(6));%><br>
+
+                <button><a href="">Update Details </a></button>
+            </p>
+            </div>
+
+            <div>
+                <h3>Stats</h3>
+                <p>
+                    You are one of  <%out.print(ls.getInt(1));%> our customers <br>
+                    You Currently have <%out.print(zs.getInt(1)); %> orders <br>
+                </p>
+            </div>
+
+        </div>
+
+        <div>
+            <h3>
+                Service Appointments
+            </h3>
+            <p>
+                hudheudheudhudheud
+            </p>
+        </div>
+
+        <div>
+            <h3>
+                Fuel Reservations
+            </h3>
+            <p>
+                Randulage lamaya ch**d***
+            </p>
+        </div>
+
+	
+	
 	
 	<footer>
       	<hr class="new1"><nav class="foot">
