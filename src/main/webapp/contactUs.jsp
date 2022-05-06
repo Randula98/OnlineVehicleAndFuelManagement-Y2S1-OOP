@@ -177,5 +177,47 @@
             </table>
         </div>
         </div>
+        <footer>
+      	<hr class="new1"><nav class="foot">
+      	  <ul class="foot">
+  				<li><a href="home.jsp">Home</a></li>
+  				<li><a href="aboutjspp">About Us</a></li>
+  				<li><a href="contactUs.jsp">Contact Us</a></li>
+  			</ul></nav>
+      	<hr class="new1">
+        <table class="t1" width="100%">
+          <tr>
+            <th>Online Vehicle Service <br>and<br> Fuel Station Management System</th>
+            <th >Find Brands</th>
+            <th>More</th>
+          </tr>
+          <tr>
+            <td>
+              <li>Promotion</li>
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Category</li>
+            </td>
+            <td style="border-right: solid 1px grey; border-left: solid 1px grey;">
+              <div class="fut">
+             <li><a href="https://www.toyota.lk/">Toyota</a></li>
+             <li><a href="https://www.nissan-global.com/EN/">Nisan</a></li>
+             <li><a href="https://www.bmw.com/en/index.html">BMW</a></li>
+             <li><a href="https://www.mitsubishicars.com/">Mitsubishi</a></li>
+             <li><a href="https://cars.mclaren.com/en">McLaren</a></li>
+             <li><a href="https://www.mazda.com/">Mazda</a></li>
+             <li><a href="https://www.globalsuzuki.com/automobile/">Suzuki</a></li>
+             <li><a href="https://global.honda/">Honda</a></li>
+             <li><a href="https://www.carlogos.org/car-brands/">Other</a></li></div>
+            </td>
+            <td><center>
+              <a href=""><img src="images/youtube.png" alt="Youtube"></a>
+              <a href=""><img src="images/fb.png" alt="Facebook"></a><br><br>
+              <a href=""><img src="images/twitter.png" alt="Twitter"></a>
+              <a href=""><img src="images/whatsapp.png" alt="Whatsapp"></a></center>
+            </td>
+          </tr>
+        </table>
+      </footer>
 </body>
 </html>
