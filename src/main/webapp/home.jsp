@@ -4,7 +4,6 @@
 <html>
 	<meta charset="utf-8">
 	<title>eZVehiCare Service and Filling Station</title>
-	<link rel="stylesheet" type="text/css" href="Styles/style.css">
   	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" type="text/css" href="css/promo.css">
   	<link rel="stylesheet" type="text/css" href="css/sd.css">
@@ -41,10 +40,10 @@
   	  </div>
   	      <div align="center">		
 			        <button class="category" id="services" onclick="window.location.href='services.jsp'">Our Services</button>
-			        <button class="category" id="book" onclick="window.location.href='services.jsp'">Book Services</button>
-			        <button class="category" id="fuel" onclick="window.location.href='services.jsp'">Reserve Fuel</button>
-			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
-		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
+			        <button class="category" id="book" onclick="window.location.href='makebook.jsp'">Book Services</button>
+			        <button class="category" id="fuel" onclick="window.location.href='fuel.jsp'">Reserve Fuel</button>
+			        <button class="category" id="spare" onclick="window.location.href='spare.jsp'">Spare Parts</button>
+		        	<button class="category" id="oil" onclick="window.location.href='oil.jsp'">Oil</button>
 		        	
 
 			        <br>
@@ -144,7 +143,7 @@
 	 <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
-  				<li><a href="index.php">Home</a></li>
+  				<li><a href="home.jsp">Home</a></li>
   				<li><a href="promotions.php">Promotions</a></li>
   				<li><a href="aboutUs.php">About Us</a></li>
   				<li><a href="contactUs.php">Contact Us</a></li>
