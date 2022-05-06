@@ -6,7 +6,7 @@
 	<title>SignUp | eZ Vehicare Service</title>
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/promo.css">
+  <link rel="stylesheet" type="text/css" href="css/regSel.css">
   <link rel="stylesheet" type="text/css" href="css/sd.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -27,7 +27,7 @@
   				<li><a href="cart.php">My Cart</a></li>
   			</ul><br>
       
-  			  <form method="GET" action="/action_page.php">
+  			  <form method="GET" action="">
      		    <input  class="navigation" type="text" placeholder="Search.." name="search" >
       		  <button class="navigation" type="submit"><i class="fa fa-search"></i></button>
     		  </form>
@@ -43,49 +43,40 @@
 
 			        <br>
 		      </div></div>
-		      <hr class="new1">
+		      <hr class="new1">	  
 
             <!-- Form starts here-->
-            <div>
-                <div>
-                    <h2>
-                        SignUp As A Customer
-                    </h2>
-                    <p>
+            <div class="sel">
+               <table class="selection">
+                <th><h2>SignUp As A Customer</h2></th>
+                <th><h2>SignUp As A Employee</h2></th>
+                <th><h2>SignUp As A Supplier</h2></th>
+                <tr>
+                <td><p>
                         Join as a customer to our family and obtain all the priviledges that our service provide. You can get our highly recognized vehicle service by making an appointment through our system and save every minute of your valuable time, we know how valuable every minute of your time. Adjoining to that, we bid welcome to experience the first ever ONLINE FUEL RESERVATION, by this, you can reserve fuel allocated to you and collect them at the time of your preference. Not to forget you can also order spare parts through our system and have them installed by our highly qualified mechanics in our eZvehi care family.
-
-                    </p>
-                    <br>
-                    <img src="images/hand.jpg" alt="">
-                    <br><br>
-                    <button><a href="cusReg.jsp">Sign Up As Customer</a></button>
-                </div>
-                <div>
-                    <h2>
-                        SignUp As A Employee
-                    </h2>
-                    <p>
+                    <br></p></td>
+                <td><p>
                         Become a part of our eZvehi Care Family. Work in a stress free and Advanced work environment. Love every second that you work in here. And also stand a chance to obtain to get Emlpoyee-discounts by getting your jobs done through our service.
-
-                    </p>
-                    <br>
-                    <img src="images/emp.jpg" alt="">
-                    <br><br>
-                    <button><a href="empReg.jsp">Sign Up As Employee</a></button>
-                </div>
-                <div>
-                    <h2>
-                        SignUp As A Supplier
-                    </h2>
-                    <p>
+                    <br></p></td>
+                <td><p>
                         Become a proud subset of our supplying family. We value the high quality products that you have to offer to us. All it takes is to go through a quality checking done by our mechanics and your company is good to go. We are looking forward for a bright and wealthy journey ahead of us.
-
-                    </p>
-                    <br>
-                    <img src="images/supp.jpg" alt="">
+                    <br></p></td>  </tr>
+                <tr>
+                <td><br>
+                    <img src="images/hand.jpg" alt="" id="pic1">
                     <br><br>
-                    <button><a href="supReg.jsp">Sign Up As Supplier</a></button>
-                </div>
+                    <button class="category" onclick="window.location.href='cusReg.jsp'">Sign Up As Customer</button></td>
+                <td><br>
+                    <img src="images/emp.jpg" alt="" id="pic2">
+                    <br><br>
+                    <button class="category" onclick="window.location.href='empReg.jsp'">Sign Up As Employee</button></td>
+                <td><br>
+                    <img src="images/supp.jpg" alt="" id="pic3">
+                    <br><br>
+                    <button class="category" onclick="window.location.href='supReg.jsp'">Sign Up As Supplier</button></td>
+                </tr>      
+               </table> 
+                
             </div>
 
 		<br>
