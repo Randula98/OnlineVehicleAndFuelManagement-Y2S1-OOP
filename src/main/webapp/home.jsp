@@ -49,7 +49,8 @@
 		        	
 
 			        <br>
-		      </div></div>
+		      </div>
+		</div>
 		      <hr class="new1">
 
 
