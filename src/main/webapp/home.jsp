@@ -19,7 +19,7 @@
         <h1 class="topic" align="center">eZ Vehi Care</h1>
   		<nav class="top">
   			<ul>
-  				<li><a href="index.php">Home</a></li>
+  				<li><a href="home.jsp">Home</a></li>
   				<!-- if no session -->
   				<%
   				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null) && (session.getAttribute("supName")== null)) {
@@ -30,8 +30,7 @@
   						} 
   				%> <!-- if session -->
   				<li><a href="regselection.jsp">Sign Up</a></li>
-  				<li><a href="contactUs.php">Help</a></li>
-  				<li><a href="cart.php">My Cart</a></li>
+  				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
   			  <form method="GET" action="/action_page.php">
@@ -41,9 +40,9 @@
   		</nav>
   	  </div>
   	      <div align="center">		
-			        <button class="category" id="services" ><a href="services.jsp">Our Services</a></button>
-			        <button class="category" id="book" ><a href="makebook.jsp">Book Services</a></button>
-			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
+			        <button class="category" id="services" onclick="window.location.href='services.jsp'">Our Services</button>
+			        <button class="category" id="book" onclick="window.location.href='services.jsp'">Book Services</button>
+			        <button class="category" id="fuel" onclick="window.location.href='services.jsp'">Reserve Fuel</button>
 			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
 		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
 		        	
