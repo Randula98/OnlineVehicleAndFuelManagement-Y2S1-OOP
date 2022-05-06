@@ -53,7 +53,8 @@
 
         <div>
             <center>
-            <table id="tab10" style="border-color:black;" border="1">
+            <h1>Contact Details</h1>
+            <table class="tab10" style="border-color:black;" border="1">
                 <tr>
                     <td>
                         Manager
@@ -123,16 +124,16 @@
         </div>
         <div>
             <center>
-            <table>
+            <table class="tab10">
                 <tr>
                     <td>
-                        <a href="https://www.instagram.com/"><img src="images/contactUs/IG.png" width="150" alt=""></a>
+                        <a href="https://www.instagram.com/"><img id="pic11" src="images/contactUs/IG.png"  alt=""></a>
                     </td>
                     <td>
-                        <a href="https://www.facebook.com/"><img src="images/contactUs/fb.png" width="150" alt=""></a>
+                        <a href="https://www.facebook.com/"><img id="pic12" src="images/contactUs/fb.png" alt=""></a>
                     </td>
                     <td>
-                        <a href="https://twitter.com/i/flow/login"><img src="images/contactUs/tw.png" width="150" alt=""></a>
+                        <a href="https://twitter.com/i/flow/login"><img id="pic13" src="images/contactUs/tw.png" alt=""></a>
                     </td>
                 </tr>
             </table>
@@ -142,7 +143,7 @@
             <hr>
             <hr>
         <div>
-            <table>
+            <table class="tab20">
                 <tr>
                     <td>Services</td>
                     <td>Fuel Reservations</td>
