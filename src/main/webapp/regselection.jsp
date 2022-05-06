@@ -91,10 +91,9 @@
 	 <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
-  				<li><a href="index.php">Home</a></li>
-  				<li><a href="promotions.php">Promotions</a></li>
-  				<li><a href="aboutUs.php">About Us</a></li>
-  				<li><a href="contactUs.php">Contact Us</a></li>
+  				<li><a href="home.jsp">Home</a></li>
+  				<li><a href="about.jsp">About Us</a></li>
+  				<li><a href="contactUs.jsp">Contact Us</a></li>
   			</ul></nav>
       	<hr class="new1">
         <table class="t1" width="100%">
@@ -113,14 +112,14 @@
             <td style="border-right: solid 1px grey; border-left: solid 1px grey;">
               <div class="fut">
              <li><a href="https://www.toyota.lk/">Toyota</a></li>
-             <li><a href="">Nisan</a></li>
-             <li><a href="">BMW</a></li>
-             <li><a href="">Mitsubishi</a></li>
-             <li><a href="">McLaren</a></li>
-             <li><a href="">Mazda</a></li>
-             <li><a href="">Suzuki</a></li>
-             <li><a href="">Honda</a></li>
-             <li><a href="">Other</a></li></div>
+             <li><a href="https://www.nissan-global.com/EN/">Nisan</a></li>
+             <li><a href="https://www.bmw.com/en/index.html">BMW</a></li>
+             <li><a href="https://www.mitsubishicars.com/">Mitsubishi</a></li>
+             <li><a href="https://cars.mclaren.com/en">McLaren</a></li>
+             <li><a href="https://www.mazda.com/">Mazda</a></li>
+             <li><a href="https://www.globalsuzuki.com/automobile/">Suzuki</a></li>
+             <li><a href="https://global.honda/">Honda</a></li>
+             <li><a href="https://www.carlogos.org/car-brands/">Other</a></li></div>
             </td>
             <td><center>
               <a href=""><img src="images/youtube.png" alt="Youtube"></a>
