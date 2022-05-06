@@ -26,26 +26,35 @@
 	Statement state = null;
 	Statement state2 = null;
 	Statement state3 = null;
+	Statement state4 = null;
 	ResultSet rs = null;
 	ResultSet ls = null;
 	ResultSet zs = null;
+	ResultSet as = null;
 	
 	try{
-		conn = DBConnect.getConnection();
-		state = conn.createStatement();
+		conn = DBConnect.getConnection();   //made connection
+		state = conn.createStatement();  
 		state2 =conn.createStatement();
-		state3 =conn.createStatement();
+		state3 =conn.createStatement(); 
+		state4 =conn.createStatement();  //gave connection for statements
+		
 		String sql = "select * from customer where username = '" + cusUserName + "'";
-		String sql2= "select count(*)  from customer";
+		String sql2= "select count(*)  from customer";  // sql statemnets
 		
 		rs = state.executeQuery(sql);
-		ls = state2.executeQuery(sql2);
+		ls = state2.executeQuery(sql2);  // executed statements
+		
 		ls.next();
 		rs.next();
 		
-		String sql3= "select count(itemID) from customer_item where cusID = '"+rs.getInt(1)+"'";
-		zs = state3.executeQuery(sql3);
+		String sql3= "select count(itemID) from customer_item where cusID = '"+rs.getInt(1)+"'";  // sql statemnets
+		String sql4= "select * from appointment where cusID = '"+rs.getInt(1)+"'";
+		
+		zs = state3.executeQuery(sql3); // executed statements
 		zs.next();
+		as = state4.executeQuery(sql4);
+		as.next();
 		
 		}
 	catch(Exception e){
@@ -62,7 +71,7 @@
         <h1 class="topic" align="center">eZ Vehi Care</h1>
   		<nav class="top">
   			<ul>
-  				<li><a href="index.php">Home</a></li>
+  				<li><a href="home.jsp">Home</a></li>
   				<!-- if no session -->
   				<%
   				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null) && (session.getAttribute("supName")== null)) {
@@ -109,7 +118,7 @@
                         Email: <%out.print(rs.getString(5));%><br>
                         UserName: <%out.print(rs.getString(6));%><br>
 
-                <button><a href="">Update Details </a></button>
+                <button><a href="changeCusDet.jsp">Update Details </a></button>
             </p>
             </div>
 
