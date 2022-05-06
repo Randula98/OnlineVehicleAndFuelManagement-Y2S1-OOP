@@ -98,51 +98,233 @@
                 else if(rs.getString(5).equals("mechanic")) out.print("Mechanic");
                 else if(rs.getString(5).equals("assistant_mechanic")) out.print("Assistant Mechanic");
                 else if(rs.getString(5).equals("car_detailer")) out.print("Car Detailer");
-                else if(rs.getString(5).equals("recieption")) out.print("Recipetion");
+                else if(rs.getString(5).equals("recieption")) out.print("Reception");
                 %></p>
                 <p>Net Salary of - <%out.print(rs.getDouble(6));%></p>
                 
                <button><a href = "#">Update Employee Detials</a></button>
                <button><a href = "#">Delete Employee Detials</a></button>
-                
+               
               </div>
 
               <div class = "cards site-details"><!--site details-->
+              <%
+             	 ResultSet countCus = null;
+           		 ResultSet countEmp = null;
+           		 ResultSet countSup = null;
+           		 ResultSet countItem = null;
+           	
+           		 Statement state1 = null;
+          		 Statement state2 = null;
+          		 Statement state3 = null;
+          	 	 Statement state4 = null;
+           	
+          	
+              	try{
+              		
+                 	state1 = conn.createStatement();  
+                 	String sql1 = "select count(*) from customer";
+                 	countCus = state1.executeQuery(sql1);
+                 	countCus.next();
+                 	
+                 	state2 =conn.createStatement();
+                 	String sql2 = "select count(*) from employee";
+                 	countEmp = state2.executeQuery(sql2);
+                 	countEmp.next();
+                 	
+            		state3 =conn.createStatement(); 
+                 	String sql3 = "select count(*) from supplier";
+                 	countSup = state3.executeQuery(sql3);
+                 	countSup.next();
+                 	
+            		state4 =conn.createStatement();
+                 	String sql4 = "select count(*) from item";
+                 	countItem = state4.executeQuery(sql4);
+                 	countItem.next();
+              	}catch(Exception e){
+            		e.printStackTrace();
+            	}
+       
+              %>
                 <div class = "cards site-creds">
-                	<img src="images/circle.png" alt="">
+                	<img src="images/dash/cus.png" alt="">
 					<p>Number of Registered Customers</p>
-					<p class = "number">#</p>
-					<img src="images/circle.png" alt="">
+					<p class = "number"><%out.print(countCus.getInt(1));%></p>
+					<img src="images/dash/emp.png" alt="">
 					<p>Number of Registered Employees</p>
-					<p class = "number">#</p>
+					<p class = "number"><%out.print(countEmp.getInt(1));%></p>
                 </div>
                 <div class = "cards site-creds">
-                	<img src="images/circle.png" alt="">
+                	<img src="images/dash/service.png" alt="">
                   	<p>Number of Registered Shops</p>
-					<p class = "number">#</p>
-					<img src="images/circle.png" alt="">
-					<p>Number of Posted Items</p>
-					<p class = "number">#</p>
+					<p class = "number"><%out.print(countSup.getInt(1));%></p>
+					<img src="images/dash/items.png" alt="">
+					<p>Number of Posted <br>Items</p>
+					<p class = "number"><%out.print(countItem.getInt(1));%></p>
                 </div>
 
               </div>
 
               <div class = "cards list"><!--emp details-->
                 <div class = "list_head"><h1>Employee List</h1></div>
-
+                
+				 <table>
+                	<thead>
+                		<tr>
+                			<th>ID</th>
+                			<th>First Name</th>
+                			<th>Last Name</th>
+                			<th>Role</th>
+                		</tr>
+                	</thead>
+                	
+                	<tbody>
+                		
+                			<%
+            				int i = 0;
+                			try{
+                				conn = DBConnect.getConnection();
+                				state = conn.createStatement();
+                				String sql = "select * from employee";
+                				rs = state.executeQuery(sql);
+                				
+                				while(rs.next()){%>
+                					<% i++;if(i>3)break;%>
+                					<tr><td><%out.print(rs.getInt(1)); %></td>
+                					<td><%out.print(rs.getString(2)); %></td>
+                					<td><%out.print(rs.getString(3)); %></td>
+                					<td><%out.print(rs.getString(5)); %></td>
+                					</tr>
+                				<%}
+                				
+                				
+                			}catch(Exception e)
+                			{
+                				e.printStackTrace();
+                			}
+                			%>
+                		
+                	</tbody>
+                	
+                </table><br>
+                <button><a href = "#">See More...</a></button>
               </div>
               <div class = "cards list"><!--cus details-->
                 <div class = "list_head"><h1>Customer List</h1></div>
-
+                <table>
+                	<thead>
+                		<tr>
+                			<th>ID</th>
+                			<th>First Name</th>
+                			<th>Last Name</th>
+                			<th>Role</th>
+                		</tr>
+                	</thead>
+                	
+                	<tbody>
+                		<tr>
+                			<%
+            				i = 0;
+            				
+                			try{
+                				conn = DBConnect.getConnection();
+                				state = conn.createStatement();
+                				String sql = "select * from customer";
+                				rs = state.executeQuery(sql);
+                				
+                				while(rs.next()){%>
+                					<% i++;if(i>3)break;%>
+                					<td><%out.print(rs.getInt(1)); %></td>
+                					<td><%out.print(rs.getString(2)); %></td>
+                					<td><%out.print(rs.getString(3)); %></td>
+                					<td><%out.print(rs.getString(5)); %></td>
+                					</tr>
+                				<%}
+                				
+                				
+                			}catch(Exception e)
+                			{
+                				e.printStackTrace();
+                			}
+                			%>
+                		
+                	</tbody>
+                	
+                </table><br>
+				<button><a href = "#">See More...</a></button>
               </div>
               <div class = "cards list"><!--sup details-->
                 <div class = "list_head"><h1>Supllier List</h1></div>
-
+				  <table>
+                	<thead>
+                		<tr>
+                			<th>ID</th>
+                			<th>First Name</th>
+                			<th>Last Name</th>
+                			<th>Role</th>
+                		</tr>
+                	</thead>
+                	
+                	<tbody>
+                		<tr>
+                			<%
+            				i = 0;
+            				
+                			try{
+                				conn = DBConnect.getConnection();
+                				state = conn.createStatement();
+                				String sql = "select * from supplier";
+                				rs = state.executeQuery(sql);
+                				
+                				while(rs.next()){%>
+                					<% i++;if(i>3)break;%>
+                					<td><%out.print(rs.getInt(1)); %></td>
+                					<td><%out.print(rs.getString(2)); %></td>
+                					<td><%out.print(rs.getString(3)); %></td>
+                					<td><%out.print(rs.getString(5)); %></td>
+                					</tr>
+                				<%}
+                				
+                				
+                			}catch(Exception e)
+                			{
+                				e.printStackTrace();
+                			}
+                			%>
+                		
+                	</tbody>
+                </table><br>
+                <button><a href = "#">See More...</a></button>
               </div>
               
               <div class = "cards item-list"><!--item details-->
                 <div class = "list_head"><h1>Item List</h1></div>
-
+					<%
+            				i = 0;
+            				
+                			try{
+                				conn = DBConnect.getConnection();
+                				state = conn.createStatement();
+                				String sql = "select * from item";
+                				rs = state.executeQuery(sql);
+                				
+                				while(rs.next()){%>
+                					<% i++;if(i>8)break;%>
+                					<div class = "item-box">
+										<p>Item ID - <%out.print(rs.getInt(1)); %></p>
+										<p><%out.print(rs.getString(2));%> </p>
+										<p>Rs.<%out.print(rs.getDouble(3));%>0</p>
+									</div>
+                				<%}
+                				
+                				
+                			}catch(Exception e)
+                			{
+                				e.printStackTrace();
+                			}
+                			%><br><br>
+						<button><a href = "#">See More...</a></button>
+					</div>
               </div>
 
             </div>

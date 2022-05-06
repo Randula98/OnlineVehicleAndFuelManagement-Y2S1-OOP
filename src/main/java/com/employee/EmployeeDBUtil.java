@@ -68,4 +68,35 @@ public class EmployeeDBUtil {
 		}
 		return employee;
 	}
+	
+	public static List<Employee> getAllEmployee(){
+		
+		ArrayList<Employee> employees = new ArrayList<>();
+		try {
+			
+			conn = DBConnect.getConnection();
+			state = conn.createStatement();
+			
+			String sql = "select * from employee";
+			rs = state.executeQuery(sql);
+			
+			while(rs.next()) {
+				
+				int id=rs.getInt(1);
+				String firstName=rs.getString(2);
+				String lastName=rs.getString(3);
+				String contactNo=rs.getString(4);
+				String role =rs.getString(5);
+				double salary=rs.getDouble(6);
+				String uname=rs.getString(7);
+				String pwd=rs.getString(8);
+				
+				Employee emp = new Employee(id,firstName,lastName,contactNo,role,salary,uname,pwd);
+				employees.add(emp);
+			}
+		}catch (Exception X) {
+			X.printStackTrace();
+		}
+		return employees;
+	}
 }

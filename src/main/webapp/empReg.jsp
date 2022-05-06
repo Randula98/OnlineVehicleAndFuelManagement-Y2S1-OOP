@@ -68,7 +68,7 @@
                 <select name="role" id="role" required>
             		<option value="">Select...</option>
             		<option value="admin">System Administrator</option>
-            		<option value="supervior">Supervisor</option>
+            		<option value="supervisor">Supervisor</option>
             		<option value="mechanic">Mechanic</option>
             		<option value="assistant_mechanic">Assistant Mechanic</option>
             		<option value="car_detailer">Car Detailer</option>
