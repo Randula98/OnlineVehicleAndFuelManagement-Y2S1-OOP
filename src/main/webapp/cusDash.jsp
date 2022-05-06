@@ -27,10 +27,12 @@
 	Statement state2 = null;
 	Statement state3 = null;
 	Statement state4 = null;
+	Statement state5 = null;
 	ResultSet rs = null;
 	ResultSet ls = null;
 	ResultSet zs = null;
 	ResultSet as = null;
+	ResultSet fs = null;
 	
 	try{
 		conn = DBConnect.getConnection();   //made connection
@@ -38,6 +40,7 @@
 		state2 =conn.createStatement();
 		state3 =conn.createStatement(); 
 		state4 =conn.createStatement();  //gave connection for statements
+		state5 =conn.createStatement();
 		
 		String sql = "select * from customer where username = '" + cusUserName + "'";
 		String sql2= "select count(*)  from customer";  // sql statemnets
@@ -50,11 +53,12 @@
 		
 		String sql3= "select count(itemID) from customer_item where cusID = '"+rs.getInt(1)+"'";  // sql statemnets
 		String sql4= "select * from appointment where cusID = '"+rs.getInt(1)+"'";
+		String sql5= "select * from fuel_reservations where customerID ='"+rs.getInt(1)+"'";
 		
 		zs = state3.executeQuery(sql3); // executed statements
 		zs.next();
 		as = state4.executeQuery(sql4);
-		as.next();
+		fs = state5.executeQuery(sql5); // executed statements
 		
 		}
 	catch(Exception e){
@@ -101,7 +105,9 @@
 
 			        <br>
 		      </div>
-		      Welcome Back <%out.print(rs.getString(2));%>
+		     <b>
+		      <label style="font-size:20px">Welcome Back <%out.print(rs.getString(2));%> !!!</label>
+		      </b>
 		</div>	
 	</div>
 	
@@ -136,8 +142,23 @@
                 Service Appointments
             </h3>
             <p>
-                hudheudheudhudheud
+            	You have the Below mentioned Appointments with our Service <br>
             </p>
+            	<table>
+            	<tr>
+            	<td><b>Service Type</b></td>
+            	<td><b>Date</b></td>
+            	</tr>
+                <%
+             		while(as.next()){%>
+             			<tr>
+             			
+             			<td><%out.print(as.getString(2)); %></td> 
+             			<td><%out.print(as.getDate(3)); %></td> 
+             			</tr><%
+             		}%>
+                </table>
+            
         </div>
 
         <div>
@@ -145,8 +166,30 @@
                 Fuel Reservations
             </h3>
             <p>
-                Randulage lamaya ch**d***
+                You have the Below mentioned Fuel Reservations in our Filling Station<br>
             </p>
+            <table >
+            <tr>
+            <td>Vehicle Number</td>
+            <td>Fuel Amount(Litres)</td>
+            <td>Fuel Type</td>
+            <td>Reservation Date</td>
+            <td>Vehicle Type</td>
+            </tr>
+            
+            <%
+            	while(fs.next()){
+            %><tr>
+            	<td><% out.print(fs.getString(4)); %></td>
+            	<td><% out.print(fs.getInt(3)); %></td>
+            	<td><% out.print(fs.getString(2)); %></td>
+            	<td><% out.print(fs.getDate(5)); %></td>
+            	<td><% out.print(fs.getString(6)); %></td>
+            	<%
+            	}
+            	%>
+            	</tr>
+            </table>
         </div>
 
 	
