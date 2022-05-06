@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";
+
+.sel{
+	width : auto;
+	max-width: 1080px;
+	margin: auto;
+	
+}
+table.selection td{
+    margin : auto;
+    padding : 45px
+}
+
+table.selection p{
+	font-size : 18px; 
+	background-color : #a7d0cd;
+	font-family: Monospace;
+	text-align: center;
+	border:10px;
+	background-color: #a4a546;
+	background-padding : 10px;
+	color:white;
+	border-radius:10px;
+	transition:0.5s;
+}
+table.selection h2{
+	font-size: 27px ;
+	padding : 10px ;
+}
+#pic1{
+	width : 80%;
+}
+#pic2{
+	width : 100%;
+}
+#pic3{
+	width : 100%;
+}
+button.category{
+		transition : 1s;
+}
