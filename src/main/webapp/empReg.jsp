@@ -67,7 +67,7 @@
                 <label for="lname">Role:</label><br>
                 <select name="role" id="role" required>
             		<option value="">Select...</option>
-            		<option value="admin">System Admin</option>
+            		<option value="admin">System Administrator</option>
             		<option value="supervior">Supervisor</option>
             		<option value="mechanic">Mechanic</option>
             		<option value="assistant_mechanic">Assistant Mechanic</option>

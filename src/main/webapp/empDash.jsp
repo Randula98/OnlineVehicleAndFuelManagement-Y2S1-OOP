@@ -87,6 +87,8 @@
               <h1><%out.print(rs.getString(2)); %>'s Dashboard</h1>
 
               <div class = "cards self-details"><!--own details-->
+              	<img alt="" src="images/user.png">
+              	
                 <p>Employee ID - <%out.print(rs.getInt(1));%> | <%out.print(rs.getString(7));%></p>
                 <p><%out.print(rs.getString(2));%> <%out.print(rs.getString(3));%></p>
                 <p><%out.print(rs.getString(4));%></p>
@@ -100,16 +102,27 @@
                 %></p>
                 <p>Net Salary of - <%out.print(rs.getDouble(6));%></p>
                 
-                <img alt="" src="images/user.png">
+               <button><a href = "#">Update Employee Detials</a></button>
+               <button><a href = "#">Delete Employee Detials</a></button>
                 
               </div>
 
               <div class = "cards site-details"><!--site details-->
                 <div class = "cards site-creds">
-
+                	<img src="images/circle.png" alt="">
+					<p>Number of Registered Customers</p>
+					<p class = "number">#</p>
+					<img src="images/circle.png" alt="">
+					<p>Number of Registered Employees</p>
+					<p class = "number">#</p>
                 </div>
                 <div class = "cards site-creds">
-                  
+                	<img src="images/circle.png" alt="">
+                  	<p>Number of Registered Shops</p>
+					<p class = "number">#</p>
+					<img src="images/circle.png" alt="">
+					<p>Number of Posted Items</p>
+					<p class = "number">#</p>
                 </div>
 
               </div>
