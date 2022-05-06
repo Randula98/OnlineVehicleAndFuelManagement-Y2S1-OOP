@@ -23,11 +23,18 @@
         <h1 class="topic" align="center">eZ Vehi Care</h1>
   		<nav class="top">
   			<ul>
-  				<li><a href="index.php">Home</a></li>
-  				<li><a href="login.jsp">Login</a></li>
-  				<li><a href="sellerRequestForm.php">Become a seller</a></li>
-  				<li><a href="contactUs.php">Help</a></li>
-  				<li><a href="cart.php">My Cart</a></li>
+  				<li><a href="home.jsp">Home</a></li>
+  				<!-- if no session -->
+  				<%
+  				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null) && (session.getAttribute("supName")== null)) {
+  				%><li><a href="login.jsp">Log In</a></li><% 
+  						} 
+  				else {
+  				%><li><a href="logout.jsp">Log Out</a></li><% 
+  						} 
+  				%> <!-- if session -->
+  				<li><a href="regselection.jsp">Sign Up</a></li>
+  				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
   			  <form method="GET" action="/action_page.php">
@@ -37,15 +44,16 @@
   		</nav>
   	  </div>
   	      <div align="center">		
-			        <button class="category" id="services" onclick="window.location.href=">Our Services</button>
-			        <button class="category" id="book" onclick="window.location.href=">Book Services</button>
-			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
-			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
-		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
+			        <button class="category" id="services" onclick="window.location.href='services.jsp'">Our Services</button>
+			        <button class="category" id="book" onclick="window.location.href='makebook.jsp'">Book Services</button>
+			        <button class="category" id="fuel" onclick="window.location.href='fuel.jsp'">Reserve Fuel</button>
+			        <button class="category" id="spare" onclick="window.location.href='spare.jsp'">Spare Parts</button>
+		        	<button class="category" id="oil" onclick="window.location.href='oil.jsp'">Oil</button>
 		        	
 
 			        <br>
-		      </div></div>
+		      </div>
+		</div>
 		      <hr class="new1">
 
             <!--Form begins from here-->
@@ -103,10 +111,9 @@
 	 <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
-  				<li><a href="index.php">Home</a></li>
-  				<li><a href="promotions.php">Promotions</a></li>
-  				<li><a href="aboutUs.php">About Us</a></li>
-  				<li><a href="contactUs.php">Contact Us</a></li>
+  				<li><a href="home.jsp">Home</a></li>
+  				<li><a href="about.jsp">About Us</a></li>
+  				<li><a href="contactUs.jsp">Contact Us</a></li>
   			</ul></nav>
       	<hr class="new1">
         <table class="t1" width="100%">
