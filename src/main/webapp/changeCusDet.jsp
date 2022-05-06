@@ -107,13 +107,12 @@
 
 		<br>
 		
-	 <footer>
+	  <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
   				<li><a href="home.jsp">Home</a></li>
-  				<li><a href="promotions.php">Promotions</a></li>
-  				<li><a href="aboutUs.php">About Us</a></li>
-  				<li><a href="contactUs.php">Contact Us</a></li>
+  				<li><a href="about.jsp">About Us</a></li>
+  				<li><a href="contactUs.jsp">Contact Us</a></li>
   			</ul></nav>
       	<hr class="new1">
         <table class="t1" width="100%">
