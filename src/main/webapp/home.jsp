@@ -117,7 +117,7 @@
    <script src = "Scripts/catslider.js"></script>
 
   
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 <div>
     <center>
       <img src="images/pormo2.jpg" alt="promo2 image" class="mainImage"> <!-- done by : IT21105302 -->
