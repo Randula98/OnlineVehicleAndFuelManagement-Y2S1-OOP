@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
-	<title>Make A Booking | eZVehi Care Service and Filling Station</title>
-	<link rel="stylesheet" type="text/css" href="Styles/style.css">
+	<title>Update User Details | eZVehiCare Service and Filling Station</title>
   	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" type="text/css" href="css/promo.css">
   	<link rel="stylesheet" type="text/css" href="css/sd.css">
@@ -20,10 +19,17 @@
   		<nav class="top">
   			<ul>
   				<li><a href="home.jsp">Home</a></li>
-  				<li><a href="logout.php">Logout</a></li>
-  				<li><a href="sellerRequestForm.php">Become a seller</a></li>
-  				<li><a href="contactUs.php">Help</a></li>
-  				<li><a href="cart.php">My Cart</a></li>
+  				<!-- if no session -->
+  				<%
+  				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null) && (session.getAttribute("supName")== null)) {
+  				%><li><a href="login.jsp">Log In</a></li><% 
+  						} 
+  				else {
+  				%><li><a href="logout.jsp">Log Out</a></li><% 
+  						} 
+  				%> <!-- if session -->
+  				<li><a href="regselection.jsp">Sign Up</a></li>
+  				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
   			  <form method="GET" action="/action_page.php">
@@ -33,56 +39,78 @@
   		</nav>
   	  </div>
   	      <div align="center">		
-			        <button class="category" id="services" ><a href="services.jsp">Our Services</a></button>
-			        <button class="category" id="book" ><a href="makebook.jsp">Book Services</a></button>
-			        <button class="category" id="fuel" onclick="window.location.href=">Reserve Fuel</button>
-			        <button class="category" id="spare" onclick="window.location.href=">Spare Parts</button>
-		        	<button class="category" id="oil" onclick="window.location.href=">Oil</button>
+			        <button class="category" id="services" onclick="window.location.href='services.jsp'">Our Services</button>
+			        <button class="category" id="book" onclick="window.location.href='makebook.jsp'">Book Services</button>
+			        <button class="category" id="fuel" onclick="window.location.href='fuel.jsp'">Reserve Fuel</button>
+			        <button class="category" id="spare" onclick="window.location.href='spare.jsp'">Spare Parts</button>
+		        	<button class="category" id="oil" onclick="window.location.href='oil.jsp'">Oil</button>
 		        	
 
 			        <br>
-		      </div></div>
+		      </div>
+		</div>
 		      <hr class="new1">
 
-            <!--Form begins from here-->
 
-            <center>
-                <h2> Service Booking</h2> <!-- reffered from labsheets-->
-                </center>
+          <!-- form starts here --> <br><br>
+      <div style="border:1px solid black;">  
+       <center>
+            <h2>User Details Customization</h2>
+            <br>
+            
+            
+            <form action="" method="POST">
+                First Name 
+                <input type="text" name="fname" placeholder="Enter New First Name">  
+                <input type="submit" value="Change Name" id=""><br><br>
+                
+            </form>
 
-                <center>
-                <form class="form1" action="" method="POST">
+            <form action="" method="POST">
+                Last Name 
+                <input type="text" name="lname" placeholder="Enter New Last Name">  
+                <input type="submit" value="Change Name" id=""><br><br>
+                
+            </form>
 
-                    <select name="serve" id="serve">
-                        <option value="">Select</option>
-                        <option value="Vip">V.I.P Service</option>
-                        <option value="FullService">Full Service</option>
-                        <option value="bodywash">Body Wash</option>
-                        <option value="CNG">Come N Go</option>
-                      </select>
+            <form action="" method="POST">
+                Contact Number
+                <input type="text" name="conNo" placeholder="Enter New Contact Number">  
+                <input type="submit" value="Change Number" id=""><br><br>
                 
+            </form>
 
-                <br><br>
-                    Date Of Service : <br/>
-                <input type="date" name="cod" required><br/><br>
+            <form action="" method="POST">
+                Email 
+                <input type="email" name="mail" placeholder="Enter New Email Address">  
+                <input type="submit" value="Change Email" id=""><br><br>
                 
-               
+            </form>
+
+            <form action="" method="POST">
+                UserName 
+                <input type="text" name="uname" placeholder="Enter New User Name">  
+                <input type="submit" value="Change UserName" id=""><br><br>
                 
-                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">Accept Privacy Policy and Terms.<br/>
+            </form>
+
+            <form action="" method="POST">
+                Password
+                <input type="password" name="pwd" placeholder="Enter New Password">  
+                <input type="submit" value="Change Password" id=""><br><br>
                 
-                </center>
-                
-                <center>
-                <input type="submit" id="submitBtn" value="submit" disabled >
-                </center>
-                </form>
+            </form>
+            
+    
+
+    </div>
 
 		<br>
 		
 	 <footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
-  				<li><a href="index.php">Home</a></li>
+  				<li><a href="home.jsp">Home</a></li>
   				<li><a href="promotions.php">Promotions</a></li>
   				<li><a href="aboutUs.php">About Us</a></li>
   				<li><a href="contactUs.php">Contact Us</a></li>
