@@ -53,7 +53,7 @@
 
         <div>
             <center>
-            <table id="tab10" style="border-color:black;"border="1">
+            <table id="tab10" style="border-color:black;" border="1">
                 <tr>
                     <td>
                         Manager
