@@ -8,6 +8,27 @@ table#tab1{
 	border-right: solid 1px rebeccapurple;
 	border-bottom: solid 2px rebeccapurple;
 	}
-table#tab10{
+table.tab10{
    border-color : black;
+   max-width : 1080px;
+   width : auto;
+   border : collapse;
+}
+table.tab20 td{
+	padding : 5px;
+	margin: 0px;
+	width : auto; 
+	max-width : 1200px;
+}
+table.tab10 tr td img#pic11{
+	margin : 0px;
+	width : 15%;
+}
+table.tab10 tr td img#pic12{
+	width : 10%;
+	margin : 0px;
+}
+table.tab10 tr td img#pic13{
+	width : 25%;
+	margin : 0px;
 }
