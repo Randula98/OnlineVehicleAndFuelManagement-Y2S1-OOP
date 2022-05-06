@@ -3,3 +3,49 @@
 	width:100%;
 	height:1000px;
 }
+.dashboard{
+    border:1px solid black;
+    width:90%;
+    height:1600px;
+    margin: 0px auto;
+}
+.self-details{
+    border:1px solid black;
+    width:40%;
+    height:500px;
+    margin-left: 20px;
+}
+.site-details{
+    border:1px solid black;
+    width:54.5%;
+    height:500px;
+    margin-left: 40px;
+}
+.cards{
+     position: relative;
+     float: left;
+     margin-top: 20px;
+}
+.site-creds{
+      width: 46%;
+      height: 450px;
+      border:1px solid black;
+      margin-left: 20px;
+      margin-top: 20px;
+ }
+.list{
+      width: 31.5%;
+      height: 500px;
+      border:1px solid black;
+      margin-left: 20px;
+}
+.item-list{
+      width: 97.2%;
+      height: 450px;
+      border:1px solid black;
+      margin-left: 20px;
+}
+.list_head{
+      width: 100%;
+      border:1px solid black;
+}

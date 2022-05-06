@@ -81,7 +81,49 @@
 		</div>
 		
 		
-		
+		<div class = "dashboard">
+              <h1>||Employee's|| Dashboard</h1>
+
+              <div class = "cards self-details"><!--own details-->
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+                <p>text</p>
+              </div>
+
+              <div class = "cards site-details"><!--site details-->
+                <div class = "cards site-creds">
+
+                </div>
+                <div class = "cards site-creds">
+                  
+                </div>
+
+              </div>
+
+              <div class = "cards list"><!--emp details-->
+                <div class = "list_head"><h1>Employee List</h1></div>
+
+              </div>
+              <div class = "cards list"><!--cus details-->
+                <div class = "list_head"><h1>Customer List</h1></div>
+
+              </div>
+              <div class = "cards list"><!--sup details-->
+                <div class = "list_head"><h1>Supllier List</h1></div>
+
+              </div>
+              
+              <div class = "cards item-list"><!--item details-->
+                <div class = "list_head"><h1>Item List</h1></div>
+
+              </div>
+
+            </div>
+
+            <br><br>
 		
 		
 	</div>

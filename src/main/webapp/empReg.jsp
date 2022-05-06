@@ -11,6 +11,7 @@
   	<link rel="stylesheet" type="text/css" href="css/home.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
   	<link rel="stylesheet" type="text/css" href="css/regform.css">
+  	<link rel="stylesheet" type="text/css" href="css/empDash.css">
   	
   	<script type="text/javascript" src = "js/regScript.js"></script>
 </head>
