@@ -13,17 +13,18 @@ public class AppointmentDelete extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
 		
-		String id = request.getParamter("id");
-		boolean isTrue;
+		String id = request.getParameter("id");
+		boolean isTrue=false;
 		
 		isTrue = AppointmentDBUtil.deleteAppointment(id);
 		
 		if(isTrue ==true) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("cusDash.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("cusDash.jsp?status=passed");
 			dispatcher.forward(request, response);
 		}else {
 			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("cusDash.jsp?status=failed");
+			dispatcher.forward(request, response);
 		}
 	}
 }

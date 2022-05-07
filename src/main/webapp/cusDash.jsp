@@ -28,11 +28,14 @@
 	Statement state3 = null;
 	Statement state4 = null;
 	Statement state5 = null;
+	Statement state6 = null;
 	ResultSet rs = null;
 	ResultSet ls = null;
 	ResultSet zs = null;
 	ResultSet as = null;
 	ResultSet fs = null;
+	
+	ResultSet dd = null;
 	
 	try{
 		conn = DBConnect.getConnection();   //made connection
@@ -41,6 +44,7 @@
 		state3 =conn.createStatement(); 
 		state4 =conn.createStatement();  //gave connection for statements
 		state5 =conn.createStatement();
+		state6 =conn.createStatement();
 		
 		String sql = "select * from customer where username = '" + cusUserName + "'";
 		String sql2= "select count(*)  from customer";  // sql statemnets
@@ -54,6 +58,7 @@
 		String sql3= "select count(itemID) from customer_item where cusID = '"+rs.getInt(1)+"'";  // sql statemnets
 		String sql4= "select * from appointment where cusID = '"+rs.getInt(1)+"'";
 		String sql5= "select * from fuel_reservations where customerID ='"+rs.getInt(1)+"'";
+		String sql6= "";
 		
 		zs = state3.executeQuery(sql3); // executed statements
 		zs.next();
@@ -155,7 +160,12 @@
              			
              			<td><%out.print(as.getString(2)); %></td> 
              			<td><%out.print(as.getDate(3)); %></td>
-             			<td><button>Delete Appointment</button></td> 
+             			<td>
+             			<form action="AppointmentDelete" method="post">
+             			<input type="text" name="id" value="<%out.print(as.getInt(1)); %>" >
+             			<button><input type="submit" value="Delete Appointment" name="appdel" class="button"></button>
+             			</form>
+             			</td> 
              			</tr><%
              		}%>
                 </table>

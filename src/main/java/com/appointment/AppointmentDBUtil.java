@@ -10,7 +10,7 @@ public class AppointmentDBUtil {
 	
 	private static boolean isSuccess;
 	private static Connection con = null;
-	private static Statement stmt = null;
+	private static Statement state = null;
 	
 	
 	public static boolean deleteAppointment(String id) {
@@ -20,9 +20,10 @@ public class AppointmentDBUtil {
 		try {
 			
 			con = DBConnect.getConnection();
-			stmt = con.createStatement();
+			state = con.createStatement();
 			String sql = "delete from appointment where appointmentID='"+conId+"'";
-			int r = stmt.executeUpdate(sql);
+			
+			int r = state.executeUpdate(sql);
 			
 			if(r>0) {
 				isSuccess=true;
