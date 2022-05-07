@@ -16,12 +16,14 @@
 	
 	Connection conn = null;
 	Statement state = null;
+	Statement state2 = null;
 	ResultSet rs = null;
+	ResultSet rs2 = null;
 	
 	  try {
 			conn = DBConnect.getConnection();
 			state = conn.createStatement();
-			String sql = "select * from supplier where username = '" + supUserName + "'";
+			String sql = "select * from supplier where userName = '" + supUserName + "'";
 			rs = state.executeQuery(sql);
 	        rs.next();
 	        
