@@ -1,6 +1,8 @@
 package com.appointment;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,9 +38,21 @@ public class AppointmentDeleteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		String id = request.getParameter("id");
+		boolean isTrue=false;
+		System.out.println(id);
+
 		
-		String id =request.getParameter("id");
-		AppointmentDBUtil.deleteAppointment(id);
+		isTrue = AppointmentDBUtil.deleteAppointment(id);
+		
+		if(isTrue ==true) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("cusDash.jsp?status=passed");
+			dispatcher.forward(request, response);
+		}else {
+			
+			RequestDispatcher dispatcher = request.getRequestDispatcher("cusDash.jsp?status=failed");
+			dispatcher.forward(request, response);
+		}
 	}
 
 }

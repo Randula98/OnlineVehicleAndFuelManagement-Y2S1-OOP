@@ -28,7 +28,6 @@
 		
 		
 		
-		
 		<servlet>
 			<servlet-name>deleteemployee</servlet-name>
 			<servlet-class>com.employee.EmployeeDeleteServlet</servlet-class>
@@ -36,6 +35,15 @@
 		<servlet-mapping>
 			<servlet-name>deleteemployee</servlet-name>
 			<url-pattern>/deleteemployee</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
+			<servlet-name>test</servlet-name>
+			<servlet-class>service.home.HomeServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>test</servlet-name>
+			<url-pattern>/test</url-pattern>
 		</servlet-mapping>
          
 </web-app>

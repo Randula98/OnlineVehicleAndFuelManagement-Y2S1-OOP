@@ -163,7 +163,7 @@
              			<td>
              			<form action="deleteappointment" method="post">
              			<input type="text" name="id" value="<%out.print(as.getInt(1)); %>" >
-             			<button><input type="submit" value="Delete Appointment" name="appdel" class="button"></button>
+             			<button><input type="submit" value="Delete Appointment" class="button"></button>
              			</form>
              			</td> 
              			</tr><%
