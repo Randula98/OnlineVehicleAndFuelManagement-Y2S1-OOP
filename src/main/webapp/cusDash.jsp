@@ -154,7 +154,8 @@
              			<tr>
              			
              			<td><%out.print(as.getString(2)); %></td> 
-             			<td><%out.print(as.getDate(3)); %></td> 
+             			<td><%out.print(as.getDate(3)); %></td>
+             			<td><button>Delete Appointment</button></td> 
              			</tr><%
              		}%>
                 </table>
