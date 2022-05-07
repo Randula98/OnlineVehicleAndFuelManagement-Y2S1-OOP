@@ -161,7 +161,7 @@
              			<td><%out.print(as.getString(2)); %></td> 
              			<td><%out.print(as.getDate(3)); %></td>
              			<td>
-             			<form action="AppointmentDelete" method="post">
+             			<form action="deleteappointment" method="post">
              			<input type="text" name="id" value="<%out.print(as.getInt(1)); %>" >
              			<button><input type="submit" value="Delete Appointment" name="appdel" class="button"></button>
              			</form>
