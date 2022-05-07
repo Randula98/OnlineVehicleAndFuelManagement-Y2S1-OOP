@@ -9,6 +9,13 @@ public class Appointment {
 		this.id = id;
 		this.aptype = aptype;
 	}
+	public int getId() {
+		return id;
+	}
+	
+	public String getAptype() {
+		return aptype;
+	}
 	
 	
 }
