@@ -3,6 +3,13 @@
 	width:100%;
 	height:1700px;
 }
+.ribbon{
+	width:100%;
+	height:40px;
+	position: absolute;
+    bottom: 0px;
+	border:1px solid black;
+}
 .dashboard{
     border:1px solid black;
     width:90%;
@@ -91,4 +98,20 @@
 	float:left;
 	margin-left:20px;
 	font-size:20px;
+}
+.emplist{
+	height:auto;
+	overflow :hidden;
+}
+.listin{
+	width:90%;
+	height:auto;
+	overflow :hidden;
+	margin:0px auto;
+	border:1px solid black;
+	background-color:pink;
+}
+.emp-list-box{
+	height:200px;
+	margin-top:30px;
 }

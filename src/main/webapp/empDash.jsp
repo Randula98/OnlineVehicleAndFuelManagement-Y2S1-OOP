@@ -207,7 +207,7 @@
                 	</tbody>
                 	
                 </table><br>
-                <button><a href = "#">See More...</a></button>
+                <button><a href = "empdashemplist.jsp">See More...</a></button>
               </div>
               <div class = "cards list"><!--cus details-->
                 <div class = "list_head"><h1>Customer List</h1></div>
