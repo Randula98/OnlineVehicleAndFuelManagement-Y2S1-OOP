@@ -52,10 +52,10 @@
 		</div>
 		      <hr class="new1">
         <hr>
-        <table>
+        <table border="1">
             <tr>
                 <td>
-                    <h3>V.I.P Service</h3>
+                    <h3><b>V.I.P Service</b></h3>
                 </td>
             </tr>
             <tr>
@@ -100,10 +100,10 @@
             </tr>
         </table>
 
-        <table>
+        <table border="1">
             <tr>
                 <td>
-                    <h3>Full Service</h3>
+                    <h3><b>Full Service</b></h3>
                 </td>
             </tr>
             <tr>
@@ -132,10 +132,10 @@
                 </td>
             </tr>
         </table>
-        <table>
+        <table border="1">
             <tr>
                 <th>
-                    <h3>Body Wash</h3>
+                    <h3><b>Body Wash</b></h3>
                 </th>
             </tr>
             <tr>
@@ -154,10 +154,10 @@
                 </td>
             </tr>
         </table>
-        <table>
+        <table border="1">
             <tr>
                 <td>
-                    <h3>Come N Go</h3>
+                    <h3><b>Come N Go</b></h3>
                 </td>
             </tr>
             <tr>
