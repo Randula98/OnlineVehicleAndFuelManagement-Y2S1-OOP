@@ -130,4 +130,28 @@ public class EmployeeDBUtil {
 		
 		return isSuccess;
 	}
+	
+	public static boolean updateEmployee(String id, String fname, String lname, String contactno , String role , String salary, String username) {
+    	
+    	try {
+    		
+    		conn = DBConnect.getConnection();
+    		state = conn.createStatement();
+    		String sql = "update employee set firstName='"+fname+"', lastName = '"+lname+"' ,role='"+role+"', salary = '"+salary+"' , username='"+username+"' where employeeID='"+id+"'";
+    		int rs = state.executeUpdate(sql);
+    		
+    		if(rs > 0) {
+    			isSuccess = true;
+    		}
+    		else {
+    			isSuccess = false;
+    		}
+    		
+    	}
+    	catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    	
+    	return isSuccess;
+    }
 }

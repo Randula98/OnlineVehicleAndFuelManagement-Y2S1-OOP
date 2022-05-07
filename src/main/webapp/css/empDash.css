@@ -122,10 +122,10 @@
 .emp-list.box a{
 	visibility:hidden;
 }
-.emp-del-msg{
+.emp-del-msg , .emp-update-emp{
 	font-family: Monospace;
-	width:300px;
-	height:200px;
+	width:600px;
+	height:430px;
 	border:1px solid black;
 	margin:0px auto;
 	margin-top:20px;

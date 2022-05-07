@@ -16,7 +16,7 @@
   	<link rel="stylesheet" type="text/css" href="css/empDash.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" style = "height:900px">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
@@ -56,7 +56,7 @@
 		</div>
 		      <hr class="new1">
 		      
-			<div class = "emp-del-msg">
+			<div class = "emp-update-emp">
 			<%String empID = request.getParameter("id");
 				Connection conn = null;
 				Statement state = null;
@@ -73,8 +73,31 @@
     				e.printStackTrace();
     			}
 			  %>
-			  <form action="deleteemployee" method = "post">
-				
+			  <form action="updateemployee" method = "post">	
+				<center>
+				<br>
+					<input type="text" name = "empID" value = "<%out.print(rs.getInt(1));%>"><br><br>
+					
+			        <h3>Employee First Name :</h3>
+			        <input type="text" name = "fname" value = "<%out.print(rs.getString(2)); %>"><br><br>
+			
+			        <h3>Employee Last Name :</h3>
+			        <input type="text" name = "lname" value = "<%out.print(rs.getString(3)); %>"><br><br>
+			
+			        <h3>Employee Contact Number :</h3>
+			        <input type="text" name = "contactno" value = "<%out.print(rs.getString(4)); %>"><br><br>
+
+			        <h3>Employee Role :</h3>
+			        <input type="text" name = "role" value = "<%out.print(rs.getString(5)); %>"><br><br>
+			
+			        <h3>Employee Salary :</h3>
+			        <input type="text" name = "salary"  value = "<%out.print(rs.getString(6)); %>"><br><br>
+			
+			        <h3>Employee Username :</h3>
+			        <input type="text" name = "username" value = "<%out.print(rs.getString(7)); %>"><br><br>
+						<br>
+			        <input type="submit" value = "Update Details">
+			    </center>
 			  </form>
 			</div>
           

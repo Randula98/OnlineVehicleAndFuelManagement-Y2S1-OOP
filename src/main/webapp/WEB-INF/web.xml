@@ -16,7 +16,7 @@
 			<url-pattern>/login</url-pattern>
 		</servlet-mapping>
 		
-		
+		<!--appointment-->
 		<servlet>
 			<servlet-name>deleteappointment</servlet-name>
 			<servlet-class>com.appointment.AppointmentDeleteServlet</servlet-class>
@@ -27,7 +27,15 @@
 		</servlet-mapping>
 		
 		
-		
+		<!--employee-->
+		<servlet>
+			<servlet-name>updateemployee</servlet-name>
+			<servlet-class>com.employee.EmployeeUpdateServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>updateemployee</servlet-name>
+			<url-pattern>/updateemployee</url-pattern>
+		</servlet-mapping>
 		<servlet>
 			<servlet-name>deleteemployee</servlet-name>
 			<servlet-class>com.employee.EmployeeDeleteServlet</servlet-class>
