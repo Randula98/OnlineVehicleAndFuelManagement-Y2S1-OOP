@@ -56,7 +56,7 @@
     <h1><center>HOME</center></h1>
   <section class="slide-show"> <!-- https://www.youtube.com/watch?v=0wvrlOyGlq0&ab_channel=CodingSnow--> 
     <div class="slider">
-       <div class="slide active" style="background-image: url('Images/guy.jpg')">
+       <div class="slide active" style="background-image: url('images/guy.jpg')">
          <div class="container">
            <div class="caption">
              <h1>Our Services</h1>

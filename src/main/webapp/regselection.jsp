@@ -33,7 +33,7 @@
   				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
-  			  <form method="GET" action="/action_page.php">
+  			  <form method="GET" action="">
      		    <input  class="navigation" type="text" placeholder="Search.." name="search" >
       		  <button class="navigation" type="submit"><i class="fa fa-search"></i></button>
     		  </form>
