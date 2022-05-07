@@ -1,6 +1,8 @@
 package com.employee;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,8 +38,23 @@ public class EmployeeDeleteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		System.out.println(request.getParameter("hiddenID"));
+		String id = request.getParameter("hiddenID");
+		System.out.println(id);
+		boolean isTrue = false;
+		System.out.println(isTrue);
+		isTrue = EmployeeDBUtil.deleteEmployee(id);
 		
+		System.out.println(isTrue);
 		
+		if (isTrue == true) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("empDash.jsp?status=passed");
+			dispatcher.forward(request, response);
+		}
+		else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("empDash.jsp?status=failed");
+			dispatcher.forward(request, response);
+		}
 		
 	}
 

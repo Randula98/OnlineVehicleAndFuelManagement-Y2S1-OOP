@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="service.util.*"%>
+<%@ page import="com.employee.*"%>
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
@@ -51,8 +55,31 @@
 		      </div>
 		</div>
 		      <hr class="new1">
-
-			<div></div>
+		      
+			<div class = "emp-del-msg">
+			<%String empID = request.getParameter("id");
+				Connection conn = null;
+				Statement state = null;
+				ResultSet rs = null;
+				
+				try{
+            		conn = DBConnect.getConnection();
+            		state = conn.createStatement();
+            		String sql = "select * from employee where employeeID = '" + empID + "'" ;
+            		rs = state.executeQuery(sql);
+   					rs.next();
+    			}
+    			catch(Exception e){
+    				e.printStackTrace();
+    			}
+			  %>
+			  <form action="deleteemployee" method = "post">
+				<h2>Do you want to delete <%out.print(rs.getString(2));%> <%out.print(rs.getString(3));%>'s Account?</h2>
+					<input type="text" name = "hiddenID" value = "<%out.print(rs.getInt(1));%>">
+					<button><input type="submit" value="Yes" name = "customer" class = "button"></button>
+				</form>
+				<button>No</button>
+			</div>
           
    
 		<br>

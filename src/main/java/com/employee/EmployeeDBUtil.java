@@ -99,4 +99,35 @@ public class EmployeeDBUtil {
 		}
 		return employees;
 	}
+	
+	public static boolean deleteEmployee(String id) {
+		
+		System.out.println(id);
+		int empid = Integer.parseInt(id);
+		
+		System.out.println("In the db util");
+		System.out.println(empid);
+		
+		try {
+			System.out.println("hello");
+			System.out.println("In the try");
+			conn = DBConnect.getConnection();
+			state=conn.createStatement();
+			String sql = "delete from employee where employeeID = '" + empid + "'";
+			int result = state.executeUpdate(sql);
+			System.out.println(result);
+			if(result > 0) {
+				isSuccess=true;
+			}else {
+				isSuccess=false;
+			}
+			
+		}catch(Exception X) {
+			
+			X.printStackTrace();
+			
+		}
+		
+		return isSuccess;
+	}
 }

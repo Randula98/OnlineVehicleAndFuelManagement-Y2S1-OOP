@@ -4,6 +4,7 @@
 <%@ page import="java.util.*"%>
 <%@ page import="service.util.*"%>
 <%@ page import="com.employee.*"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +17,7 @@
 <link rel="stylesheet" type="text/css" href="css/sd.css">
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/empDash.css">
 
 </head>
 <body>
@@ -54,13 +56,21 @@
         			
 						while(rs.next())
 						{
+							String id = Integer.toString(rs.getInt(1));
+							String fname = rs.getString(2);
+							String lname = rs.getString(3);
 							%><div class = "item-box emp-list-box">
 							<p><%out.print(rs.getInt(1)); %> - <%out.print(rs.getString(2)); %> <%out.print(rs.getString(3)); %></p>
 							<p><%out.print(rs.getString(4)); %></p>
 							<p><%out.print(rs.getString(5)); %></p>
 							<p><%out.print(rs.getString(6)); %></p>
+							<p><%out.print(id); %></p>
+							
+							
 							<button><a href = "">Edit Employee</a></button>
-							<button><a href = "">Delete Employee</a></button>
+							<button><a href = "empdashempdelete.jsp?id=<%out.print(rs.getInt(1)); %>">Delete Employee</a></button>
+
+							
 							</div><%
 						}
         			}

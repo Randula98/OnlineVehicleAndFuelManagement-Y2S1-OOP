@@ -115,3 +115,18 @@
 	height:200px;
 	margin-top:30px;
 }
+.emp-list-box p{
+	font-family: Monospace;
+	font-size:22px;
+}
+.emp-list.box a{
+	visibility:hidden;
+}
+.emp-del-msg{
+	font-family: Monospace;
+	width:300px;
+	height:200px;
+	border:1px solid black;
+	margin:0px auto;
+	margin-top:20px;
+}
