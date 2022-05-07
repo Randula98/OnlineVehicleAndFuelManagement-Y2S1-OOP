@@ -54,7 +54,7 @@
 
             <!-- Form starts here-->
             <center>
-                <h2> Registration Form</h2> <!-- reffered from labsheets-->
+                <h2> Fuel Reservation Form</h2> <!-- reffered from labsheets-->
             </center>
             <center>
                 <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
