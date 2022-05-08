@@ -112,7 +112,7 @@
                 %></p>
                 <p>Net Salary of - <%out.print(rs.getDouble(6));%></p>
                 
-               <button><a href = "#">Update Employee Detials</a></button>
+               <button><a href = "empdashempupdate.jsp?id=<%out.print(rs.getInt(1));%>">Update Employee Detials</a></button>
                
               </div>
 
@@ -332,7 +332,7 @@
                 				e.printStackTrace();
                 			}
                 			%><br><br>
-						<button><a href = "#">See More...</a></button>
+						<button><a href = "empdashitemlist.jsp">See More...</a></button>
 					</div>
               </div>
 

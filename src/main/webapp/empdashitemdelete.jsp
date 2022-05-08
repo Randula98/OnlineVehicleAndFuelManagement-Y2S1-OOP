@@ -16,7 +16,7 @@
   	<link rel="stylesheet" type="text/css" href="css/empDash.css">
 </head>
 <body>
-  <div class="container" style = "height:900px">
+  <div class="container"  style = "height:600px;">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
@@ -43,11 +43,11 @@
 						}
   					} 
   				%> <!-- if session -->
-  				<li><a href="regselection.jsp">Sign Up</a></li>
+  				
   				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
-  			  <form method="GET" action="">
+  			  <form method="GET" action="/action_page.php">
      		    <input  class="navigation" type="text" placeholder="Search.." name="search" >
       		  <button class="navigation" type="submit"><i class="fa fa-search"></i></button>
     		  </form>
@@ -66,7 +66,7 @@
 		</div>
 		      <hr class="new1">
 		      
-			<div class = "emp-update-emp">
+			<div class = "emp-del-msg">
 			<%String empID = request.getParameter("id");
 				Connection conn = null;
 				Statement state = null;
@@ -75,7 +75,7 @@
 				try{
             		conn = DBConnect.getConnection();
             		state = conn.createStatement();
-            		String sql = "select * from employee where employeeID = '" + empID + "'" ;
+            		String sql = "select * from item where itemID = '" + empID + "'" ;
             		rs = state.executeQuery(sql);
    					rs.next();
     			}
@@ -83,40 +83,12 @@
     				e.printStackTrace();
     			}
 			  %>
-			  <form action="updateemployee" method = "post">	
-				<center>
-				<br>
-					<input type="text" name = "empID" value = "<%out.print(rs.getInt(1));%>"><br><br>
-					
-			        <h3>Employee First Name :</h3>
-			        <input type="text" name = "fname" value = "<%out.print(rs.getString(2)); %>"><br><br>
-			
-			        <h3>Employee Last Name :</h3>
-			        <input type="text" name = "lname" value = "<%out.print(rs.getString(3)); %>"><br><br>
-			
-			        <h3>Employee Contact Number :</h3>
-			        <input type="text" name = "contactno" value = "<%out.print(rs.getString(4)); %>"><br><br>
-
-			        <h3>Employee Role :</h3>
-			        	<select name="role" id="role" value = "<%out.print(rs.getString(5)); %>" required>
-            			<option value="">Select...</option>
-            			<option value="admin">System Administrator</option>
-            			<option value="supervisor">Supervisor</option>
-            			<option value="mechanic">Mechanic</option>
-            			<option value="assistant_mechanic">Assistant Mechanic</option>
-            			<option value="car_detailer">Car Detailer</option>
-            			<option value="recieption">Recipetion</option>
-        			</select><br><br>
-			
-			        <h3>Employee Salary :</h3>
-			        <input type="text" name = "salary"  value = "<%out.print(rs.getString(6)); %>"><br><br>
-			
-			        <h3>Employee Username :</h3>
-			        <input type="text" name = "username" value = "<%out.print(rs.getString(7)); %>"><br><br>
-						<br>
-			        <input type="submit" value = "Update Details">
-			    </center>
-			  </form>
+			  <form action="deleteitem" method = "post">
+				<h2>Do you want to delete <%out.print(rs.getString(2));%> <%out.print(rs.getString(3));%>'s Account?</h2>
+					<input type="text" name = "hiddenID" value = "<%out.print(rs.getInt(1));%>">
+					<button><input type="submit" value="Yes" name = "customer" class = "button"></button>
+				</form>
+				<button>No</button>
 			</div>
           
    

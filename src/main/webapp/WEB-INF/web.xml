@@ -49,7 +49,6 @@
 		
 		
 		<!--customer -->
-		
 		<servlet>
 			<servlet-name>updatecustomer</servlet-name>
 			<servlet-class>com.customer.CustomerUpdateServlet</servlet-class>
@@ -76,6 +75,16 @@
 		<servlet-mapping>
 			<servlet-name>deletesupplier</servlet-name>
 			<url-pattern>/deletesupplier</url-pattern>
+		</servlet-mapping>
+		
+		<!--item-->
+		<servlet>
+			<servlet-name>deleteitem</servlet-name>
+			<servlet-class>com.item.ItemDeleteServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>deleteitem</servlet-name>
+			<url-pattern>/deleteitem</url-pattern>
 		</servlet-mapping>
 		
 </web-app>

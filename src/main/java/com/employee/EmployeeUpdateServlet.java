@@ -63,11 +63,11 @@ public class EmployeeUpdateServlet extends HttpServlet {
 		//132654
 		
 		if(isTrue == true) {
-			RequestDispatcher dis = request.getRequestDispatcher("empdashemplist.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("empDash.jsp");
 			dis.forward(request, response);
 		}
 		else {
-			RequestDispatcher dis = request.getRequestDispatcher("empdashemplist.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("empDash.jsp");
 			dis.forward(request, response);
 		}
 	}
