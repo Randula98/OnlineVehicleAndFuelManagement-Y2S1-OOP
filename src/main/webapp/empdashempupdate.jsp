@@ -16,7 +16,7 @@
   	<link rel="stylesheet" type="text/css" href="css/empDash.css">
 </head>
 <body>
-  <div class="container" style = "height:1000px">
+  <div class="container" style = "height:900px">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
@@ -105,9 +105,6 @@
 			
 			        <h3>Employee Username :</h3>
 			        <input type="text" name = "username" value = "<%out.print(rs.getString(7)); %>"><br><br>
-			        
-			        <h3>Employee Password :</h3>
-			        <input type="text" name = "password" value = "<%out.print(rs.getString(8)); %>"><br><br>
 						<br>
 			        <input type="submit" value = "Update Details">
 			    </center>

@@ -129,4 +129,34 @@ public class CustomerDBUtil {
 			}
 			return isSuccess;
 	}
+
+	public static boolean deleteCustomer(String id) {
+		// TODO Auto-generated method stub
+		System.out.println(id);
+		int cuspid = Integer.parseInt(id);
+		
+		System.out.println("In the db util");
+		System.out.println(cuspid);
+		
+		try {
+			System.out.println("hello");
+			System.out.println("In the try");
+			conn = DBConnect.getConnection();
+			state=conn.createStatement();
+			String sql = "delete from customer where customerID = '" + cuspid + "'";
+			int result = state.executeUpdate(sql);
+			System.out.println(result);
+			if(result > 0) {
+				isSuccess=true;
+			}else {
+				isSuccess=false;
+			}
+			
+		}catch(Exception X) {
+			
+			X.printStackTrace();
+			
+		}
+		return isSuccess;
+	}
 }

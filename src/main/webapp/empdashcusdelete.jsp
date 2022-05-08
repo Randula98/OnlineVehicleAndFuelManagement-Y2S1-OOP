@@ -83,7 +83,7 @@
     				e.printStackTrace();
     			}
 			  %>
-			  <form action="deleteemployee" method = "post">
+			  <form action="deletecustomer" method = "post">
 				<h2>Do you want to delete <%out.print(rs.getString(2));%> <%out.print(rs.getString(3));%>'s Account?</h2>
 					<input type="text" name = "hiddenID" value = "<%out.print(rs.getInt(1));%>">
 					<button><input type="submit" value="Yes" name = "customer" class = "button"></button>

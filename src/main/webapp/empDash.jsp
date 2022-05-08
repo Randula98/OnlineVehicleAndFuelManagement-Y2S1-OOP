@@ -113,7 +113,6 @@
                 <p>Net Salary of - <%out.print(rs.getDouble(6));%></p>
                 
                <button><a href = "#">Update Employee Detials</a></button>
-               <button><a href = "#">Delete Employee Detials</a></button>
                
               </div>
 
