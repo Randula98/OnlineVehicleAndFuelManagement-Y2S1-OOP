@@ -46,10 +46,11 @@ public class EmployeeUpdateServlet extends HttpServlet {
 		String role = request.getParameter("role");
 		String salary = request.getParameter("salary");
 		String username = request.getParameter("username");
+		String password = request.getParameter("password");
 		
 		boolean isTrue = false;
 		
-		isTrue = EmployeeDBUtil.updateEmployee(id, fname, lname, cno, role, salary, username);
+		isTrue = EmployeeDBUtil.updateEmployee(id, fname, lname, cno, role, salary, username , password);
 		System.out.println(isTrue);
 		System.out.println(id);
 		System.out.println(fname);
@@ -58,6 +59,7 @@ public class EmployeeUpdateServlet extends HttpServlet {
 		System.out.println(role);
 		System.out.println(salary);
 		System.out.println(username);
+		System.out.println(password);
 		//132654
 		
 		if(isTrue == true) {

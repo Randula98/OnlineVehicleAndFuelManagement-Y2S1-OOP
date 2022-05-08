@@ -98,7 +98,7 @@
 		</div>
 		      <hr class="new1"><center>
 		      <div class = "supDash">
-		          <h1 style="text-align:center; background-color: #8f8f2f"><% out.print(rs.getString(2)); %>'s Supplier Dashboard</h1>
+		          <h1 style="text-align:center; background-color: #8f8f2f"><% out.print(rs1.getString(2)); %>'s Supplier Dashboard</h1>
 		          <br><br>
 		          <h2 style="text-align:center;">Profile Details</h2>
 		          <br><br>
