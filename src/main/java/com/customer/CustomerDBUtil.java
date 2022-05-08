@@ -108,4 +108,25 @@ public class CustomerDBUtil {
 		
 		return customer;
 	}
+	
+	public static boolean updateCustomer(String id, String fname, String lname, String conNo, String mail, String uname,String password) {
+		
+		try {
+    		
+    		conn = DBConnect.getConnection();
+    		state = conn.createStatement();
+    		String sql = "update customer set firstName='"+fname+"', lastName = '"+lname+"' ,contacNo='"+conNo+"', email = '"+mail+"' , username='"+uname+"',password='"+password+"' where customerID='"+id+"'";
+    		int rs = state.executeUpdate(sql);
+    		
+    		if(rs > 0) {
+    			isSuccess = true;
+    		}
+    		else {
+    			isSuccess = false;
+    		}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			return isSuccess;
+	}
 }
