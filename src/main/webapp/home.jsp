@@ -130,18 +130,18 @@
 <br><br><br><br><br><br><br><br><br><br><br>
 <div>
     <center>
-      <img src="images/pormo2.jpg" alt="promo2 image" class="mainImage"> <!-- done by : IT21105302 -->
-      <img src="images/promo6.jpg" alt="promo6 image" class="mainImage">
+      <img src="images/pormo2.jfif" alt="promo2 image" class="mainImage"> <
+      <img src="images/blond.jpg" alt="promo6 image" class="mainImage">
       <br>
-      <img src="images/promo7.jpg" alt="promo6 image" class="banner">
+      <img src="images/serv.jpg" alt="promo6 image" class="banner">
     
     <hr>
     <br><br><br>
     <div class="imgFooter">
-      <a href="category.php? categoryId=CA02"><img src="images/promo1.jpg" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA01"><img src="images/promo3.png" alt="" class="image"></a> 
-      <a href="category.php? categoryId=CA02"><img src="images/promo4.jpg" alt="" class="image"></a> 
-      <a href="index.php"><img src="images/promo5.jpg" alt="" class="image"></a> 
+      <img src="images/piston.jpg" alt="" class="image"> 
+      <img src="images/fuel-1.jpg" alt="" class="image">
+      <img src="images/hapcus.jpg" alt="" class="image"> 
+      <img src="images/whee.jpg" alt="" class="image"> 
     </div>
     </center>
   </div>
