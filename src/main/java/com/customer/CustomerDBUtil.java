@@ -115,7 +115,7 @@ public class CustomerDBUtil {
     		
     		conn = DBConnect.getConnection();
     		state = conn.createStatement();
-    		String sql = "update customer set firstName='"+fname+"', lastName = '"+lname+"' ,contacNo='"+conNo+"', email = '"+mail+"' , username='"+uname+"',password='"+password+"' where customerID='"+id+"'";
+    		String sql = "update customer set firstName='"+fname+"', lastName = '"+lname+"' ,contactNo='"+conNo+"', email = '"+mail+"' , username='"+uname+"',password='"+password+"' where customerID='"+id+"'";
     		int rs = state.executeUpdate(sql);
     		
     		if(rs > 0) {
