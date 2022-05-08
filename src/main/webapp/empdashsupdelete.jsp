@@ -67,7 +67,7 @@
 		      <hr class="new1">
 		      
 			<div class = "emp-del-msg">
-			<%String empID = request.getParameter("id");
+			<%String supID = request.getParameter("id");
 				Connection conn = null;
 				Statement state = null;
 				ResultSet rs = null;
@@ -75,7 +75,7 @@
 				try{
             		conn = DBConnect.getConnection();
             		state = conn.createStatement();
-            		String sql = "select * from employee where employeeID = '" + empID + "'" ;
+            		String sql = "select * from supplier where supplierID = '" + supID + "'" ;
             		rs = state.executeQuery(sql);
    					rs.next();
     			}
@@ -83,7 +83,7 @@
     				e.printStackTrace();
     			}
 			  %>
-			  <form action="deleteemployee" method = "post">
+			  <form action="deletesupplier" method = "post">
 				<h2>Do you want to delete <%out.print(rs.getString(2));%> <%out.print(rs.getString(3));%>'s Account?</h2>
 					<input type="text" name = "hiddenID" value = "<%out.print(rs.getInt(1));%>">
 					<button><input type="submit" value="Yes" name = "customer" class = "button"></button>

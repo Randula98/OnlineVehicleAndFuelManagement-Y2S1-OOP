@@ -84,7 +84,7 @@
 							<p><%out.print(rs.getString(5)); %></p>
 							<p><%out.print(id); %></p>
 							
-							<button><a href = "empdashempdelete.jsp?id=<%out.print(rs.getInt(1)); %>">Delete Employee</a></button>
+							<button><a href = "empdashsupdelete.jsp?id=<%out.print(rs.getInt(1)); %>">Delete Employee</a></button>
 
 							
 							</div><%

@@ -95,5 +95,35 @@ public class SupplierDBUtil {
 		
 		return supplier;
 	}
+public static boolean deleteSupplier(String id) {
+	// TODO Auto-generated method stub
+	System.out.println(id);
+	int supid = Integer.parseInt(id);
+	
+	System.out.println("In the db util");
+	System.out.println(supid);
+	
+	try {
+		System.out.println("hello");
+		System.out.println("In the try");
+		conn = DBConnect.getConnection();
+		state=conn.createStatement();
+		String sql = "delete from supplier where supplierID = '" + supid + "'";
+		int result = state.executeUpdate(sql);
+		System.out.println(result);
+		if(result > 0) {
+			isSuccess=true;
+		}else {
+			isSuccess=false;
+		}
+		
+	}catch(Exception X) {
+		
+		X.printStackTrace();
+		
+	}
+	
+	return isSuccess;
+}
    
 }

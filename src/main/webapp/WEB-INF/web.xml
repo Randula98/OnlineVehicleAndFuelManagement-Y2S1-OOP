@@ -67,4 +67,15 @@
 			<servlet-name>deletecustomer</servlet-name>
 			<url-pattern>/deletecustomer</url-pattern>
 		</servlet-mapping>
+		
+		<!--supplier-->
+		<servlet>
+			<servlet-name>deletesupplier</servlet-name>
+			<servlet-class>com.supplier.SupplierDeleteServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>deletesupplier</servlet-name>
+			<url-pattern>/deletesupplier</url-pattern>
+		</servlet-mapping>
+		
 </web-app>
