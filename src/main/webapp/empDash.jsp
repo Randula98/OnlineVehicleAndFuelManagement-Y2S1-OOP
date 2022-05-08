@@ -227,7 +227,7 @@
                 			<th>ID</th>
                 			<th>First Name</th>
                 			<th>Last Name</th>
-                			<th>Role</th>
+                			<th>Email</th>
                 		</tr>
                 	</thead>
                 	
@@ -261,7 +261,7 @@
                 	</tbody>
                 	
                 </table><br>
-				<button><a href = "#">See More...</a></button>
+				<button><a href = "empdashcuslist.jsp">See More...</a></button>
               </div>
               <div class = "cards list"><!--sup details-->
                 <div class = "list_head"><h1>Supllier List</h1></div>
@@ -269,9 +269,9 @@
                 	<thead>
                 		<tr>
                 			<th>ID</th>
-                			<th>First Name</th>
-                			<th>Last Name</th>
-                			<th>Role</th>
+                			<th>Comapany Name</th>
+                			<th>Branch Name</th>
+                			<th>Username</th>
                 		</tr>
                 	</thead>
                 	
@@ -304,7 +304,7 @@
                 		
                 	</tbody>
                 </table><br>
-                <button><a href = "#">See More...</a></button>
+                <button><a href = "empdashsuplist.jsp">See More...</a></button>
               </div>
               
               <div class = "cards item-list"><!--item details-->
