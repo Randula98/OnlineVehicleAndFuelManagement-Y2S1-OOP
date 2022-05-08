@@ -43,7 +43,7 @@ public class CustomerInsertServlet extends HttpServlet {
 		String lastName=request.getParameter("lastName");
 		String contactNo=request.getParameter("contactNo");
 		String email=request.getParameter("email");
-		String username=request.getParameter("username");
+		String username=request.getParameter("uname");
 		String password=request.getParameter("password");
 		
 		boolean isTrue;
