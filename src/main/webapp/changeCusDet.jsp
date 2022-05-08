@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="service.util.*"%>
+<%@ page import="com.customer.*"%>
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
@@ -9,6 +14,29 @@
   	<link rel="stylesheet" type="text/css" href="css/sd.css">
   	<link rel="stylesheet" type="text/css" href="css/home.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
+  	
+  	
+  	<%
+	String cusUserName = session.getAttribute("Susername").toString();
+	
+	
+	Connection conn = null;
+	Statement state = null;
+	ResultSet rs = null;
+	
+	try{
+		conn = DBConnect.getConnection();   //made connection
+		state = conn.createStatement();
+		
+		String sql = "select * from customer where username = '" + cusUserName + "'";
+		
+		rs = state.executeQuery(sql);
+		rs.next();
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	
+	%>
 </head>
 <body>
   <div class="container">
@@ -69,45 +97,39 @@
             <br>
             
             
-            <form action="" method="POST">
+            <form action="updatecustomer" method="POST">
+            	<input type="text" name="id" value="<%out.print(rs.getString(1));%>"> 
                 First Name 
-                <input type="text" name="fname" placeholder="Enter New First Name">  
-                <input type="submit" value="Change Name" id=""><br><br>
+                <input type="text" name="fname" value="<%out.print(rs.getString(2));%>">  
+                <br><br>
                 
-            </form>
-
-            <form action="" method="POST">
+            
                 Last Name 
-                <input type="text" name="lname" placeholder="Enter New Last Name">  
-                <input type="submit" value="Change Name" id=""><br><br>
+                <input type="text" name="lname" value="<%out.print(rs.getString(3));%>">  
+                <br><br>
                 
-            </form>
-
-            <form action="" method="POST">
+            
                 Contact Number
-                <input type="text" name="conNo" placeholder="Enter New Contact Number">  
-                <input type="submit" value="Change Number" id=""><br><br>
+                <input type="text" name="conNo" value="<%out.print(rs.getString(4));%>">  
+                <br><br>
                 
-            </form>
-
-            <form action="" method="POST">
+            
                 Email 
-                <input type="email" name="mail" placeholder="Enter New Email Address">  
-                <input type="submit" value="Change Email" id=""><br><br>
+                <input type="email" name="mail" value="<%out.print(rs.getString(5));%>">  
+                <br><br>
                 
-            </form>
-
-            <form action="" method="POST">
+           
                 UserName 
-                <input type="text" name="uname" placeholder="Enter New User Name">  
-                <input type="submit" value="Change UserName" id=""><br><br>
+                <input type="text" name="uname" value="<%out.print(rs.getString(6));%>">  
+                <br><br>
                 
-            </form>
-
-            <form action="" method="POST">
+            
                 Password
-                <input type="password" name="pwd" placeholder="Enter New Password">  
-                <input type="submit" value="Change Password" id=""><br><br>
+                <input type="text" name="pwd" value="<%out.print(rs.getString(7));%>">  
+                <br><br>
+                
+                <input type="submit" value="Make Changes" >
+                <br><br>
                 
             </form>
             

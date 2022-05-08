@@ -53,5 +53,16 @@
 			<servlet-name>test</servlet-name>
 			<url-pattern>/test</url-pattern>
 		</servlet-mapping>
+		
+		<!--customer -->
+		
+		<servlet>
+			<servlet-name>updatecustomer</servlet-name>
+			<servlet-class>com.customer.CustomerUpdateServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>updatecustomer</servlet-name>
+			<url-pattern>/updatecustomer</url-pattern>
+		</servlet-mapping>
          
 </web-app>
