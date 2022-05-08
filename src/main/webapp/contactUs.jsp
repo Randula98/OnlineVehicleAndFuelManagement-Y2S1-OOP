@@ -22,13 +22,23 @@
   				<!-- if no session -->
   				<%
   				if((session.getAttribute("Susername") == null) && (session.getAttribute("Empname")== null) && (session.getAttribute("supName")== null)) {
-  				%><li><a href="login.jsp">Log In</a></li><% 
+  				%><li><a href="login.jsp">Log In</a></li>
+  				<li><a href="regselection.jsp">Sign Up</a></li><% 
   						} 
   				else {
   				%><li><a href="logout.jsp">Log Out</a></li><% 
-  						} 
+  					if(session.getAttribute("Susername") != null){
+  						%><li><a href="cusDash.jsp">Dashboard</a></li><% 
+  						}
+  					else if(session.getAttribute("Empname") != null){
+						%><li><a href="empDash.jsp">Dashboard</a></li><% 
+						}
+  					else if(session.getAttribute("supName") != null){
+						%><li><a href="supDash.jsp">Dashboard</a></li><% 
+						}
+  					} 
   				%> <!-- if session -->
-  				<li><a href="regselection.jsp">Sign Up</a></li>
+  				
   				<li><a href="contactUs.jsp">Help</a></li>
   			</ul><br>
       
