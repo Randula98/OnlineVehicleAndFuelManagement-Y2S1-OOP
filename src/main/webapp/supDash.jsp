@@ -10,22 +10,36 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="Styles/style.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/sd.css">
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/supDash.css">
 <title>Supplier Dashboard</title>
 <%
 	String supUserName = session.getAttribute("supName").toString();
 	
 	Connection conn = null;
-	Statement state = null;
+	Statement state1 = null;
 	Statement state2 = null;
-	ResultSet rs = null;
+	ResultSet rs1 = null;
 	ResultSet rs2 = null;
+	
 	
 	  try {
 			conn = DBConnect.getConnection();
-			state = conn.createStatement();
-			String sql = "select * from supplier where userName = '" + supUserName + "'";
-			rs = state.executeQuery(sql);
-	        rs.next();
+			state1 = conn.createStatement();
+			String sql1 = "select * from supplier where userName = '" + supUserName + "'";
+			rs1 = state1.executeQuery(sql1);
+	        rs1.next();
+	        
+	        int supID = rs1.getInt(1);
+	        
+			state2 = conn.createStatement();
+			String sql2 = "select * from item where supID = '" + supID + "'";
+			rs2 = state2.executeQuery(sql2);
+	        rs2.next();
 	        
 	} catch (Exception e) {
 		// TODO: handle exception
@@ -72,15 +86,32 @@
 			        <br>
 		      </div>
 		</div>
-		      <hr class="new1">
-	<h1>Hello</h1>
+		      <hr class="new1"><center>
+		      <div class = "supDash">
+		          <h1 style="text-align:center; background-color: #8f8f2f"><% out.print(rs.getString(2)); %>'s Supplier Dashboard</h1>
+		          <br><br>
+		          <h2 style="text-align:center;">Profile Details</h2>
+		          <br><br>
+		           <table id= tab101>
+		             <tr><td class="det">Company Name</td>
+		                 <td><% out.print(rs1.getString(2)); %></td></tr>
+		                 <tr><tdclass="det">Branch Location</td>
+		                 <td><% out.print(rs1.getString(3)); %></td></tr>
+		                 <tr><tdclass="det">User Name</td>
+		                 <td><% out.print(rs1.getString(5)); %></td></tr>
+		                 <tr><tdclass="det">Contact Number</td>
+		                 <td><% out.print(rs1.getString(4)); %></td></tr>
+		           </table>     
+		      </div></center>
+		      <%  %>
+	<h1></h1>
 	<label><%out.print(supUserName);%></label><br>
-	<label><%out.print(rs.getInt(1));%></label><br>
-	<label><%out.print(rs.getString(2));%></label><br>
-	<label><%out.print(rs.getString(3));%></label><br>
-	<label><%out.print(rs.getString(4));%></label><br>
-	<label><%out.print(rs.getString(5));%></label><br>
-	<label><%out.print(rs.getString(6));%></label><br>
+	<label><%out.print(rs1.getInt(1));%></label><br>
+	<label><%out.print(rs1.getString(2));%></label><br>
+	<label><%out.print(rs1.getString(3));%></label><br>
+	<label><%out.print(rs1.getString(4));%></label><br>
+	<label><%out.print(rs1.getString(5));%></label><br>
+	<label><%out.print(rs1.getString(6));%></label><br>
 	
 	<footer>
       	<hr class="new1"><nav class="foot">

@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+table#tab101 {
+	max-width : 1080px;
+	padding : 0px;
+	margin : 0px;
+}
+.det{
+	font-weight:bold;
+}
