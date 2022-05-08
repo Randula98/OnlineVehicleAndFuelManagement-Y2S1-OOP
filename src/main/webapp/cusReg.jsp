@@ -73,25 +73,25 @@
                 </center>
 
                 <center>
-                <form action="" method="POST" onsubmit="return checkPassword()">
+                <form action="insertcustomer" method="POST" onsubmit="return checkPassword()">
                 
                 <label for="fname">First name:</label><br>
-                <input type="text" placeholder="Enter First Name" name="fname" class = "text" required><br><br>
+                <input type="text" placeholder="Enter First Name" name="firstName" class = "text" required><br><br>
                 
                 <label for="lname">Last name:</label><br>
-                <input type="text" placeholder="Enter Last Name" name="lname" class = "text" required><br><br>
+                <input type="text" placeholder="Enter Last Name" name="lastName" class = "text" required><br><br>
                 
                 <label for="lname">Mobile Number:</label><br>
-                <input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="+94712345678" class = "text" required><br/><br>
+                <input type="phone" name="contactNo"  placeholder="+94712345678" class = "text" required><br/><br>
                 
                 <label for="lname">Email Address:</label><br>
                 <input type="email" name="email" pattern="[a-z0-9.-+_%]+@[a-z0-9.-]+\.[a-z]{2,3} " placeholder="anonymous@Xmail.com" class = "text" required><br/><br>
                 
                 <label for="username">Username:</label><br>
-                <input type="text" placeholder="Username" name="uname" pattern="{5,15}" class = "text" required><br><br>
+                <input type="text" placeholder="username" name="uname" pattern="{5,15}" class = "text" required><br><br>
                 
                 <label for="lname">Enter Password:</label><br>
-                <input type="password" name="pwd" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Enter Password" class = "text" required ><br/><br>
+                <input type="password" name="password" id="pwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Enter Password" class = "text" required ><br/><br>
                 
                 <label for="lname">Re-Enter Password:</label><br>
                 <input type="password" name="cnfrmpwd" id="cnfrmpwd" pattern="(!@#$%^&*?/\)(?=.+[a-z])(?=.+[A-Z]).{5,15}" placeholder = "Re-Enter Password" class = "text" required><br/><br>

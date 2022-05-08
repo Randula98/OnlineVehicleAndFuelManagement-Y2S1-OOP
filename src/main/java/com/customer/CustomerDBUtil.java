@@ -159,4 +159,29 @@ public class CustomerDBUtil {
 		}
 		return isSuccess;
 	}
+	
+	public static boolean insertcustomer(String firstName,String lastName,String contactNo,String email,String username,String password) {
+		
+		boolean isSuccess = false;
+		
+		try {
+			
+			conn = DBConnect.getConnection();
+			state = conn.createStatement();
+			String sql = "insert into customer values (0,'"+firstName+"','"+lastName+"','"+contactNo+"','"+email+"','"+username+"','"+password+"')";
+			int rs = state.executeUpdate(sql);
+			
+			if(rs>0) {
+				isSuccess=true;
+			}else {
+				isSuccess=false;
+			}
+		}catch(Exception X) {
+			X.printStackTrace();
+		}
+		return isSuccess;
+		
+	}
+	
+	
 }
