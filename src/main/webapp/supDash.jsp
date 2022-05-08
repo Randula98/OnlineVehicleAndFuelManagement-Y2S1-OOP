@@ -39,7 +39,6 @@
 			state2 = conn.createStatement();
 			String sql2 = "select * from item where supID = '" + supID + "'";
 			rs2 = state2.executeQuery(sql2);
-	        rs2.next();
 	        
 	} catch (Exception e) {
 		// TODO: handle exception
@@ -105,23 +104,27 @@
 		           <table id= tab101>
 		             <tr><td class="det">Company Name</td>
 		                 <td><% out.print(rs1.getString(2)); %></td></tr>
-		                 <tr><tdclass="det">Branch Location</td>
+		                 <tr><td class="det">Branch Location</td>
 		                 <td><% out.print(rs1.getString(3)); %></td></tr>
-		                 <tr><tdclass="det">User Name</td>
+		                 <tr><td class="det">User Name</td>
 		                 <td><% out.print(rs1.getString(5)); %></td></tr>
-		                 <tr><tdclass="det">Contact Number</td>
+		                 <tr><td class="det">Contact Number</td>
 		                 <td><% out.print(rs1.getString(4)); %></td></tr>
 		           </table>     
 		      </div></center>
-		      <%  %>
-	<h1></h1>
-	<label><%out.print(supUserName);%></label><br>
-	<label><%out.print(rs1.getInt(1));%></label><br>
-	<label><%out.print(rs1.getString(2));%></label><br>
-	<label><%out.print(rs1.getString(3));%></label><br>
-	<label><%out.print(rs1.getString(4));%></label><br>
-	<label><%out.print(rs1.getString(5));%></label><br>
-	<label><%out.print(rs1.getString(6));%></label><br>
+		        <h2 style="text-align:center;">Items Available In Stocks</h2>
+		      <table id="tab1"><tr>
+		       <th>Item Name</th>
+		       <th>Price</th>
+		       <th>Quantity</th></tr>
+		       <% while(rs2.next()){ %>
+		       <tr><td><% out.print(rs2.getString(2)); %></td>
+		       <td><% out.print(rs2.getDouble(3)); %></td>
+		       <td><% out.print(rs2.getInt(5)); %></td>
+		       </tr><%}%>
+		      </table>
+		      
+	
 	
 	<footer>
       	<hr class="new1"><nav class="foot">
