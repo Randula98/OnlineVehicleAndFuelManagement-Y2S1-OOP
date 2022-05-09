@@ -13,7 +13,7 @@ public class FuelDBUtil {
 	private static Statement state =null;
 	private static ResultSet rs=null;
 	
-	public static boolean insertFuel(String fType , String amount , String vno , String cDate , String vType) {
+	public static boolean insertFuel(String fType , String amount , String vno , String cDate , String vType , String cid) {
 		
 		boolean isSuccess = false;
 		

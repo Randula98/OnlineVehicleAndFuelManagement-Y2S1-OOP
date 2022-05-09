@@ -46,15 +46,14 @@ public class FuelInsertServlet extends HttpServlet {
 		String vehicleNo = request.getParameter("vehicleNo");
 		String cDate = request.getParameter("date");
 		String vType = request.getParameter("vehicleType");
-		String username = request.getParameter("uname");
-		String password = request.getParameter("password");
+		String cid = request.getParameter("hiddenid");
 		
 		boolean isTrue;
 		
-		isTrue = EmployeeDBUtil.insertEmployee(firstName,lastName,contactNo,role,salary,username,password);
+		isTrue = FuelDBUtil.insertFuel(fType, amount, vehicleNo, cDate, vType , cid);
 		
 		if(isTrue==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("login.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("cusDash.jsp");
 			dis.forward(request, response);
 		}else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("home.jsp");
