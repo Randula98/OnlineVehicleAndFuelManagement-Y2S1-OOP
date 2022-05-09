@@ -123,8 +123,8 @@
 		       <td><% out.print(rs2.getInt(5)); %></td>
 		       </tr><%}%>
 		      </table>
-		      <button class="add" onclick="window.location.href='addItem.jsp'">Add Supplies</button>
-	
+		      <div class="add"><button class="category" onclick="window.location.href='addItem.jsp'">Add Supplies</button>
+	</div>
 	
 	<footer>
       	<hr class="new1"><nav class="foot">

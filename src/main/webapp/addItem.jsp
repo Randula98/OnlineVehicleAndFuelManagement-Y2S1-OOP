@@ -22,28 +22,21 @@
 	
 	Connection conn = null;
 	Statement state1 = null;
-	Statement state2 = null;
 	ResultSet rs1 = null;
-	ResultSet rs2 = null;
 	
 	
-	  try {
+		try{
 			conn = DBConnect.getConnection();
 			state1 = conn.createStatement();
-			String sql1 = "select * from supplier where userName = '" + supUserName + "'";
+			String sql1 = "select * from supplier where userName = '" + supUserName + "';";
 			rs1 = state1.executeQuery(sql1);
-	        rs1.next();
+			rs1.next();
 	        
 	        int supID = rs1.getInt(1);
-	        
-			state2 = conn.createStatement();
-			String sql2 = "select * from item where supID = '" + supID + "'";
-			rs2 = state2.executeQuery(sql2);
-	        
-	} catch (Exception e) {
-		// TODO: handle exception
-		e.printStackTrace();
-	}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 	
 %>
 </head>
@@ -97,7 +90,7 @@
 		</div>
 		      <hr class="new1">
 		      <center>
-		        <form action="updateItems" method="POST" >
+		        <form action="insertItem" method="POST" >
                 
                 <label >Item:</label><br>
                 <input type="text" placeholder="item name" name="item" class = "text" required><br><br>
@@ -105,11 +98,12 @@
                 <input type="text" placeholder="RS." name="price" class = "text" required><br><br>
                 <label >Available quantity:</label><br>
                 <input type="text" placeholder="quantity" name="quantity" class = "text" required><br><br>
+                <input type="text" style="visibility:hidden;" name="supID" class = "text" value="<% out.print(rs1.getInt(1)); %>"><br><br>
                
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="Register" >
+                <input type="submit" id="submitBtn" value="Add" >
                 </center>
                 </form>
 		      </center>		      
