@@ -88,6 +88,15 @@
 		
 		<!--item-->
 		<servlet>
+			<servlet-name>addItem</servlet-name>
+			<servlet-class>com.item.AddItemServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>addItem</servlet-name>
+			<url-pattern>/addItem</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
 			<servlet-name>deleteitem</servlet-name>
 			<servlet-class>com.item.ItemDeleteServlet</servlet-class>
 		</servlet>

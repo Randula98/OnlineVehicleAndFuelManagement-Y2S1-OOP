@@ -43,5 +43,31 @@ public class ItemDBUtil {
 		}
 		return isSuccess;// TODO Auto-generated method stub
 	}
-
+	
+    public static boolean insertItem(String item,double price,int quantity,int supID){
+		
+		boolean isSuccess = false;
+		
+		try {
+			
+			conn = DBConnect.getConnection();
+			state = conn.createStatement();
+			String sql = "insert into item values (0,'"+item+"','"+price+"','"+supID+"','"+quantity+"')";
+			int rs = state.executeUpdate(sql);
+			
+			if(rs>0) {
+				isSuccess=true;
+			}else {
+				isSuccess=false;
+			}
+		}catch(Exception X) {
+			X.printStackTrace();
+		}
+		return isSuccess;
+		
+	}
+	
+	
 }
+ 
+

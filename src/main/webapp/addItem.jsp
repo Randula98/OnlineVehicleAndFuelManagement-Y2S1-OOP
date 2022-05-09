@@ -95,37 +95,24 @@
 			        <br>
 		      </div>
 		</div>
-		      <hr class="new1"><center>
-		      <div class = "supDash">
-		          <h1 style="text-align:center; background-color: #8f8f2f"><% out.print(rs1.getString(2)); %>'s Supplier Dashboard</h1>
-		          <br><br>
-		          <h2 style="text-align:center;">Profile Details</h2>
-		          <br><br>
-		           <table id= tab101>
-		             <tr><td class="det">Company Name</td>
-		                 <td><% out.print(rs1.getString(2)); %></td></tr>
-		                 <tr><td class="det">Branch Location</td>
-		                 <td><% out.print(rs1.getString(3)); %></td></tr>
-		                 <tr><td class="det">User Name</td>
-		                 <td><% out.print(rs1.getString(5)); %></td></tr>
-		                 <tr><td class="det">Contact Number</td>
-		                 <td><% out.print(rs1.getString(4)); %></td></tr>
-		           </table>     
-		      </div></center>
-		        <h2 style="text-align:center;">Items Available In Stocks</h2>
-		      <table id="tab1"><tr>
-		       <th>Item Name</th>
-		       <th>Price</th>
-		       <th>Quantity</th></tr>
-		       <% while(rs2.next()){ %>
-		       <tr><td><% out.print(rs2.getString(2)); %></td>
-		       <td><% out.print(rs2.getDouble(3)); %></td>
-		       <td><% out.print(rs2.getInt(5)); %></td>
-		       </tr><%}%>
-		      </table>
-		      <button class="add" onclick="window.location.href='addItem.jsp'">Add Supplies</button>
-	
-	
+		      <hr class="new1">
+		      <center>
+		        <form action="updateItems" method="POST" >
+                
+                <label >Item:</label><br>
+                <input type="text" placeholder="item name" name="item" class = "text" required><br><br>
+                <label >Price per unit:</label><br>
+                <input type="text" placeholder="RS." name="price" class = "text" required><br><br>
+                <label >Available quantity:</label><br>
+                <input type="text" placeholder="quantity" name="quantity" class = "text" required><br><br>
+               
+                </center>
+                
+                <center>
+                <input type="submit" id="submitBtn" value="Register" >
+                </center>
+                </form>
+		      </center>		      
 	<footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
