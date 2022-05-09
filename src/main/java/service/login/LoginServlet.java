@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 		out.println("<script type='text/javascript'>");
 		out.println("alert('Logged in');");
 		out.println("</script>");
-		//Done by Leo
+		
 		if(employee != null)
 		{
 			isTrue = EmployeeDBUtil.validate(username, password);
@@ -77,7 +77,7 @@ public class LoginServlet extends HttpServlet {
 				out.println("</script>");
 			
 			}
-		} // until here
+		}
 		else if(customer != null)
 		{
 			isTrue = CustomerDBUtil.validate(username, password);
