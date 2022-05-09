@@ -3,25 +3,29 @@
 	width:100%;
 	height:1700px;
 }
+body{
+	/*background-image: linear-gradient(to bottom right, yellow, orange);*/
+}
 .ribbon{
 	width:100%;
 	height:40px;
 	position: absolute;
     bottom: 0px;
-	border:1px solid black;
 }
 .dashboard{
-    border:1px solid black;
     width:90%;
     height:1250px;
     margin: 0px auto;
     font-family: Monospace;
+    background-color:gold;
 }
 .self-details{
-    border:1px solid black;
     width:40%;
     height:400px;
     margin-left: 20px;
+    background: rgb(227,184,9);
+	background: linear-gradient(90deg, rgba(227,184,9,1) 0%, rgba(255,184,0,1) 600%);
+	border-radius:20px;
 }
 .self-details img{
 	width: 200px;
@@ -34,10 +38,12 @@
 	font-size:25px;
 }
 .site-details{
-    border:1px solid black;
     width:54.5%;
     height:500px;
     margin-left: 40px;
+    background: rgb(227,184,9);
+	background: linear-gradient(90deg, rgba(227,184,9,1) 0%, rgba(255,184,0,1) 100%);
+	border-radius:20px;
 }
 .site-details p{
 	font-size:25px;
@@ -61,6 +67,7 @@
 }
 .cards table , .cards thead , .cards tr , .cards th , .cards td{
 	border:1px solid black;
+	border-collapse:collapse;
 }
 
 .list_head{
@@ -69,35 +76,40 @@
 .site-creds{
       width: 46%;
       height: 450px;
-      border:1px solid black;
       margin-left: 20px;
       margin-top: 20px;
+      background-color: rgba(255, 166, 0, 0.34);
+      transition:1s;
+ }
+ .site-creds:hover{
+ 	background-color: rgba(255, 166, 0, 0.64);
  }
 .list{
       width: 31.5%;
       height: 300px;
-      border:1px solid black;
       margin-left: 20px;
+      background-color: rgba(255, 166, 0, 0.54);
+      border-radius:30px;
 }
 .item-list{
       width: 97.2%;
       height: 300px;
-      border:1px solid black;
       margin-left: 20px;
+      background-color: rgba(255, 166, 0, 0.54);
 }
 .list_head{
     width: 100%;
-    border:1px solid black;
 }
 .item-box{
 	width:23%;
 	height:80px;
-	border:1px solid black;
 	margin-top:20px;
 	position:relative;
 	float:left;
 	margin-left:20px;
 	font-size:20px;
+	background-color:goldenrod;
+	border-radius:10px;
 }
 .emplist{
 	height:auto;
@@ -124,12 +136,58 @@
 }
 .emp-del-msg , .emp-update-emp{
 	font-family: Monospace;
-	border:1px solid black;
 	margin:0px auto;
 	margin-top:20px;
+	background-color:gold;
+	border-radius:20px;
 }
 .emp-del-msg{
 	height:100px;
 	width: 300px;
-	
+}
+.emp-update-emp{
+	width: 500px;
+	height:600px;
+}
+.dashboard button , .emp-list-box button{
+	display:block;
+	margin: 0 auto;
+	width:120px;
+	height:40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgb(251, 255, 0);
+    color: rgb(97, 89, 193);
+    transition:0.5s;
+}
+.dashboard button:hover , .emp-list-box button:hover{
+	background-color: #ffffff;
+    color: #000000;
+}
+.dashboard a , .emp-list-box a{
+	text-decoration:none;
+}
+.emp-update-emp input.text , .emp-update-emp select.text{
+	width:150px;
+	height:30px;
+	border:none;
+	border-radius:5px;
+	text-align:center;
+}
+
+.emp-update-emp input.button , .emp-del-emp button{
+	width:150px;
+	height:30px;
+	border-radius:10px;
+	border:0px;
+	transition:0.75s;
+	color:#95943a;
+	background-color:white;
+	transition:.5s;
+}
+
+.emp-update-emp input.button:hover , .emp-del-emp input.button:hover{
+	color:white;
+	background-color:#95943a;
 }

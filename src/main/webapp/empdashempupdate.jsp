@@ -14,9 +14,10 @@
   	<link rel="stylesheet" type="text/css" href="css/home.css">
   	<link rel="stylesheet" type="text/css" href="css/style.css">
   	<link rel="stylesheet" type="text/css" href="css/empDash.css">
+  	<link rel="stylesheet" type="text/css" href="css/regform.css">
 </head>
 <body>
-  <div class="container" style = "height:900px">
+  <div class="container" style = "height:1100px">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
@@ -86,19 +87,19 @@
 			  <form action="updateemployee" method = "post">	
 				<center>
 				<br>
-					<input type="text" name = "empID" value = "<%out.print(rs.getInt(1));%>"><br><br>
+					<input type="text" name = "empID" value = "<%out.print(rs.getInt(1));%>" class = "text"><br><br>
 					
 			        <h3>Employee First Name :</h3>
-			        <input type="text" name = "fname" value = "<%out.print(rs.getString(2)); %>"><br><br>
+			        <input type="text" name = "fname" value = "<%out.print(rs.getString(2)); %>" class = "text"><br><br>
 			
 			        <h3>Employee Last Name :</h3>
-			        <input type="text" name = "lname" value = "<%out.print(rs.getString(3)); %>"><br><br>
+			        <input type="text" name = "lname" value = "<%out.print(rs.getString(3)); %>" class = "text"><br><br>
 			
 			        <h3>Employee Contact Number :</h3>
-			        <input type="text" name = "contactno" value = "<%out.print(rs.getString(4)); %>"><br><br>
+			        <input type="text" name = "contactno" value = "<%out.print(rs.getString(4)); %>" class = "text"><br><br>
 
 			        <h3>Employee Role :</h3>
-			        	<select name="role" id="role" value = "<%out.print(rs.getString(5)); %>" required>
+			        	<select name="role" id="role" value = "<%out.print(rs.getString(5)); %>" class = "text" required>
             			<option value="">Select...</option>
             			<option value="admin">System Administrator</option>
             			<option value="supervisor">Supervisor</option>
@@ -109,12 +110,16 @@
         			</select><br><br>
 			
 			        <h3>Employee Salary :</h3>
-			        <input type="text" name = "salary"  value = "<%out.print(rs.getString(6)); %>"><br><br>
+			        <input type="text" name = "salary"  value = "<%out.print(rs.getString(6)); %>" class = "text"><br><br>
 			
 			        <h3>Employee Username :</h3>
-			        <input type="text" name = "username" value = "<%out.print(rs.getString(7)); %>"><br><br>
+			        <input type="text" name = "username" value = "<%out.print(rs.getString(7)); %>" class = "text""><br><br>
 						<br>
-			        <input type="submit" value = "Update Details">
+						
+					<h3>Employee Password :</h3>
+			        <input type="text" name = "password" value = "<%out.print(rs.getString(8)); %>" class = "text"><br><br>
+						<br>
+			        <input type="submit" value = "Update Details" class = "button">
 			    </center>
 			  </form>
 			</div>

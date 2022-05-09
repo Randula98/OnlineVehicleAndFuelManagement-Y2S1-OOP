@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Employee List</title>
+<title>Item List</title>
 <link rel="stylesheet" type="text/css" href="Styles/style.css">
 <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/promo.css">
@@ -81,8 +81,7 @@
 							<p><%out.print(rs.getInt(1)); %> - <%out.print(rs.getString(2)); %></p>
 							<p><%out.print(rs.getDouble(3)); %></p>
 							<p><%out.print(rs.getInt(5)); %></p>
-							<p><%out.print(id); %></p>
-					
+							<br>			
 					
 							<button><a href = "empdashitemdelete.jsp?id=<%out.print(rs.getInt(1)); %>">Delete Employee</a></button>
 

@@ -20,8 +20,8 @@ public class AppointmentDBUtil {
 		
 		try {
 			
-			con = DBConnect.getConnection();
-			state = con.createStatement();
+			conn = DBConnect.getConnection();
+			state = conn.createStatement();
 			String sql = "delete from appointment where appointmentID='"+conId+"'";
 			
 			int r = state.executeUpdate(sql);
