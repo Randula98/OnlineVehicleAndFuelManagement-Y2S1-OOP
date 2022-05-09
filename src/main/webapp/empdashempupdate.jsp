@@ -87,7 +87,7 @@
 			  <form action="updateemployee" method = "post">	
 				<center>
 				<br>
-					<input type="text" name = "empID" value = "<%out.print(rs.getInt(1));%>" class = "text"><br><br>
+					<input type="text" name = "empID" value = "<%out.print(rs.getInt(1));%>" class = "text" style = "visibility:hidden;"><br><br>
 					
 			        <h3>Employee First Name :</h3>
 			        <input type="text" name = "fname" value = "<%out.print(rs.getString(2)); %>" class = "text"><br><br>
