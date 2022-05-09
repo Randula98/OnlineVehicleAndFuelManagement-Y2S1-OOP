@@ -82,7 +82,7 @@
 							<p><%out.print(rs.getString(4)); %></p>
 							<p><%out.print(rs.getString(5)); %></p>
 							<p><%out.print(rs.getString(6)); %></p>
-							<p><%out.print(id); %></p>
+							<br>
 							
 							<button><a href = "empdashempdelete.jsp?id=<%out.print(rs.getInt(1)); %>">Delete Employee</a></button>
 

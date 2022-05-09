@@ -331,8 +331,9 @@
                 			{
                 				e.printStackTrace();
                 			}
-                			%><br><br>
-						<button><a href = "empdashitemlist.jsp">See More...</a></button>
+                			%><br><br><br>
+                			
+						<button style = "margin-top:40px"><a href = "empdashitemlist.jsp">See More...</a></button>
 					</div>
               </div>
 
