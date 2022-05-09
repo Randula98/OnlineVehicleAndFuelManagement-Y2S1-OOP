@@ -38,8 +38,17 @@
 		
 		<!--employee-->
 		<servlet>
+			<servlet-name>insertemployee</servlet-name>
+			<servlet-class>com.employee.EmployeeInsertServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>insertemployee</servlet-name>
+			<url-pattern>/insertemployee</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
 			<servlet-name>updateemployee</servlet-name>
-			<servlet-class>com.employee.EmployeeUpdateServlet</servlet-class>
+			<servlet-class>com.employee.EmployeeInsertServlet</servlet-class>
 		</servlet>
 		<servlet-mapping>
 			<servlet-name>updateemployee</servlet-name>

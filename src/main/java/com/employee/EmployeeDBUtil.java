@@ -154,4 +154,28 @@ public class EmployeeDBUtil {
     	
     	return isSuccess;
     }
+	
+	public static boolean insertEmployee(String fname , String lname , String cno , String role , String salary , String username , String password) {
+		
+		boolean isSuccess = false;
+		
+		try {
+			
+			conn = DBConnect.getConnection();
+			state = conn.createStatement();
+			String sql = "insert into employee values (0,'"+fname+"','"+lname+"','"+cno+"','"+role+"','"+salary+"','"+username+"','"+password+"')";
+			int rs = state.executeUpdate(sql);
+			
+			if(rs>0) {
+				isSuccess=true;
+			}else {
+				isSuccess=false;
+			}
+		}catch(Exception X) {
+			X.printStackTrace();
+		}
+		
+		
+		return isSuccess;
+	}
 }

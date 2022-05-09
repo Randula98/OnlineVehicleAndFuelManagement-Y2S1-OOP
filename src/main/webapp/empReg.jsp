@@ -68,19 +68,22 @@
 
             <!--Form begins from here-->
 			<br>
-            <div class = "regform emp" style = "height:600px">
+            <div class = "regform emp" style = "height:700px">
             <center>
                 <h1>Employee Registration Form</h1><br>
                 </center>
 
                 <center>
-                <form action="" method="POST" onsubmit="return checkPassword()">
+                <form action="insertemployee" method="POST" onsubmit="return checkPassword()">
                 
                 <label for="fname">First name:</label><br>
                 <input type="text" placeholder="Enter First Name" name="fname" class = "text" required><br><br>
                 
                 <label for="lname">Last name:</label><br>
                 <input type="text" placeholder="Enter Last Name" name="lname" class = "text" required><br><br>
+                
+                <label for="lname">Contact:</label><br>
+                <input type="text" placeholder="+94712345678" name="contactNo" class = "text" required><br><br>
                 
                 <label for="lname">Role:</label><br>
                 <select name="role" id="role" required>
