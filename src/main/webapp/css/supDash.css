@@ -9,9 +9,22 @@ table#tab101 {
 	font-weight:bold;
 }
 .add{
-	flex: 1;
-	align-items: center;
-	content-align:right;
-	text-align: right;
-	padding: 5px;
+	float:right;
+
+	
+}
+button.add{
+	font-family: Arial;
+	  margin: 5px;
+  	text-align: center;
+  	border: 2px solid ;
+  	padding: 10px;
+  	width: 150px;
+  	background-image: url("../images/btnBG.jpg");
+  	background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: cover;
+    height: cover;
+  	position: relative;
 }
