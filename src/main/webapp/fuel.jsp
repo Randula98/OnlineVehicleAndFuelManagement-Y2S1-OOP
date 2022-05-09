@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="service.util.*"%>
+<%@ page import="com.customer.*"%>
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
@@ -10,6 +14,28 @@
   <link rel="stylesheet" type="text/css" href="css/sd.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  
+<%
+	String cusUserName = session.getAttribute("Susername").toString();
+	
+	
+	Connection conn = null;
+	Statement state = null;
+	ResultSet rs = null;
+	
+	try{
+		conn = DBConnect.getConnection();   //made connection
+		state = conn.createStatement();
+		
+		String sql = "select * from customer where username = '" + cusUserName + "'";
+		
+		rs = state.executeQuery(sql);
+		rs.next();
+	}catch(Exception X){
+		X.printStackTrace();
+	}
+	%>
 </head>
 <body>
   <div class="container">
