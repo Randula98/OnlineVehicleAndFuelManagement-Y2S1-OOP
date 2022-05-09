@@ -1,4 +1,4 @@
-package com.appointment;
+package com.supplier;
 
 import java.io.IOException;
 
@@ -9,17 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.customer.CustomerDBUtil;
+
 /**
- * Servlet implementation class AppointmentAddServlet
+ * Servlet implementation class SupplierInsertServlet
  */
-@WebServlet("/AppointmentAddServlet")
-public class AppointmentAddServlet extends HttpServlet {
+@WebServlet("/SupplierInsertServlet")
+public class SupplierInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AppointmentAddServlet() {
+    public SupplierInsertServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,22 +41,23 @@ public class AppointmentAddServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		String serve=request.getParameter("serve");
-		String[] date=request.getParameterValues("date");
-		String id=request.getParameter("id");
+		String company=request.getParameter("company");
+		String branch=request.getParameter("branch");
+		String mobile=request.getParameter("mobile");
+		String uname=request.getParameter("uname");
+		String pwd=request.getParameter("pwd");
 		
 		boolean isTrue;
 		
-		isTrue=AppointmentDBUtil.addappointment(id,serve,date);
+		isTrue = SupplierDBUtil.insertSupplier(company,branch,mobile,uname,pwd);
 		
 		if(isTrue==true) {
 			RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
 			dis.forward(request, response);
 		}else {
-			RequestDispatcher dis2=request.getRequestDispatcher("home.jsp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("home.jsp");
 			dis2.forward(request, response);
 		}
-		
 	}
 
 }

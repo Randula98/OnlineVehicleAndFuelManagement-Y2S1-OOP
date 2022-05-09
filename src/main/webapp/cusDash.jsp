@@ -154,7 +154,7 @@
             	</tr>
             </table>
             </div>
-
+			<br><br>
             <div>
                 <h3>Stats</h3>
                 <p>
@@ -182,7 +182,7 @@
              			<tr>
              			
              			<td><%out.print(as.getString(2)); %></td> 
-             			<td><%out.print(as.getDate(3)); %></td>
+             			<td><%out.print(as.getString(3)); %></td>
              		<!--  	<td>
              			<form action="deleteappointment" method="post">
              			<input type="text" name="id" value="<%out.print(as.getInt(1)); %>" >

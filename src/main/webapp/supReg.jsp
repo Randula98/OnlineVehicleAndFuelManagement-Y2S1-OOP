@@ -83,7 +83,7 @@
                 	<input type="text" placeholder="Enter Branch" name="branch" class = "text" required><br><br>
 
                 	<label for="lname">Contact Number:</label><br> 
-                	<input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="+94712345678" class = "text" required><br/><br>
+                	<input type="text" name="mobile"  placeholder="+94712345678" class = "text" required><br/><br>
                 
                 	<label for="username">Username:</label><br>
                 	<input type="text" placeholder="Username" name="uname" pattern="{5,15}" class = "text" required><br><br>
