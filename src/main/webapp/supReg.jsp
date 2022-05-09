@@ -77,10 +77,10 @@
                 <form action="" method="POST" onsubmit="return checkPassword()">
                 
                 	<label for="fname">Company Name:</label><br>
-                	<input type="text" placeholder="Enter Company Name" name="fname" class = "text" required><br><br>
+                	<input type="text" placeholder="Enter Company Name" name="company" class = "text" required><br><br>
                 
                 	<label for="lname">Branch:</label><br>
-                	<input type="text" placeholder="Enter Branch" name="lname" class = "text" required><br><br>
+                	<input type="text" placeholder="Enter Branch" name="branch" class = "text" required><br><br>
 
                 	<label for="lname">Contact Number:</label><br> 
                 	<input type="phone" name="mobile" pattern="[0-9]{10}" placeholder="+94712345678" class = "text" required><br/><br>

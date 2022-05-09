@@ -125,5 +125,27 @@ public static boolean deleteSupplier(String id) {
 	
 	return isSuccess;
 }
+public static boolean insertSupplier(String company,String branch,String contactNo,String uname,String pwd) {
+	
+	boolean isSuccess = false;
+	
+	try {
+		
+		conn = DBConnect.getConnection();
+		state = conn.createStatement();
+		String sql = "insert into supplier values (0,'"+company+"','"+branch+"','"+contactNo+"','"+uname+"','"+pwd+"')";
+		int rs = state.executeUpdate(sql);
+		
+		if(rs>0) {
+			isSuccess=true;
+		}else {
+			isSuccess=false;
+		}
+	}catch(Exception X) {
+		X.printStackTrace();
+	}
+	return isSuccess;
+	
+}
    
 }
