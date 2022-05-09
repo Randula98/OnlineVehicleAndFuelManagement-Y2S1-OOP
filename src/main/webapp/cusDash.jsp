@@ -128,18 +128,31 @@
 	
 	
 	
-	<div>
+		<div>
             <div>
-                <h3>Customer Details</h3>
-                    <p>
-                        FirstName:  <%out.print(rs.getString(2));%><br>
-                        LastName: <%out.print(rs.getString(3));%><br>
-                        Contact Number: <%out.print(rs.getString(4));%><br>
-                        Email: <%out.print(rs.getString(5));%><br>
-                        UserName: <%out.print(rs.getString(6));%><br>
-
-                <button><a href="changeCusDet.jsp">Update Details </a></button>
-            </p>
+            <table>
+            	<tr>
+               		<td><h3>Customer Details</h3></td>
+                 </tr>
+                 <tr>   
+                        <td>FirstName: <b> <%out.print(rs.getString(2));%></b> </td>
+               	</tr>
+               	<tr>
+                        <td>LastName: <b><%out.print(rs.getString(3));%></b></td>
+                </tr>        
+                <tr>  
+                        <td>Contact Number:<b> <%out.print(rs.getString(4));%></b></td>
+               </tr>
+               <tr>
+                        <td>Email:<b> <%out.print(rs.getString(5));%></b></td>
+               </tr>
+               <tr>
+                        <td>UserName: <b><%out.print(rs.getString(6));%></b></td>>
+				</tr>
+				<tr>
+                		<td><button><a href="changeCusDet.jsp">Update Details </a></button></td>
+            	</tr>
+            </table>
             </div>
 
             <div>
