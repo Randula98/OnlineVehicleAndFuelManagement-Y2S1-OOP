@@ -1,41 +1,53 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ page import="java.sql.*"%>
-	<%@ page import="java.util.*"%>
-	<%@ page import="service.util.*"%>
-	<%@ page import="com.customer.*"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="service.util.*"%>
+<%@ page import="com.supplier.*"%>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
-	<meta charset="utf-8">
-	<title>Make A Booking | eZVehi Care Service and Filling Station</title>
-	<link rel="stylesheet" type="text/css" href="Styles/style.css">
-  	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  	<link rel="stylesheet" type="text/css" href="css/promo.css">
-  	<link rel="stylesheet" type="text/css" href="css/sd.css">
-  	<link rel="stylesheet" type="text/css" href="css/home.css">
-  	<link rel="stylesheet" type="text/css" href="css/style.css">
-  	
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="Styles/style.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/sd.css">
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/supDash.css">
+<title>Supplier Dashboard</title>
 <%
-	String cusUserName = session.getAttribute("Susername").toString();
-	
+	String supUserName = session.getAttribute("supName").toString();
 	
 	Connection conn = null;
-	Statement state = null;
-	ResultSet rs = null;
+	Statement state1 = null;
+	Statement state2 = null;
+	ResultSet rs1 = null;
+	ResultSet rs2 = null;
 	
-	try{
-		conn = DBConnect.getConnection();   //made connection
-		state = conn.createStatement();
-		String sql = "select * from customer where username = '" + cusUserName + "'";
-		rs = state.executeQuery(sql);
-		rs.next();
-	}catch(Exception X){
-		X.printStackTrace();
+	
+	  try {
+			conn = DBConnect.getConnection();
+			state1 = conn.createStatement();
+			String sql1 = "select * from supplier where userName = '" + supUserName + "'";
+			rs1 = state1.executeQuery(sql1);
+	        rs1.next();
+	        
+	        int supID = rs1.getInt(1);
+	        
+			state2 = conn.createStatement();
+			String sql2 = "select * from item where supID = '" + supID + "'";
+			rs2 = state2.executeQuery(sql2);
+	        
+	} catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
 	}
-	%>
+	
+%>
 </head>
-<body>
-  <div class="container">
+<body><div class="container">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
@@ -84,43 +96,24 @@
 		      </div>
 		</div>
 		      <hr class="new1">
-
-            <!--Form begins from here-->
-
-            <center>
-                <h2> Service Booking</h2> <!-- reffered from labsheets-->
-                </center>
-
-                <center>
-                <form class="addapointment" action="" method="POST">
-					<input type="text" name="id" value="<%out.print(rs.getString(1)); %>">
-                    <select name="serve" id="serve">
-                        <option value="">Select</option>
-                        <option value="Vip">V.I.P Service</option>
-                        <option value="FullService">Full Service</option>
-                        <option value="bodywash">Body Wash</option>
-                        <option value="CNG">Come N Go</option>
-                      </select>
+		      <center>
+		        <form action="updateItems" method="POST" >
                 
-
-                <br><br>
-                    Date Of Service : <br/>
-                <input type="date" name="cod" required><br/><br>
-                
+                <label >Item:</label><br>
+                <input type="text" placeholder="item name" name="item" class = "text" required><br><br>
+                <label >Price per unit:</label><br>
+                <input type="text" placeholder="RS." name="price" class = "text" required><br><br>
+                <label >Available quantity:</label><br>
+                <input type="text" placeholder="quantity" name="quantity" class = "text" required><br><br>
                
-                
-                <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">Accept Privacy Policy and Terms.<br/>
-                
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" disabled >
+                <input type="submit" id="submitBtn" value="Register" >
                 </center>
                 </form>
-
-		<br>
-		
-	 <footer>
+		      </center>		      
+	<footer>
       	<hr class="new1"><nav class="foot">
       	  <ul class="foot">
   				<li><a href="home.jsp">Home</a></li>
@@ -162,6 +155,5 @@
           </tr>
         </table>
       </footer>
-      
 </body>
 </html>
