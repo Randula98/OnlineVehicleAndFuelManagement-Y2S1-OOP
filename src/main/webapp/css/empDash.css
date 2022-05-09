@@ -176,7 +176,7 @@ body{
 	text-align:center;
 }
 
-.emp-update-emp input.button , .emp-del-emp input.button{
+.emp-update-emp input.button , .emp-del-emp button{
 	width:150px;
 	height:30px;
 	border-radius:10px;

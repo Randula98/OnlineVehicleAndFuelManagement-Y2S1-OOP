@@ -92,7 +92,7 @@
                 </center>
 
                 <center>
-                <form class="addapointment" action="" method="POST">
+                <form class="" action="addapointment" method="POST">
 					<input type="text" name="id" value="<%out.print(rs.getString(1)); %>">
                     <select name="serve" id="serve">
                         <option value="">Select</option>
@@ -114,7 +114,7 @@
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" disabled >
+                <input type="submit" id="submitBtn" value="submit" >
                 </center>
                 </form>
 

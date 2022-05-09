@@ -26,6 +26,15 @@
 			<url-pattern>/deleteappointment</url-pattern>
 		</servlet-mapping>
 		
+		<servlet>
+			<servlet-name>addapointment</servlet-name>
+			<servlet-class>com.appointment.AppointmentAddServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>addapointment</servlet-name>
+			<url-pattern>/addapointment</url-pattern>
+		</servlet-mapping>
+		
 		
 		<!--employee-->
 		<servlet>
