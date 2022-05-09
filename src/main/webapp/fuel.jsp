@@ -95,13 +95,13 @@
 
                 
                 <label for="Amount">Amount</label>:
-                <input type="number"> Litres <br><br>
+                <input type="amount"> Litres <br><br>
                 
                 
                 
                 Date Of Collection : <br/>
-                <input type="date" name="cod" required><br/><br>
-                
+                <input type="date" name="cod" required><br/>
+                <input type="text" name="hidden" required><br/>
                 
                 <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">I have Read the conditions and I Accept Privacy Policy and Terms.<br/>
                 </center>
