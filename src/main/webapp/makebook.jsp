@@ -114,7 +114,9 @@
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" >
+
+                <input type="submit" id="submitBtn" value="submit">
+
                 </center>
                 </form>
 

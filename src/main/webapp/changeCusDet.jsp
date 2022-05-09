@@ -98,12 +98,11 @@
             
             
             <form action="updatecustomer" method="POST">
-            	<input type="text" name="id" value="<%out.print(rs.getString(1));%>"> 
+            	<input style="visibility:hidden;" type="text" name="id" value="<%out.print(rs.getString(1));%>" > <br>
                 First Name 
                 <input type="text" name="fname" value="<%out.print(rs.getString(2));%>">  
                 <br><br>
                 
-            
                 Last Name 
                 <input type="text" name="lname" value="<%out.print(rs.getString(3));%>">  
                 <br><br>
