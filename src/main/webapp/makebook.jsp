@@ -114,7 +114,7 @@
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" disabled >
+                <input type="submit" id="submitBtn" value="submit">
                 </center>
                 </form>
 
