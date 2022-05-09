@@ -41,8 +41,9 @@ public class AddItemServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		String item=request.getParameter("item");
-		double price=request.getParameter("price");
-		int quantity=request.getParameter("quantity");
+		String price=request.getParameter("price");
+		String quantity=request.getParameter("quantity");
+		String supID = request.getParameter("supID");
 		
 		
 		boolean isTrue;
@@ -50,10 +51,10 @@ public class AddItemServlet extends HttpServlet {
 		isTrue = ItemDBUtil.insertItem(item,price,quantity,supID);
 		
 		if(isTrue==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("supDash.jsp");
 			dis.forward(request, response);
 		}else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("home.jsp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("supDash.jsp");
 			dis2.forward(request, response);
 		}
 	}

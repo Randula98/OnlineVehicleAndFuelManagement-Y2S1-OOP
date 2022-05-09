@@ -93,7 +93,8 @@
 
                 <center>
                 <form class="" action="addapointment" method="POST">
-					<input type="text" name="id" value="<%out.print(rs.getString(1)); %>">
+					<input style="visibility:hidden;" type="text" name="id" value="<%out.print(rs.getString(1)); %>"><br>
+					Select Service Type: 
                     <select name="serve" id="serve">
                         <option value="">Select</option>
                         <option value="Vip">V.I.P Service</option>
@@ -114,7 +115,9 @@
                 </center>
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" >
+
+                <input type="submit" id="submitBtn" value="submit">
+
                 </center>
                 </form>
 

@@ -44,7 +44,7 @@ public class ItemDBUtil {
 		return isSuccess;// TODO Auto-generated method stub
 	}
 	
-    public static boolean insertItem(String item,double price,int quantity,int supID){
+    public static boolean insertItem(String item,String price,String quantity,String supID){
 		
 		boolean isSuccess = false;
 		
