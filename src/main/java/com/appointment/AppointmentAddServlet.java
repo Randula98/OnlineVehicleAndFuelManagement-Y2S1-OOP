@@ -41,10 +41,11 @@ public class AppointmentAddServlet extends HttpServlet {
 		
 		String serve=request.getParameter("serve");
 		String date=request.getParameter("date");
+		String id=request.getParameter("id");
 		
 		boolean isTrue;
 		
-		isTrue=AppointmentDBUtil.addappointment(serve,date);
+		isTrue=AppointmentDBUtil.addappointment(id,serve,date);
 		
 		if(isTrue==true) {
 			RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
