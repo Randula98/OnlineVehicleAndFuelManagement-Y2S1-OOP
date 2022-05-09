@@ -7,3 +7,7 @@
 	font-family: verdana;
 	color: white;
 }
+#submitBtn{
+	padding:5px;
+	background-color: lightyellow;
+}

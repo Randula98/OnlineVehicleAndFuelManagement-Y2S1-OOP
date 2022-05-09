@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/supDash.css">
+<link rel="stylesheet" type="text/css" href="css/form1.css">
 <title>Supplier Dashboard</title>
 <%
 	String supUserName = session.getAttribute("supName").toString();
@@ -90,7 +91,7 @@
 		</div>
 		      <hr class="new1">
 		      <center>
-		        <form action="insertItem" method="POST" >
+		        <form action="insertItem" method="POST" class="form1">
                 
                 <label >Item:</label><br>
                 <input type="text" placeholder="item name" name="item" class = "text" required><br><br>
