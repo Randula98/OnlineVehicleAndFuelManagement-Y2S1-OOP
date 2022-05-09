@@ -40,7 +40,7 @@ public class AppointmentAddServlet extends HttpServlet {
 		//doGet(request, response);
 		
 		String serve=request.getParameter("serve");
-		String date=request.getParameter("date");
+		String[] date=request.getParameterValues("date");
 		String id=request.getParameter("id");
 		
 		boolean isTrue;

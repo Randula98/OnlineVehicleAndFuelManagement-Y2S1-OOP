@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/supDash.css">
+
 <title>Supplier Dashboard</title>
 <%
 	String supUserName = session.getAttribute("supName").toString();
@@ -125,6 +126,7 @@
 		      </table>
 		      <div class="add"><button class="category" onclick="window.location.href='addItem.jsp'">Add Supplies</button>
 	</div>
+	<br><br><br>
 	
 	<footer>
       	<hr class="new1"><nav class="foot">

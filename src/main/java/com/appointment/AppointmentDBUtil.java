@@ -37,9 +37,10 @@ public class AppointmentDBUtil {
 		return isSuccess;
 	}
 	
-	public static boolean addappointment(String id,String serve,String date) {
+	public static boolean addappointment(String id,String serve,String[] date) {
 		
 		boolean isSuccess = false;
+		System.out.println(date);//date
 		
 		try {
 				conn = DBConnect.getConnection();
