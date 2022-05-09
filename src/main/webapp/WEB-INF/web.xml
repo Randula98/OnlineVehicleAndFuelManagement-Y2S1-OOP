@@ -95,6 +95,15 @@
 			<url-pattern>/deletesupplier</url-pattern>
 		</servlet-mapping>
 		
+		<servlet>
+			<servlet-name>insertSupplier</servlet-name>
+			<servlet-class>com.supplier.SupplierInsertServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>insertSupplier</servlet-name>
+			<url-pattern>/insertSupplier</url-pattern>
+		</servlet-mapping>
+		
 		<!--item-->
 		<servlet>
 			<servlet-name>insertItem</servlet-name>
