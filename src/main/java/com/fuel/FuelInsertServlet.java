@@ -47,8 +47,9 @@ public class FuelInsertServlet extends HttpServlet {
 		String cDate = request.getParameter("date");
 		String vType = request.getParameter("vehicleType");
 		String cid = request.getParameter("hiddenid");
-		
-		boolean isTrue;
+		System.out.println(cid);
+		System.out.println(cid);
+		boolean isTrue;//
 		
 		isTrue = FuelDBUtil.insertFuel(fType, amount, vehicleNo, cDate, vType , cid);
 		

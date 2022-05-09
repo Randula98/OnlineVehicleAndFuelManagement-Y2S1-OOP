@@ -21,7 +21,7 @@ public class FuelDBUtil {
 			
 			conn = DBConnect.getConnection();
 			state = conn.createStatement();
-			String sql = "insert into employee values (0,'"+fType+"','"+amount+"','"+vno+"','"+cDate+"','"+vType+"')";
+			String sql = "insert into fuel_reservations values (0,'"+fType+"','"+amount+"','"+vno+"','"+cDate+"','"+vType+"','"+cid+"')";
 			int rs = state.executeUpdate(sql);
 			
 			if(rs>0) {

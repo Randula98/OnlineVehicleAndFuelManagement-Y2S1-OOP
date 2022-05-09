@@ -218,7 +218,7 @@
             	<td><% out.print(fs.getString(4)); %></td>
             	<td><% out.print(fs.getInt(3)); %></td>
             	<td><% out.print(fs.getString(2)); %></td>
-            	<td><% out.print(fs.getDate(5)); %></td>
+            	<td><% out.print(fs.getString(5)); %></td>
             	<td><% out.print(fs.getString(6)); %></td>
             	<%
             	}

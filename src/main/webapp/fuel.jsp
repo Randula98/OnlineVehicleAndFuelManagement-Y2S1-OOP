@@ -93,7 +93,7 @@
                 <h2> Fuel Reservation Form</h2> <!-- reffered from labsheets-->
             </center>
             <center>
-                <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
+                <form class="form1" action="insertFuel" method="POST" onsubmit="return checkPassword()">
                 <label for="vehicleNo">Vehicle Number</label>
                 <input type="text" placeholder="Enter Vehicle Number" name="vehicleNo" required><br><br>
                 <label for="Fueltype">Select Fuel Type</label>
@@ -121,20 +121,20 @@
 
                 
                 <label for="Amount">Amount</label>:
-                <input type="amount"> Litres <br><br>
+                <input type="text" name = "amount"> Litres <br><br>
                 
                 
                 
                 Date Of Collection : <br/>
                 <input type="date" name="cod" required><br/>
-                <input type="text" name="hidden" required><br/>
+                <input type="text" name="hiddenid" value = "<% out.print(rs.getInt(1));%>" style = "visibility:hidden;" required><br/>
                 
                 <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">I have Read the conditions and I Accept Privacy Policy and Terms.<br/>
                 </center>
                 
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" disabled >
+                <input type="submit" id="submitBtn" value="submit">
                 </center>
                 </form>
     
