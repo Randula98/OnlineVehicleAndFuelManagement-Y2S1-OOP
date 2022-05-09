@@ -8,3 +8,10 @@ table#tab101 {
 .det{
 	font-weight:bold;
 }
+.add{
+	flex: 1;
+	align-items: center;
+	content-align:right;
+	text-align: right;
+	padding: 5px;
+}
