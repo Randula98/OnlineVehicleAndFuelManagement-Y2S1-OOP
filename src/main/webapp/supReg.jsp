@@ -74,7 +74,7 @@
                 </center>
 
                 <center>
-                <form action="" method="POST" onsubmit="return checkPassword()">
+                <form action="insertSupplier" method="POST" onsubmit="return checkPassword()">
                 
                 	<label for="fname">Company Name:</label><br>
                 	<input type="text" placeholder="Enter Company Name" name="company" class = "text" required><br><br>
