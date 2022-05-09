@@ -16,7 +16,7 @@
   	<script type="text/javascript" src = "js/regScript.js"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="container"style = "height:1200px;">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
