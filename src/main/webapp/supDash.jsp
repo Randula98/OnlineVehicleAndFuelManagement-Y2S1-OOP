@@ -125,6 +125,7 @@
 		      </table>
 		      <div class="add"><button class="category" onclick="window.location.href='addItem.jsp'">Add Supplies</button>
 	</div>
+	<br><br><br>
 	
 	<footer>
       	<hr class="new1"><nav class="foot">
