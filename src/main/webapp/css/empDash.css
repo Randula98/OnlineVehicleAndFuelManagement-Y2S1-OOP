@@ -69,7 +69,10 @@ body{
 	border:1px solid black;
 	border-collapse:collapse;
 }
-
+.cards th{
+	background-color:yellow;
+	border:1px solid black;
+}
 .list_head{
 	text-align:center;
 }
@@ -120,8 +123,19 @@ body{
 	height:auto;
 	overflow :hidden;
 	margin:0px auto;
-	border:1px solid black;
-	background-color:pink;
+	border-radius:10px;
+	background-image: linear-gradient(
+  						45deg,
+  						hsl(37deg 76% 64%) 0%,
+  						hsl(39deg 75% 65%) 11%,
+  						hsl(42deg 75% 66%) 22%,
+  						hsl(44deg 74% 66%) 33%,
+  						hsl(47deg 72% 67%) 44%,
+  						hsl(50deg 71% 68%) 56%,
+  						hsl(53deg 69% 69%) 67%,
+  						hsl(56deg 67% 69%) 78%,
+  						hsl(60deg 65% 71%) 89%,
+  						hsl(65deg 71% 73%) 100%);
 }
 .emp-list-box{
 	height:200px;
@@ -142,8 +156,8 @@ body{
 	border-radius:20px;
 }
 .emp-del-msg{
-	height:150px;
-	width: 350px;
+	height:200px;
+	width: 450px;
 }
 .emp-update-emp{
 	width: 500px;
@@ -176,7 +190,7 @@ body{
 	text-align:center;
 }
 
-.emp-update-emp input.button , .emp-del-msg button{
+.emp-update-emp input.button , .emp-del-msg button , .emp-del-msg input.button{
 	width:150px;
 	height:30px;
 	border-radius:10px;
@@ -187,7 +201,11 @@ body{
 	transition:.5s;
 }
 
-.emp-update-emp input.button:hover , .emp-del-msg input.button:hover{
+.emp-update-emp input.button:hover , .emp-del-msg input.button:hover, .emp-del-msg button:hover{
 	color:white;
 	background-color:#95943a;
+}
+.emp-del-msg button{
+	margin-top:10px;
+	margin-left:150px;
 }

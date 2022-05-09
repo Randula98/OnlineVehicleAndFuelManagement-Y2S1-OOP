@@ -80,7 +80,7 @@
 							%><div class = "item-box emp-list-box">
 							<p><%out.print(rs.getInt(1)); %> - <%out.print(rs.getString(2)); %></p>
 							<p><%out.print(rs.getDouble(3)); %></p>
-							<p><%out.print(rs.getInt(5)); %></p>
+							<p>Quantity : <%out.print(rs.getInt(5)); %></p>
 							<br>			
 					
 							<button><a href = "empdashitemdelete.jsp?id=<%out.print(rs.getInt(1)); %>">Delete Employee</a></button>

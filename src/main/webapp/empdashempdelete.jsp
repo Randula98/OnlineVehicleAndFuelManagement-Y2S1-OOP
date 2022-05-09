@@ -16,7 +16,7 @@
   	<link rel="stylesheet" type="text/css" href="css/empDash.css">
 </head>
 <body>
-  <div class="container"  style = "height:600px;">
+  <div class="container"  style = "height:700px;">
   	<div class="navbar">
   	  <div class="logo">
   	  	<center><a href="home.jsp"><img src="images/index/logo.png" width="250px"></a></center>
