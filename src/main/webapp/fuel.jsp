@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="service.util.*"%>
+<%@ page import="com.customer.*"%>
 <!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
@@ -10,6 +14,28 @@
   <link rel="stylesheet" type="text/css" href="css/sd.css">
   <link rel="stylesheet" type="text/css" href="css/home.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  
+<%
+	String cusUserName = session.getAttribute("Susername").toString();
+	
+	
+	Connection conn = null;
+	Statement state = null;
+	ResultSet rs = null;
+	
+	try{
+		conn = DBConnect.getConnection();   //made connection
+		state = conn.createStatement();
+		
+		String sql = "select * from customer where username = '" + cusUserName + "'";
+		
+		rs = state.executeQuery(sql);
+		rs.next();
+	}catch(Exception X){
+		X.printStackTrace();
+	}
+	%>
 </head>
 <body>
   <div class="container">
@@ -67,7 +93,7 @@
                 <h2> Fuel Reservation Form</h2> <!-- reffered from labsheets-->
             </center>
             <center>
-                <form class="form1" action="" method="POST" onsubmit="return checkPassword()">
+                <form class="form1" action="insertFuel" method="POST" onsubmit="return checkPassword()">
                 <label for="vehicleNo">Vehicle Number</label>
                 <input type="text" placeholder="Enter Vehicle Number" name="vehicleNo" required><br><br>
                 <label for="Fueltype">Select Fuel Type</label>
@@ -95,20 +121,20 @@
 
                 
                 <label for="Amount">Amount</label>:
-                <input type="number"> Litres <br><br>
+                <input type="text" name = "amount"> Litres <br><br>
                 
                 
                 
                 Date Of Collection : <br/>
-                <input type="date" name="cod" required><br/><br>
-                
+                <input type="date" name="cod" required><br/>
+                <input type="text" name="hiddenid" value = "<% out.print(rs.getInt(1));%>" style = "visibility:hidden;" required><br/>
                 
                 <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()">I have Read the conditions and I Accept Privacy Policy and Terms.<br/>
                 </center>
                 
                 
                 <center>
-                <input type="submit" id="submitBtn" value="submit" disabled >
+                <input type="submit" id="submitBtn" value="submit">
                 </center>
                 </form>
     

@@ -52,7 +52,7 @@ public class SupplierInsertServlet extends HttpServlet {
 		isTrue = SupplierDBUtil.insertSupplier(company,branch,mobile,uname,pwd);
 		
 		if(isTrue==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("login.jsp");
 			dis.forward(request, response);
 		}else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("home.jsp");

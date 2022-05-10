@@ -1,4 +1,4 @@
-package com.customer;
+package com.employee;
 
 import java.io.IOException;
 
@@ -9,17 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.customer.CustomerDBUtil;
+
 /**
- * Servlet implementation class CustomerInsertServlet
+ * Servlet implementation class EmployeeInsertServlet
  */
-@WebServlet("/CustomerInsertServlet")
-public class CustomerInsertServlet extends HttpServlet {
+@WebServlet("/EmployeeInsertServlet")
+public class EmployeeInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CustomerInsertServlet() {
+    public EmployeeInsertServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,16 +41,17 @@ public class CustomerInsertServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		String firstName=request.getParameter("firstName");
-		String lastName=request.getParameter("lastName");
-		String contactNo=request.getParameter("contactNo");
-		String email=request.getParameter("email");
-		String username=request.getParameter("uname");
-		String password=request.getParameter("password");
+		String firstName = request.getParameter("fname");
+		String lastName = request.getParameter("lname");
+		String contactNo = request.getParameter("contactNo");
+		String role = request.getParameter("role");
+		String salary = request.getParameter("salary");
+		String username = request.getParameter("uname");
+		String password = request.getParameter("password");
 		
 		boolean isTrue;
 		
-		isTrue = CustomerDBUtil.insertcustomer(firstName,lastName,contactNo,email,username,password);
+		isTrue = EmployeeDBUtil.insertEmployee(firstName,lastName,contactNo,role,salary,username,password);
 		
 		if(isTrue==true) {
 			RequestDispatcher dis = request.getRequestDispatcher("login.jsp");

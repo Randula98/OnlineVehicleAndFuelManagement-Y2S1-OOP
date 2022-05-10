@@ -155,14 +155,15 @@
             </table>
             </div>
 			<br><br>
+			<center>
             <div>
                 <h3>Stats</h3>
                 <p>
-                    You are one of  <%out.print(ls.getInt(1));%> our customers <br>
-                    You Currently have <%out.print(zs.getInt(1)); %> orders <br>
+                    You are one of <b> <%out.print(ls.getInt(1));%> </b>our customers <br>
+                    You Currently have <b> <%out.print(zs.getInt(1)); %> </b> orders <br>
                 </p>
             </div>
-
+			</center>
         </div>
 
         <div>
@@ -217,7 +218,7 @@
             	<td><% out.print(fs.getString(4)); %></td>
             	<td><% out.print(fs.getInt(3)); %></td>
             	<td><% out.print(fs.getString(2)); %></td>
-            	<td><% out.print(fs.getDate(5)); %></td>
+            	<td><% out.print(fs.getString(5)); %></td>
             	<td><% out.print(fs.getString(6)); %></td>
             	<%
             	}

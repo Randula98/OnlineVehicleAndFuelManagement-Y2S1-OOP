@@ -38,8 +38,17 @@
 		
 		<!--employee-->
 		<servlet>
+			<servlet-name>insertemployee</servlet-name>
+			<servlet-class>com.employee.EmployeeInsertServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>insertemployee</servlet-name>
+			<url-pattern>/insertemployee</url-pattern>
+		</servlet-mapping>
+		
+		<servlet>
 			<servlet-name>updateemployee</servlet-name>
-			<servlet-class>com.employee.EmployeeUpdateServlet</servlet-class>
+			<servlet-class>com.employee.EmployeeInsertServlet</servlet-class>
 		</servlet>
 		<servlet-mapping>
 			<servlet-name>updateemployee</servlet-name>
@@ -123,4 +132,13 @@
 			<url-pattern>/deleteitem</url-pattern>
 		</servlet-mapping>
 		
+		<!--fuel-->
+		<servlet>
+			<servlet-name>insertFuel</servlet-name>
+			<servlet-class>com.fuel.FuelInsertServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>insertFuel</servlet-name>
+			<url-pattern>/insertFuel</url-pattern>
+		</servlet-mapping>
 </web-app>

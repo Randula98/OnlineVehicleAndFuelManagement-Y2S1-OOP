@@ -1,4 +1,4 @@
-package com.customer;
+package com.fuel;
 
 import java.io.IOException;
 
@@ -9,17 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.employee.EmployeeDBUtil;
+
 /**
- * Servlet implementation class CustomerInsertServlet
+ * Servlet implementation class FuelInsertServlet
  */
-@WebServlet("/CustomerInsertServlet")
-public class CustomerInsertServlet extends HttpServlet {
+@WebServlet("/FuelInsertServlet")
+public class FuelInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CustomerInsertServlet() {
+    public FuelInsertServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,19 +41,20 @@ public class CustomerInsertServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		String firstName=request.getParameter("firstName");
-		String lastName=request.getParameter("lastName");
-		String contactNo=request.getParameter("contactNo");
-		String email=request.getParameter("email");
-		String username=request.getParameter("uname");
-		String password=request.getParameter("password");
+		String fType = request.getParameter("fueltype");
+		String amount = request.getParameter("amount");
+		String vehicleNo = request.getParameter("vehicleNo");
+		String cDate = request.getParameter("date");
+		String vType = request.getParameter("vehicleType");
+		String cid = request.getParameter("hiddenid");
+		System.out.println(cid);
+		System.out.println(cid);
+		boolean isTrue;//
 		
-		boolean isTrue;
-		
-		isTrue = CustomerDBUtil.insertcustomer(firstName,lastName,contactNo,email,username,password);
+		isTrue = FuelDBUtil.insertFuel(fType, amount, vehicleNo, cDate, vType , cid);
 		
 		if(isTrue==true) {
-			RequestDispatcher dis = request.getRequestDispatcher("login.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("cusDash.jsp");
 			dis.forward(request, response);
 		}else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("home.jsp");
