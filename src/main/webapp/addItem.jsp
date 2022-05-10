@@ -17,7 +17,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/supDash.css">
 <link rel="stylesheet" type="text/css" href="css/form1.css">
-<title>Supplier Dashboard</title>
+<title>Add items</title>
 <%
 	String supUserName = session.getAttribute("supName").toString();
 	
