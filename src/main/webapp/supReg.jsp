@@ -9,23 +9,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Supplier Registration | eZ VehiCare Service and Filling Station</title>
-<%
-	String supUserName = session.getAttribute("supName").toString();
-	
-	Connection conn = null;
-	Statement state1 = null;
-	ResultSet rs1 = null;
-	
-	
-		try{
-			conn = DBConnect.getConnection();
-	        
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-	
-%>
+
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
   	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" type="text/css" href="css/promo.css">
