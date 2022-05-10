@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="service.util.*"%>
+<%@ page import="com.supplier.*"%>
 <!DOCTYPE html>
 <html>
 <head>
